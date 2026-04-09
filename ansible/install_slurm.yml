@@ -1,0 +1,8 @@
+# Source - https://stackoverflow.com/a/38047760
+
+- name: Transfer and execute slurm script
+  hosts: all
+  tasks:
+     - name: Copy and Execute the script 
+       script: /home/orangepi/ansible/scripts/slurm-script.sh
+

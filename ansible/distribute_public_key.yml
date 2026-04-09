@@ -1,0 +1,6 @@
+---
+- name: Copy the public ssh key to the cluster nodes
+  become: true
+
+  tasks:
+    file: ~

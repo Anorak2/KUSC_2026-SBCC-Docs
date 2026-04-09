@@ -1,0 +1,9 @@
+---
+- name: Install a package on servers
+  hosts: all
+  become: true
+  tasks:
+    - name: Install package 
+      apt:
+        name: nginx
+        state: present

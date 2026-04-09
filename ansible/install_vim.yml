@@ -1,0 +1,10 @@
+---
+- name: Install nvim on servers
+  hosts: all
+  become: true
+  tasks:
+    - name: Install package 
+      apt:
+        name: vim 
+        state: present
+
