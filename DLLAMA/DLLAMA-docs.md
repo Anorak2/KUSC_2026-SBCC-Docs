@@ -4,23 +4,15 @@
 
 Distributed Llama splits LLM inference across multiple devices using tensor parallelism over Ethernet. One node acts as the root (loads the model and coordinates), and the rest act as workers. Each node holds a slice of the model in RAM, so the memory cost is split across all nodes.
 
-The binary we build is `dllama`. It supports `inference` (benchmark), `chat`, and `worker` subcommands. There's also `dllama-api` for an HTTP-compatible API server.
+The binary we build is `dllama`. It supports `inference` (benchmark), `chat`, and `worker` subcommands.
 
 Upstream repo: https://github.com/b4rtaz/distributed-llama
 
-## What does it test
+## What are we testing?
 
-CPU-bound matrix multiplications (quantized int4/int8 GEMM), memory bandwidth (loading weights), and network throughput between nodes (synchronizing activations over TCP). The bottleneck on the Orange Pi's will be CPU compute and network latency between nodes.
+We are using the Llama 3.1 8B Instruct Q40 model on providing prompts to test the throughput of tokens.
 
-## What are the computational bottlenecks
-
-- **CPU**: The bulk of time is spent in quantized matrix multiplications on ARM NEON. More cores and higher clock speeds help directly.
-- **RAM bandwidth**: Weights are streamed from memory every token. The Orange Pi's LPDDR4 bandwidth is the ceiling here.
-- **Network**: Every layer requires a round-trip sync between all nodes. Gigabit Ethernet is fine for small models, but larger models will bottleneck on network latency and bandwidth. Use a direct switch, not WiFi.
-
-Node count must divide evenly into the model dimensions. Valid counts for Llama 3.1 8B (which has 8 KV heads): 1, 2, 4, or 8 nodes. The code enforces `nNodes <= nKvHeads`, so 8 is the hard max. The team should sweep 4 vs 8 nodes during competition to find the throughput sweet spot (more nodes = less compute per node but more network sync overhead).
-
-## What steps did it take to install / run
+## Steps to install / run
 
 ### On every node (root + workers):
 
