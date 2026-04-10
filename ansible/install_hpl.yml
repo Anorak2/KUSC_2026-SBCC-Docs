@@ -1,0 +1,239 @@
+---
+# =============================================================================
+# HPL (High Performance Linpack) build and install for ARM64 Orange Pi cluster
+#
+# Usage:
+#   ansible-playbook install_hpl.yml -i hosts.ini
+#
+# After running, launch HPL from the head node:
+#   cd ~/hpl-2.3/bin/arm64
+#   mpirun --hostfile ~/mpi_hosts -np <node_count> --map-by node \
+#     -x OMP_NUM_THREADS=8 -x OMP_PROC_BIND=TRUE -x OMP_PLACES=cores \
+#     ./xhpl
+# =============================================================================
+
+- name: Build and install HPL on ARM64 Orange Pi cluster
+  hosts: iqtree_nodes
+  become: false
+  vars:
+    openblas_version: "0.3.27"
+    hpl_version: "2.3"
+    home_dir: "/home/{{ ansible_user }}"
+    openblas_src: "{{ home_dir }}/OpenBLAS-{{ openblas_version }}"
+    openblas_prefix: "{{ home_dir }}/openblas"
+    hpl_src: "{{ home_dir }}/hpl-{{ hpl_version }}"
+    hpl_bin: "{{ hpl_src }}/bin/arm64"
+    mpi_hosts_file: "{{ home_dir }}/mpi_hosts"
+    mpi_inc: "/usr/lib/aarch64-linux-gnu/openmpi/include"
+    mpi_lib: "/usr/lib/aarch64-linux-gnu/openmpi/lib"
+    openblas_target: "ARMV8"
+    openblas_num_threads: "8"
+
+  tasks:
+
+    # -------------------------------------------------------------------------
+    # 1. System dependencies
+    # -------------------------------------------------------------------------
+    - name: Install HPL build dependencies
+      become: true
+      apt:
+        update_cache: true
+        cache_valid_time: 3600
+        name:
+          - gcc
+          - gfortran
+          - make
+          - wget
+          - libopenmpi-dev
+          - openmpi-bin
+        state: present
+
+    # -------------------------------------------------------------------------
+    # 2. OpenBLAS — download, build, install
+    # -------------------------------------------------------------------------
+    - name: Download OpenBLAS {{ openblas_version }}
+      get_url:
+        url: "https://github.com/OpenMathLib/OpenBLAS/archive/refs/tags/v{{ openblas_version }}.tar.gz"
+        dest: "{{ home_dir }}/openblas-{{ openblas_version }}.tar.gz"
+        mode: "0644"
+
+    - name: Extract OpenBLAS source
+      unarchive:
+        src: "{{ home_dir }}/openblas-{{ openblas_version }}.tar.gz"
+        dest: "{{ home_dir }}"
+        remote_src: true
+        creates: "{{ openblas_src }}/Makefile"
+
+    - name: Build OpenBLAS (takes several minutes)
+      command: >
+        make -j{{ ansible_processor_nproc | default(8) }}
+        TARGET={{ openblas_target }}
+        DYNAMIC_ARCH=1
+        NO_SHARED=1
+        USE_OPENMP=1
+        NUM_THREADS={{ openblas_num_threads }}
+      args:
+        chdir: "{{ openblas_src }}"
+        creates: "{{ openblas_src }}/libopenblas.a"
+
+    - name: Install OpenBLAS to {{ openblas_prefix }}
+      command: >
+        make install
+        PREFIX={{ openblas_prefix }}
+        TARGET={{ openblas_target }}
+        DYNAMIC_ARCH=1
+        NO_SHARED=1
+        USE_OPENMP=1
+        NUM_THREADS={{ openblas_num_threads }}
+      args:
+        chdir: "{{ openblas_src }}"
+        creates: "{{ openblas_prefix }}/lib/libopenblas.a"
+
+    # -------------------------------------------------------------------------
+    # 3. HPL — download, configure, build
+    # -------------------------------------------------------------------------
+    - name: Download HPL {{ hpl_version }}
+      get_url:
+        url: "https://www.netlib.org/benchmark/hpl/hpl-{{ hpl_version }}.tar.gz"
+        dest: "{{ home_dir }}/hpl-{{ hpl_version }}.tar.gz"
+        mode: "0644"
+
+    - name: Extract HPL source
+      unarchive:
+        src: "{{ home_dir }}/hpl-{{ hpl_version }}.tar.gz"
+        dest: "{{ home_dir }}"
+        remote_src: true
+        creates: "{{ hpl_src }}/Makefile"
+
+    - name: Write Make.arm64
+      copy:
+        dest: "{{ hpl_src }}/Make.arm64"
+        mode: "0644"
+        content: |
+          SHELL        = /bin/sh
+          CD           = cd
+          CP           = cp
+          LN_S         = ln -s
+          MKDIR        = mkdir
+          RM           = /bin/rm -f
+          TOUCH        = touch
+          ARCH         = arm64
+          TOPdir       = {{ hpl_src }}
+          INCdir       = $(TOPdir)/include
+          BINdir       = $(TOPdir)/bin/$(ARCH)
+          LIBdir       = $(TOPdir)/lib/$(ARCH)
+          HPLlib       = $(LIBdir)/libhpl.a
+          MPdir        = /usr
+          MPinc        = -I{{ mpi_inc }}
+          MPlib        = -L{{ mpi_lib }} -lmpi
+          LAdir        = {{ openblas_prefix }}
+          LAinc        = -I$(LAdir)/include
+          LAlib        = $(LAdir)/lib/libopenblas.a -lm
+          F2CDEFS      =
+          HPL_INCLUDES = -I$(INCdir) -I$(INCdir)/$(ARCH) $(LAinc) $(MPinc)
+          HPL_LIBS     = $(HPLlib) $(LAlib) $(MPlib)
+          HPL_OPTS     = -DHPL_CALL_CBLAS
+          HPL_DEFS     = $(F2CDEFS) $(HPL_OPTS) $(HPL_INCLUDES)
+          CC           = mpicc
+          CCNOOPT      = $(HPL_DEFS)
+          CCFLAGS      = $(HPL_DEFS) -O3 -march=armv8-a -fomit-frame-pointer
+          LINKER       = mpicc
+          LINKFLAGS    = -O3 -fopenmp
+          ARCHIVER     = ar
+          ARFLAGS      = r
+          RANLIB       = echo
+
+    - name: Build HPL (takes several minutes)
+      command: make arch=arm64
+      args:
+        chdir: "{{ hpl_src }}"
+        creates: "{{ hpl_bin }}/xhpl"
+
+    - name: Verify xhpl binary exists
+      stat:
+        path: "{{ hpl_bin }}/xhpl"
+      register: xhpl_stat
+
+    - name: Assert xhpl built successfully
+      assert:
+        that: xhpl_stat.stat.exists
+        fail_msg: "xhpl not found at {{ hpl_bin }}/xhpl — build failed on {{ inventory_hostname }}"
+        success_msg: "xhpl built successfully on {{ inventory_hostname }}"
+
+    # -------------------------------------------------------------------------
+    # 4. Deploy HPL.dat — smoke test config (N=10000, single node)
+    #    Replace with HPL_cluster.dat values before full cluster run.
+    # -------------------------------------------------------------------------
+    - name: Deploy smoke test HPL.dat (N=10000, P=1, Q=1)
+      copy:
+        dest: "{{ hpl_bin }}/HPL.dat"
+        mode: "0644"
+        content: |
+          HPLinpack benchmark input file
+          Innovative Computing Laboratory, University of Tennessee
+          HPL.out      output file name (if any)
+          6            device out (6=stdout,7=stderr,file)
+          1            # of problems sizes (N)
+          10000        Ns
+          1            # of NBs
+          192          NBs
+          0            PMAP process mapping (0=Row-,1=Column-major)
+          1            # of process grids (P x Q)
+          1            Ps
+          1            Qs
+          16.0         threshold
+          1            # of panel fact
+          2            PFACTs (0=left, 1=Crout, 2=Right)
+          1            # of recursive stopping criterium
+          4            NBMINs
+          1            # of panels in recursion
+          2            NDIVs
+          1            # of recursive panel fact.
+          1            RFACTs
+          1            # of broadcast
+          0            BCASTs
+          1            # of lookahead depth
+          0            DEPTHs
+          2            SWAP
+          64           swapping threshold
+          0            L1 in (0=transposed,1=no-transposed) form
+          0            U  in (0=transposed,1=no-transposed) form
+          1            Equilibration (0=no,1=yes)
+          8            memory alignment in double (> 0)
+
+    # -------------------------------------------------------------------------
+    # 5. Generate mpi_hosts from inventory (1 slot per node)
+    # -------------------------------------------------------------------------
+    - name: Generate mpi_hosts from inventory
+      copy:
+        dest: "{{ mpi_hosts_file }}"
+        mode: "0644"
+        content: |
+          {% for host in groups['iqtree_nodes'] %}
+          {{ hostvars[host]['ansible_host'] }} slots=1
+          {% endfor %}
+
+    # -------------------------------------------------------------------------
+    # 6. Smoke test — single node, passes -x flags through mpirun correctly
+    # -------------------------------------------------------------------------
+    - name: Run single-node HPL smoke test
+      command: >
+        mpirun -np 1
+        -x OMP_NUM_THREADS={{ openblas_num_threads }}
+        -x OMP_PROC_BIND=TRUE
+        -x OMP_PLACES=cores
+        {{ hpl_bin }}/xhpl
+      args:
+        chdir: "{{ hpl_bin }}"
+      register: hpl_smoke
+      changed_when: false
+
+    - name: Assert smoke test passed
+      assert:
+        that: "'PASSED' in hpl_smoke.stdout"
+        fail_msg: "HPL smoke test FAILED on {{ inventory_hostname }}"
+        success_msg: "HPL smoke test PASSED on {{ inventory_hostname }}"
+
+    - name: Print GFlops result
+      debug:
+        msg: "{{ hpl_smoke.stdout_lines | select('match', '.*Gflops.*|.*WR.*|.*PASSED.*|.*FAILED.*') | list }}"
