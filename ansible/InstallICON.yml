@@ -1,0 +1,88 @@
+- name: Install mkexp in a virtual environment (Ubuntu, robust)
+  hosts: all
+  become: yes
+
+  vars:
+    venv_path: /opt/mkexp-venv
+    mkexp_package: "mkexp==1.0.0"   # 🔒 pin version for stability
+    mkexp_symlink: /usr/local/bin/mkexp
+
+  tasks:
+
+    - name: Ensure required Python packages are installed
+      apt:
+        name:
+          - python3
+          - python3-venv
+          - python3-pip
+        state: present
+        update_cache: yes
+
+    - name: Ensure venv parent directory exists
+      file:
+        path: "{{ venv_path }}"
+        state: directory
+        mode: "0755"
+
+    - name: Create virtual environment if missing
+      command: python3 -m venv {{ venv_path }}
+      args:
+        creates: "{{ venv_path }}/bin/python3"
+
+    - name: Ensure pip is up to date inside venv
+      pip:
+        name: pip
+        state: latest
+        virtualenv: "{{ venv_path }}"
+
+    - name: Install mkexp in virtualenv
+      pip:
+        name: "{{ mkexp_package }}"
+        state: present
+        virtualenv: "{{ venv_path }}"
+
+    - name: Check if mkexp binary exists in venv
+      stat:
+        path: "{{ venv_path }}/bin/mkexp"
+      register: mkexp_venv_bin
+
+    - name: Fail if mkexp was not installed in venv
+      fail:
+        msg: "mkexp binary not found in virtualenv"
+      when: not mkexp_venv_bin.stat.exists
+
+    - name: Create global symlink (only if not already correct)
+      file:
+        src: "{{ venv_path }}/bin/mkexp"
+        dest: "{{ mkexp_symlink }}"
+        state: link
+
+    # ✅ Verification
+
+    - name: Run mkexp --version
+      command: "{{ mkexp_symlink }} --version"
+      register: mkexp_version
+      changed_when: false
+      ignore_errors: yes
+
+    - name: Run mkexp --help if version failed
+      command: "{{ mkexp_symlink }} --help"
+      register: mkexp_help
+      changed_when: false
+      when: mkexp_version.rc != 0
+
+    - name: Fail if mkexp is not functional
+      fail:
+        msg: "mkexp command failed to execute properly"
+      when:
+        - mkexp_version.rc != 0
+        - mkexp_help.rc is not defined or mkexp_help.rc != 0
+
+    - name: Show mkexp output
+      debug:
+        msg: >-
+          {{
+            mkexp_version.stdout
+            if mkexp_version.rc == 0
+            else mkexp_help.stdout
+          }}
