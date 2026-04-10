@@ -24,6 +24,7 @@ if you view the ethernet ports from the front (where you plug it in) then WAN is
 | subnet    | 172.17.1.0/24           |
 | da router | 172.171.1.1             |
 | dns       | 8.8.8.8 8.8.4.4         |
+| static pool | 172.17.1.50 172.17.1.58 |
 | dhcp pool | 172.171.100 172.171.200 |
 | wan       | enP3p49s0               |
 | lan       | enP4p65s0               |
