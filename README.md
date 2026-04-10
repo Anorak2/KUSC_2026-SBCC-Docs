@@ -37,6 +37,6 @@ Saturday
 | - | - | - |
 | 10 am | 5 pm | Running Applications (IQ Tree, Mystery) |
 | 5 pm | 7 pm | Committee grades submissions. Teams are encouraged to take a break. | 
-| 7 pm  | 8 pm | The final results are announced? |
+| 7 pm  | 8 pm | The final results are announced |
 
 

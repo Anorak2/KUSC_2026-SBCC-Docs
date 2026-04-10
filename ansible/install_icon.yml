@@ -1,0 +1,264 @@
+---
+# =============================================================================
+# Ansible Playbook: Install ICON Model Environment
+# References:
+#   https://docs.icon-model.org/buildrun/buildrun_quickstart.html
+#   https://docs.icon-model.org/buildrun/buildrun_running.html
+#
+# This playbook clones ICON, builds it, and prepares the runtime environment.
+# It does NOT create or run any experiment — see the printed instructions
+# at the end for how to do that once the environment is ready.
+#
+# Usage:
+#   ansible-playbook install_icon.yml -i inventory.ini
+#
+# Required variables (set in inventory or group_vars):
+#   icon_src_dir        - Where to clone the ICON source tree
+#   icon_build_dir      - Out-of-source build directory
+#   icon_repo_url       - Git repository URL to clone from
+#   icon_configure_wrapper - Path relative to icon_src_dir to the configure
+#                            wrapper suitable for this machine
+#                            e.g. config/dkrz/levante.intel
+#
+# Optional variables (with defaults shown):
+#   icon_repo_version   - ""      (default branch/tag; set to pin a version)
+#   icon_make_jobs      - 8       (parallelism passed to make -j)
+#   icon_configure_args - ""      (extra flags forwarded to the configure wrapper)
+# =============================================================================
+
+- name: Install ICON model
+  hosts: cluster
+  gather_facts: true
+
+  vars:
+    icon_repo_version:   ""
+    icon_make_jobs:      8
+    icon_configure_args: ""
+    # Applied to all three compiler frontends at configure time.
+    # -march=native is safe here because each node compiles for itself.
+    icon_native_opt_flags: "-march=native -O2"
+    mkexp_venv_dir:      "{{ icon_src_dir }}/venv_mkexp"
+    icon_run_dir:        "{{ icon_src_dir }}/run"
+    icon_utils_mkexp:    "{{ icon_src_dir }}/utils/mkexp/mkexp"
+
+  tasks:
+
+    # ── 1. Validate required variables ──────────────────────────────────────
+    - name: Assert required variables are defined
+      ansible.builtin.assert:
+        that:
+          - icon_src_dir            is defined and icon_src_dir            | length > 0
+          - icon_build_dir          is defined and icon_build_dir          | length > 0
+          - icon_repo_url           is defined and icon_repo_url           | length > 0
+          - icon_configure_wrapper  is defined and icon_configure_wrapper  | length > 0
+        fail_msg: >
+          Required variables icon_src_dir, icon_build_dir, icon_repo_url, and
+          icon_configure_wrapper must all be set.
+
+    # ── 2. Create /opt/ directories and set ownership ────────────────────
+    - name: Create ICON source directory
+      ansible.builtin.file:
+        path:  "{{ icon_src_dir }}"
+        state: directory
+        owner: "{{ ansible_user }}"
+        group: "{{ ansible_user }}"
+        mode:  "0755"
+      become: true
+
+    - name: Create ICON build directory
+      ansible.builtin.file:
+        path:  "{{ icon_build_dir }}"
+        state: directory
+        owner: "{{ ansible_user }}"
+        group: "{{ ansible_user }}"
+        mode:  "0755"
+      become: true
+
+    # ── 3. Install system dependencies ──────────────────────────────────
+    # gfortran is required by ICON's configure step — without it configure
+    # exits immediately with "Fortran compiler cannot create executables".
+    # netCDF, LAPACK/BLAS, fyaml, and eccodes are all required link
+    # dependencies for a generic build (see configure FAQ in quickstart docs).
+    - name: Ensure build tools and ICON dependencies are installed
+      ansible.builtin.package:
+        name:
+          - git
+          - make
+          - gcc
+          - gfortran
+          - libnetcdf-dev
+          - libnetcdff-dev
+          - liblapack-dev
+          - libblas-dev
+          - libfyaml-dev
+          - libeccodes-dev
+          - python3
+          - python3-pip
+          - python3-venv
+        state: present
+      become: true
+
+    # ── 4. Clone ICON with submodules ────────────────────────────────────
+    # --recursive initialises all submodules; without it the configure step
+    # fails with "unable to find sources of..." (see FAQ in quickstart docs).
+    - name: Clone ICON repository with all submodules
+      ansible.builtin.git:
+        repo:      "{{ icon_repo_url }}"
+        dest:      "{{ icon_src_dir }}"
+        version:   "{{ icon_repo_version if icon_repo_version | length > 0 else 'HEAD' }}"
+        recursive: true
+        update:    false   # do not overwrite local changes on re-runs
+
+    # ── 5. Configure (out-of-source) ─────────────────────────────────────
+    # No `creates` guard: a failed configure leaves a partial Makefile behind,
+    # so guarding on it would silently skip a broken state on re-runs.
+    - name: Run configure wrapper
+      ansible.builtin.command:
+        cmd:   "{{ icon_src_dir }}/{{ icon_configure_wrapper }} {{ icon_configure_args }}"
+        chdir: "{{ icon_build_dir }}"
+      environment:
+        FCFLAGS:  "{{ icon_native_opt_flags }}"
+        CFLAGS:   "{{ icon_native_opt_flags }}"
+        CXXFLAGS: "{{ icon_native_opt_flags }}"
+      changed_when: true
+
+    # ── 6. Sync run/ tree into build directory (out-of-source requirement) ──
+    # make_runscript requires namelists, dictionaries, and helper scripts to be
+    # present under the build directory's run/ subdirectory. The configure
+    # wrapper is supposed to rsync these automatically, but does not always do
+    # so reliably for out-of-source builds. We run the rsync and symlinks
+    # explicitly here, mirroring what the docs show configure wrappers doing.
+    - name: Rsync run/ scripts and namelists into build directory
+      ansible.builtin.command:
+        cmd: >
+          rsync -uavz {{ icon_src_dir }}/run {{ icon_build_dir }}/
+          --exclude='*.in' --exclude='.*' --exclude='standard_*' --exclude=mkexp
+        chdir: "{{ icon_build_dir }}"
+      changed_when: true
+
+    - name: Symlink standard_* files into build run/ directory
+      ansible.builtin.shell:
+        cmd: "ln -sf -t run/ {{ icon_src_dir }}/run/standard_* 2>/dev/null || true"
+        chdir: "{{ icon_build_dir }}"
+      changed_when: true
+
+    - name: Symlink mkexp into build run/ directory
+      ansible.builtin.file:
+        src:   "{{ icon_src_dir }}/run/mkexp"
+        dest:  "{{ icon_build_dir }}/run/mkexp"
+        state: link
+        force: true
+
+    - name: Symlink data/ into build directory
+      ansible.builtin.file:
+        src:   "{{ icon_src_dir }}/data"
+        dest:  "{{ icon_build_dir }}/data"
+        state: link
+        force: true
+
+    - name: Symlink vertical_coord_tables into build directory
+      ansible.builtin.file:
+        src:   "{{ icon_src_dir }}/vertical_coord_tables"
+        dest:  "{{ icon_build_dir }}/vertical_coord_tables"
+        state: link
+        force: true
+
+    - name: Rsync make_runscripts into build directory
+      ansible.builtin.command:
+        cmd:     rsync -uavz {{ icon_src_dir }}/make_runscripts {{ icon_build_dir }}/
+        chdir:   "{{ icon_build_dir }}"
+      changed_when: true
+
+    # ── 8. Build ─────────────────────────────────────────────────────────
+    - name: Build ICON (make -j{{ icon_make_jobs }})
+      ansible.builtin.command:
+        cmd:     make -j{{ icon_make_jobs }}
+        chdir:   "{{ icon_build_dir }}"
+        creates: "{{ icon_build_dir }}/bin/icon"   # skip if binary already present
+
+    - name: Verify ICON binary was produced
+      ansible.builtin.stat:
+        path: "{{ icon_build_dir }}/bin/icon"
+      register: _icon_binary
+
+    - name: Fail if ICON binary is missing after build
+      ansible.builtin.fail:
+        msg: >
+          Build completed but {{ icon_build_dir }}/bin/icon was not found.
+          Check make output for errors.
+      when: not _icon_binary.stat.exists
+
+    # ── 9. Set up mkexp virtual environment ──────────────────────────────
+    - name: Create Python virtual environment for mkexp
+      ansible.builtin.command:
+        cmd:     python3 -m venv "{{ mkexp_venv_dir }}"
+        creates: "{{ mkexp_venv_dir }}/bin/activate"
+
+    - name: Install mkexp into venv
+      ansible.builtin.pip:
+        name:       "{{ icon_src_dir }}/utils/mkexp"
+        virtualenv: "{{ mkexp_venv_dir }}"
+        state:      present
+
+    # ── 10. Verify tools ───────────────────────────────────────────────────
+    - name: Confirm mkexp is callable
+      ansible.builtin.command:
+        cmd: "{{ mkexp_venv_dir }}/bin/python {{ icon_utils_mkexp }} --help"
+      register: _mkexp_help
+      changed_when: false
+      failed_when: _mkexp_help.rc not in [0, 1]
+
+    - name: Confirm make_runscripts is present
+      ansible.builtin.stat:
+        path: "{{ icon_src_dir }}/make_runscripts"
+      register: _make_runscripts_stat
+
+    - name: Warn if make_runscripts is missing
+      ansible.builtin.debug:
+        msg: >
+          WARNING: make_runscripts not found at {{ icon_src_dir }}/make_runscripts.
+          It may not have been copied into the build tree yet — see the
+          make_runscript requirements in the ICON docs.
+      when: not _make_runscripts_stat.stat.exists
+
+    # ── 11. Set ownership of all /opt/ content to ansible_user ────────────
+    - name: Set ownership of ICON directories to {{ ansible_user }}
+      ansible.builtin.file:
+        path:    "{{ item }}"
+        state:   directory
+        owner:   "{{ ansible_user }}"
+        group:   "{{ ansible_user }}"
+        recurse: true
+      loop:
+        - "{{ icon_src_dir }}"
+        - "{{ icon_build_dir }}"
+      become: true
+
+    # ── 12. Print next-step instructions ──────────────────────────────────
+    - name: Installation complete — print usage instructions
+      ansible.builtin.debug:
+        msg:
+          - "================================================================"
+          - "ICON installed on {{ inventory_hostname }}"
+          - ""
+          - "Paths:"
+          - "  Source root : {{ icon_src_dir }}"
+          - "  Build root  : {{ icon_build_dir }}"
+          - "  Binary      : {{ icon_build_dir }}/bin/icon"
+          - "  mkexp venv  : {{ mkexp_venv_dir }}"
+          - ""
+          - "To run an experiment with mkexp:"
+          - "  cd {{ icon_run_dir }}"
+          - "  cp ./examples/<template>.config ./<exp_id>.config"
+          - "  # edit <exp_id>.config as needed"
+          - "  MKEXP_PATH=.:{{ icon_build_dir }}/run \\"
+          - "    {{ mkexp_venv_dir }}/bin/python {{ icon_utils_mkexp }} <exp_id>.config"
+          - "  cd {{ icon_src_dir }}/experiments/<exp_id>/scripts"
+          - "  mpirun ./<exp_id>.run_start"
+          - ""
+          - "To run an experiment with make_runscript:"
+          - "  cd {{ icon_build_dir }}"
+          - "  ./make_runscripts <exp_name>   # e.g. aes_bubble"
+          - "  cd {{ icon_build_dir }}/run"
+          - "  mpirun ./exp.<exp_name>.run"
+          - "================================================================"
