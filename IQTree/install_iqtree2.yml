@@ -1,0 +1,215 @@
+---
+- name: Build and install IQ-TREE 2.4.0 on ARM64 Linux cluster
+  hosts: iqtree_nodes
+  become: true
+  vars:
+    iqtree_version: "v2.4.0"
+    iqtree_src_dir: "/opt/iqtree2-src"
+    iqtree_build_dir: "{{ iqtree_src_dir }}/build"
+    iqtree_build_mpi_dir: "{{ iqtree_src_dir }}/build-mpi"
+    iqtree_install_prefix: "/usr/local/bin"
+    clang_c: "clang-14"
+    clang_cxx: "clang++-14"
+    mpi_hosts_file: "/home/{{ ansible_user }}/mpi_hosts"
+    # 1 MPI process per node — -T AUTO handles thread count per-node automatically
+    mpi_slots_per_node: 1
+
+  tasks:
+
+    # ------------------------------------------------------------------ #
+    # 1. Dependencies
+    # ------------------------------------------------------------------ #
+    - name: Update apt cache
+      apt:
+        update_cache: true
+        cache_valid_time: 3600
+
+    - name: Install build and runtime dependencies
+      apt:
+        name:
+          - cmake
+          - git
+          - clang-14
+          - libboost-all-dev
+          - libeigen3-dev
+          - zlib1g-dev
+          - libomp-dev
+          - libopenmpi-dev
+          - openmpi-bin
+          - make
+          - openssh-server
+        state: present
+
+    - name: Ensure SSH service is running and enabled
+      service:
+        name: ssh
+        state: started
+        enabled: true
+
+    # ------------------------------------------------------------------ #
+    # 2. SSH keypair mesh setup
+    #    Every node gets a keypair, every node trusts every other node.
+    # ------------------------------------------------------------------ #
+    - name: Generate SSH keypair on each node (if not already present)
+      become: false
+      openssh_keypair:
+        path: "/home/{{ ansible_user }}/.ssh/id_rsa"
+        type: rsa
+        size: 4096
+        state: present
+
+    - name: Read each node's public key
+      become: false
+      slurp:
+        src: "/home/{{ ansible_user }}/.ssh/id_rsa.pub"
+      register: node_pubkey
+
+    - name: Distribute all nodes' public keys to every node's authorized_keys
+      become: false
+      authorized_key:
+        user: "{{ ansible_user }}"
+        key: "{{ hostvars[item]['node_pubkey']['content'] | b64decode }}"
+        state: present
+      loop: "{{ groups['iqtree_nodes'] }}"
+      loop_control:
+        label: "{{ item }}"
+
+    - name: Pre-populate SSH known_hosts so MPI does not get host-key prompts
+      become: false
+      known_hosts:
+        name: "{{ hostvars[item]['ansible_host'] }}"
+        key: "{{ lookup('pipe', 'ssh-keyscan -t rsa ' + hostvars[item]['ansible_host']) }}"
+        state: present
+        path: "/home/{{ ansible_user }}/.ssh/known_hosts"
+      loop: "{{ groups['iqtree_nodes'] }}"
+      loop_control:
+        label: "{{ item }}"
+
+    # ------------------------------------------------------------------ #
+    # 3. Build mpi_hosts dynamically from inventory
+    #    1 slot per node — IQ-TREE uses -T AUTO for threading within each node
+    # ------------------------------------------------------------------ #
+    - name: Generate mpi_hosts file from inventory
+      become: false
+      copy:
+        dest: "{{ mpi_hosts_file }}"
+        mode: "0644"
+        content: |
+          {% for host in groups['iqtree_nodes'] %}
+          {{ hostvars[host]['ansible_host'] }} slots={{ mpi_slots_per_node }}
+          {% endfor %}
+
+    # ------------------------------------------------------------------ #
+    # 4. Clone IQ-TREE source with submodules
+    # ------------------------------------------------------------------ #
+    - name: Clone IQ-TREE {{ iqtree_version }} with submodules
+      git:
+        repo: https://github.com/iqtree/iqtree2.git
+        dest: "{{ iqtree_src_dir }}"
+        version: "{{ iqtree_version }}"
+        recursive: true
+        depth: 1
+        force: false
+
+    # ------------------------------------------------------------------ #
+    # 5. Standard (single-node, OpenMP) build
+    # ------------------------------------------------------------------ #
+    - name: Create standard build directory
+      file:
+        path: "{{ iqtree_build_dir }}"
+        state: directory
+        mode: "0755"
+
+    - name: CMake configure — standard build (clang-14, ARM64)
+      command: >
+        cmake
+        -DCMAKE_C_COMPILER={{ clang_c }}
+        -DCMAKE_CXX_COMPILER={{ clang_cxx }}
+        -DCMAKE_BUILD_TYPE=Release
+        ..
+      args:
+        chdir: "{{ iqtree_build_dir }}"
+        creates: "{{ iqtree_build_dir }}/Makefile"
+
+    - name: Compile standard iqtree2
+      command: make -j{{ ansible_processor_nproc | default(4) }}
+      args:
+        chdir: "{{ iqtree_build_dir }}"
+        creates: "{{ iqtree_build_dir }}/iqtree2"
+
+    # ------------------------------------------------------------------ #
+    # 6. MPI (multi-node) build
+    # ------------------------------------------------------------------ #
+    - name: Create MPI build directory
+      file:
+        path: "{{ iqtree_build_mpi_dir }}"
+        state: directory
+        mode: "0755"
+
+    - name: CMake configure — MPI build
+      command: >
+        cmake
+        -DCMAKE_C_COMPILER=mpicc
+        -DCMAKE_CXX_COMPILER=mpicxx
+        -DIQTREE_FLAGS=mpi
+        -DCMAKE_BUILD_TYPE=Release
+        ..
+      args:
+        chdir: "{{ iqtree_build_mpi_dir }}"
+        creates: "{{ iqtree_build_mpi_dir }}/Makefile"
+
+    - name: Compile iqtree2-mpi
+      command: make -j{{ ansible_processor_nproc | default(4) }}
+      args:
+        chdir: "{{ iqtree_build_mpi_dir }}"
+        creates: "{{ iqtree_build_mpi_dir }}/iqtree2-mpi"
+
+    # ------------------------------------------------------------------ #
+    # 7. Install binaries system-wide
+    # ------------------------------------------------------------------ #
+    - name: Install iqtree2 to {{ iqtree_install_prefix }}
+      copy:
+        src: "{{ iqtree_build_dir }}/iqtree2"
+        dest: "{{ iqtree_install_prefix }}/iqtree2"
+        mode: "0755"
+        remote_src: true
+
+    - name: Install iqtree2-mpi to {{ iqtree_install_prefix }}
+      copy:
+        src: "{{ iqtree_build_mpi_dir }}/iqtree2-mpi"
+        dest: "{{ iqtree_install_prefix }}/iqtree2-mpi"
+        mode: "0755"
+        remote_src: true
+
+    # ------------------------------------------------------------------ #
+    # 8. Smoke tests
+    # ------------------------------------------------------------------ #
+    - name: Verify iqtree2 version
+      command: iqtree2 --version
+      register: iqtree2_version_out
+      changed_when: false
+
+    - name: Print iqtree2 version
+      debug:
+        msg: "{{ iqtree2_version_out.stdout_lines }}"
+
+    - name: Run example alignment smoke test
+      command: >
+        iqtree2
+        -s {{ iqtree_src_dir }}/example/example.phy
+        -m GTR+G
+        -T AUTO
+        --prefix /tmp/iqtree2_smoketest
+        --redo
+      changed_when: false
+
+    - name: Confirm treefile was produced
+      stat:
+        path: /tmp/iqtree2_smoketest.treefile
+      register: treefile
+
+    - name: Assert treefile exists
+      assert:
+        that: treefile.stat.exists
+        fail_msg: "Smoke test failed — treefile not produced on {{ inventory_hostname }}!"
+        success_msg: "Smoke test passed — iqtree2 2.4.0 working correctly on {{ inventory_hostname }}."
