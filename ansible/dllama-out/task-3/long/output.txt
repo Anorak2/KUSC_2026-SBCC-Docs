@@ -1,0 +1,848 @@
+📄 AddBos: 0
+📄 BosId: 128000 (<|begin_of_text|>)
+📄 EosId: 128001 (<|end_of_text|>) 128009 (<|eot_id|>) 
+📄 RegularVocabSize: 128000
+📄 SpecialVocabSize: 256
+💡 Arch: Llama
+💡 HiddenAct: Silu
+💡 Dim: 4096
+💡 HeadDim: 128
+💡 QDim: 4096
+💡 KvDim: 1024
+💡 HiddenDim: 14336
+💡 VocabSize: 128256
+💡 nLayers: 32
+💡 nHeads: 32
+💡 nKvHeads: 8
+💡 OrigSeqLen: 131072
+💡 SeqLen: 4096
+💡 NormEpsilon: 0.000010
+💡 RopeType: Llama3.1
+💡 RopeTheta: 500000
+💡 RopeScaling: f=8.0, l=1.0, h=4.0, o=8192
+📀 RequiredMemory: 3312 MB
+⭕ Socket[0]: connecting to 172.17.1.51:9999 worker
+⭕ Socket[0]: connected
+⭕ Socket[1]: connecting to 172.17.1.52:9999 worker
+⭕ Socket[1]: connected
+⭕ Socket[2]: connecting to 172.17.1.53:9999 worker
+⭕ Socket[2]: connected
+⭕ Network is initialized
+🧠 CPU: neon fp16
+💿 Loading weights...
+💿 Loaded 12/32
+💿 Loaded 13/32
+💿 Loaded 14/32
+💿 Loaded 15/32
+💿 Loaded 16/32
+💿 Loaded 17/32
+💿 Loaded 18/32
+💿 Loaded 19/32
+💿 Loaded 20/32
+💿 Loaded 21/32
+💿 Loaded 22/32
+💿 Loaded 23/32
+💿 Loaded 24/32
+💿 Loaded 25/32
+💿 Loaded 26/32
+💿 Loaded 27/32
+💿 Loaded 28/32
+💿 Loaded 29/32
+💿 Loaded 30/32
+💿 Loaded 31/32
+💿 Loaded 32/32
+💿 Weights loaded
+🚁 Network is in non-blocking mode
+Answer the question based on the given passages. Only give me the answer and do not output any other words.\n\nThe following are given passages.\nPassage 1:\nBand-e Amir National Park\nBand-e Amir National Park (Persian: \u0628\u0646\u062f \u0627\u0645\u06cc\u0631) Afghanistan established its first national park on April 22, 2009, to promote and protect the natural beauty of a series of intensely blue lakes created by natural dams high in the Hindu Kush. Band-e-Amir is a chain of six lakes in the mountainous desert of central Afghanistan. The lakes formed from mineral-rich water that seeped out of faults and cracks in the rocky landscape. Over time, the water deposited layers of hardened mineral (travertine) that built up into walls that now contain the water. According to the Wildlife Conservation Society, who helped the Afghan government set up the park, Band-e-Amir is one of the few travertine systems in the world.They were created by the carbon dioxide rich water oozing out of the faults and fractures to deposit calcium carbonate precipitate in the form of travertine walls that today store the water of these lakes. Band-e Amir is one of the few rare natural lakes in the world which are created by travertine systems. The site of Band-e Amir has been described as Afghanistan's Grand Canyon, and draws thousands of tourists a year. The river is part of the system of the Balkh River.\n\nHistory\nThe name Band-e Amir literally means \"the Ruler's Dam\" which is believed by some to be a reference to Ali, the fourth Caliph of the Muslims. The area is dominated by ethnic Hazaras, who are estimated to make up about 40 percent of Afghanistan's population.In her 1970 guide to Afghanistan, Nancy Dupree wrote that a full description about Band-e Amir would \"rob the uninitiated of the wonder and amazement it produces on all who gaze upon it\". Parts of the 1975 Bollywood film Dharmatma, with Feroz Khan and Hema Malini, were filmed at the Band-e Amir National Park.In 2004, Band-e Amir was submitted for recognition as a World Heritage site. Efforts to make Band-e Amir a national park started in the 1970s, but were then put on hold due to the wars. In April 2009, Band-e Amir was finally declared Afghanistan's first national park. As of 2013, about 6,000 local tourists visit the Band-e Amir National Park every year. The area is protected by a small number of park rangers.\n\nGeography\nBand-e Amir is situated at approximately 75 km to the north-west of the ancient city of Bamyan, close to the town of Yakawlang. Together with Bamyan Valley, they are the heart of Afghanistan's tourism, attracting thousands of tourists every year and from every corner of the world. The Band-e Amir lakes are primarily a late spring and summertime tourism destination, as the high elevation central Hazarajat region of Afghanistan is extremely cold in winter, with temperatures reaching as low as \u221220 \u00b0C (\u22124.0 \u00b0F). The six constituent lakes of Band-e Amir are:\n\nBand-e Gholaman (Lake of the slaves)\nBand-e Qambar (Lake of Caliph Ali's slave)\nBand-e Haibat (Lake of grandiose)\nBand-e Panir (Lake of cheese)\nBand-e Pudina (Lake of wild mint)\nBand-e Zulfiqar (Lake of the sword of Ali)The white travertine dams created by fault lines, which are prevalent in the Band-e Amir Valley, form the barriers between the lakes. Band-e Haibat is the biggest and the deepest of the six, with an average depth of approximately 150 metres, as estimated by the Provincial Reconstruction Team diving team from New Zealand. Another comparable lake is Band-e Azhdahar (The Dragon), located a few kilometres southeast of the town of Bamyan, which has also been created as a result of carbon dioxide rich water oozing out of the faults underground and depositing calcium carbonate precipitate to form the travertine walls of Band-e Amir.\n\nClimate\nHigh in the Hindu Kush at approximately 2,900 metres (9,500 ft) above sea level, the national park has a subarctic climate (Dsc) closely bordering on a warm-summer humid continental climate (Dsb). The climate is extremely severe and the lakes freezing over in winter.\n\nCurrent status\nAfter the formal establishment of the park in 2009, a park office with a park warden and a group of rangers was installed to manage the conservation and protection of park natural resources. Wildlife Conservation Society (WCS) is the only non-government organization with an office in the park. WCS supports park staff and works with the local community to promote conservation and sustainable use of natural resources. Ecotourism is expected to decrease local economic dependency on the park's natural resources. Tourists visit Band-e-Amir primarily in the summer months when the weather is warm. A poor local economy and limited outside investment have hampered efforts to attract winter tourism.\nThe local people in Band-e-Amir National Park rely heavily on the park's natural resources for their livelihood. Grazing of livestock, collection of shrubs for fuel and winter fodder and rain-fed farming is still widely practiced within the park boundary. Although the illegal hunting of birds and a few mammals living in the park is formally prohibited by the park office, there is no current data to evaluate the status of wildlife and biodiversity.\n\nImportant Bird Area\nA 41,000 ha tract overlapping the national park has been designated an Important Bird Area (IBA) by BirdLife International because it supports populations of Himalayan snowcocks, Hume's larks, white-winged snowfinches, Afghan snowfinches and Eurasian crimson-winged finches.\n\nSee also\nList of dams and reservoirs in Afghanistan\nNatural areas of Afghanistan\nWakhan National Park\nNuristan National Park\nPassage 2:\nQasim Oryakhail\nQasim Oryakhail (born 10 January 1992) is an Afghan cricketer. He made his Twenty20 debut for Band-e-Amir Dragons in the 2017 Shpageeza Cricket League on 12 September 2017. He made his first-class debut for Speen Ghar Region in the 2017\u201318 Ahmad Shah Abdali 4-day Tournament on 20 October 2017. He made his List A debut for Kabul Region in the 2018 Ghazi Amanullah Khan Regional One Day Tournament on 15 July 2018.\nPassage 3:\nSamim Sultani\nSamim Sultani is an Afghan cricketer. He made his Twenty20 debut for Band-e-Amir Dragons in the 2017 Shpageeza Cricket League on 14 September 2017.\nPassage 4:\nFitratullah Khawari\nFitratullah Khawari (born 29 January 1997) is an Afghan cricketer. He made his List A debut for Mis Ainak Region in the 2017 Ghazi Amanullah Khan Regional One Day Tournament on 10 August 2017. He made his Twenty20 debut for Band-e-Amir Dragons in the 2017 Shpageeza Cricket League on 18 September 2017. He made his first-class debut for Speen Ghar Region in the 2017\u201318 Ahmad Shah Abdali 4-day Tournament on 20 October 2017.In September 2018, he was named in Kabul's squad in the first edition of the Afghanistan Premier League tournament.\nPassage 5:\nIkram Faizi\nIkram Alikhil (Pashto: \u0627\u06a9\u0631\u0627\u0645 \u0641\u064a\u0636\u064a \u0639\u0644\u064a\u062e\u06d0\u0644; born 29 September 2000) is an Afghan cricketer. He made his international debut for the Afghanistan cricket team in March 2019.\n\nDomestic and U19 career\nHe made his Twenty20 debut for Band-e-Amir Dragons in the 2017 Shpageeza Cricket League on 14 September 2017. Prior to his T20 debut, he was part of Afghanistan's squad for the 2016 Under-19 Cricket World Cup. He also scored an unbeaten century in the final of the 2017 ACC Under-19 Asia Cup and helped Afghanistan to win their maiden ACC Under-19 Cup title.In December 2017, he was named in Afghanistan's squad for the 2018 Under-19 Cricket World Cup.He made his first-class debut for Speen Ghar Region in the 2018 Ahmad Shah Abdali 4-day Tournament on 1 March 2018. He made his List A debut for Speen Ghar Region in the 2018 Ghazi Amanullah Khan Regional One Day Tournament on 10 July 2018.In September 2018, he was named in Balkh's squad in the first edition of the Afghanistan Premier League tournament.\n\nInternational career\nIn December 2018, he was named in Afghanistan's under-23 team for the 2018 ACC Emerging Teams Asia Cup.In February 2019, he was named in Afghanistan's Test and One Day International (ODI) squads for their series against Ireland in India. He made his ODI debut for Afghanistan against Ireland on 2 March 2019. He made his Test debut for Afghanistan against Ireland on 15 March 2019.On 6 June 2019, he was added to Afghanistan's squad for the 2019 Cricket World Cup. He replaced Mohammad Shahzad, who was ruled out of the tournament due to a knee injury.\nPassage 6:\nArif Khan (cricketer)\nArif Khan (born 5 June 2001) is an Afghan cricketer. He made his List A debut for Band-e-Amir Region in the 2017 Ghazi Amanullah Khan Regional One Day Tournament on 10 August 2017. He made his Twenty20 debut for Band-e-Amir Dragons in the 2017 Shpageeza Cricket League on 17 September 2017. He made his first-class debut for Speen Ghar Region in the 2017\u201318 Ahmad Shah Abdali 4-day Tournament on 7 November 2017.\nPassage 7:\nMuslim Musa\nMuslim Musa (born 15 January 1997) is an Afghan cricketer. He made his List A debut for Amo Region in the 2017 Ghazi Amanullah Khan Regional One Day Tournament on 10 August 2017. Before his List A debut, he was part of Afghanistan's squad for the 2016 Under-19 Cricket World Cup.He made his Twenty20 debut for Band-e-Amir Dragons in the 2017 Shpageeza Cricket League on 12 September 2017. He made his first-class debut for Speen Ghar Region in the 2017\u201318 Ahmad Shah Abdali 4-day Tournament on 20 October 2017.In September 2018, he was named in Kabul's squad in the first edition of the Afghanistan Premier League tournament.\nPassage 8:\nBand-e-Amir Dragons\nBand-e-Amir Dragons (Pashto: \u0628\u0646\u062f \u0627\u0645\u064a\u0631 \u069a\u0627\u0645\u0627\u0631\u0627\u0646 Band-e-Am\u012br Kh\u0101m\u0101r\u0101n / Sh\u0101m\u0101r\u0101n; Dari: \u0628\u0646\u062f \u0627\u0645\u06cc\u0631 \u0634\u0627\u0645\u0627\u0631\u0627\u0646) or Band-e-Amir Region is one of eight regional first-class cricket teams in Afghanistan. In the 2017 Shpageeza team auction, the Band-e-Amir Dragons team was bought by Paragon Business Group, a Finance and investment company, and it will play as the Paragon Band-e-Amir Dragons in this competition. The Region represents the following provinces in the centre of Afghanistan: Ghazni, Bamyan, Daykundi, and Maidan Wardak. The team is named after Band-e Amir, a series of six deep blue lakes in Bamyan Province.\nBand-e-Amir Region compete in the Ahmad Shah Abdali 4-day Tournament, which has had first-class status from 2017 onwards. In October 2017, they lost their opening fixture of the tournament, against Mis Ainak Region, by 262 runs.They also play in the Ghazi Amanullah Khan Regional One Day Tournament, which was granted List A status from 2017. and the Afghan Shpageeza Cricket League Twenty20 competition (which has Twenty20 status from 2017) using the name Band-e-Amir Dragons.\nPassage 9:\nShahidullah (cricketer)\nShahidullah (born 6 February 1999) is an Afghan cricketer. He made his List A debut for Afghanistan A against Zimbabwe A during their tour to Zimbabwe on 27 January 2017. Prior to his List A debut, he was named in Afghanistan's squad for the 2014 Under-19 Cricket World Cup. He made his international debut for the Afghanistan cricket team in March 2021.\n\nCareer\nShahidullah made his Twenty20 debut for Band-e-Amir Dragons in the 2017 Shpageeza Cricket League on 12 September 2017. He made his first-class debut for Mis Ainak Region in the 2017\u201318 Ahmad Shah Abdali 4-day Tournament on 19 November 2017. He was the leading run-scorer for Mis Ainak Region in the 2018 Ahmad Shah Abdali 4-day Tournament, with 663 runs in eight matches.In September 2018, Shahidullah was named in Kabul's squad in the first edition of the Afghanistan Premier League tournament. In December 2018, he was named in Afghanistan's under-23 team for the 2018 ACC Emerging Teams Asia Cup.In August 2019, Shahidullah was named in Afghanistan's Twenty20 International (T20I) squad for the 2019\u201320 Bangladesh Tri-Nation Series. In November 2019, he was named in Afghanistan's squad for the 2019 ACC Emerging Teams Asia Cup in Bangladesh. In February 2021, he was named in Afghanistan's Test squad for their series against Zimbabwe. He made his Test debut for Afghanistan, against Zimbabwe, on 10 March 2021.In July 2021, Shahidullah was named in Afghanistan's One Day International (ODI) squad for their series against Pakistan. In January 2022, he was named in Afghanistan's ODI squad for their series against the Netherlands in Qatar. He made his ODI debut on 21 January 2022, for Afghanistan against the Netherlands.\nPassage 10:\nJaveed Khan\nJaveed Khan is an Afghan cricketer. He made his Twenty20 debut for Band-e-Amir Dragons in the 2017 Shpageeza Cricket League on 21 September 2017.\n\nAnswer the question based on the given passages. Only give me the answer and do not output any other words.\n\nWhich film had parts filmed in the Band-e Amir National Park?\nAnswer:
+🔷️ Eval 6181 ms Sync  724 ms | Sent 27648 kB Recv 38136 kB | (32 tokens)
+🔷️ Eval 6199 ms Sync  695 ms | Sent 27648 kB Recv 38136 kB | (32 tokens)
+🔷️ Eval 6166 ms Sync  711 ms | Sent 27648 kB Recv 38136 kB | (32 tokens)
+🔷️ Eval 6178 ms Sync  716 ms | Sent 27648 kB Recv 38136 kB | (32 tokens)
+🔷️ Eval 6194 ms Sync  708 ms | Sent 27648 kB Recv 38136 kB | (32 tokens)
+🔷️ Eval 6251 ms Sync  701 ms | Sent 27648 kB Recv 38136 kB | (32 tokens)
+🔷️ Eval 6259 ms Sync  715 ms | Sent 27648 kB Recv 38136 kB | (32 tokens)
+🔷️ Eval 6274 ms Sync  706 ms | Sent 27648 kB Recv 38136 kB | (32 tokens)
+🔷️ Eval 6290 ms Sync  707 ms | Sent 27648 kB Recv 38136 kB | (32 tokens)
+🔷️ Eval 6342 ms Sync  693 ms | Sent 27648 kB Recv 38136 kB | (32 tokens)
+🔷️ Eval 6328 ms Sync  706 ms | Sent 27648 kB Recv 38136 kB | (32 tokens)
+🔷️ Eval 6344 ms Sync  716 ms | Sent 27648 kB Recv 38136 kB | (32 tokens)
+🔷️ Eval 6362 ms Sync  715 ms | Sent 27648 kB Recv 38136 kB | (32 tokens)
+🔷️ Eval 6377 ms Sync  715 ms | Sent 27648 kB Recv 38136 kB | (32 tokens)
+🔷️ Eval 6393 ms Sync  716 ms | Sent 27648 kB Recv 38136 kB | (32 tokens)
+🔷️ Eval 6414 ms Sync  756 ms | Sent 27648 kB Recv 38136 kB | (32 tokens)
+🔷️ Eval 6436 ms Sync  763 ms | Sent 27648 kB Recv 38136 kB | (32 tokens)
+🔷️ Eval 6438 ms Sync 1125 ms | Sent 27648 kB Recv 38136 kB | (32 tokens)
+🔷️ Eval 6423 ms Sync  726 ms | Sent 27648 kB Recv 38136 kB | (32 tokens)
+🔷️ Eval 6466 ms Sync  862 ms | Sent 27648 kB Recv 38136 kB | (32 tokens)
+🔷️ Eval 6483 ms Sync 1124 ms | Sent 27648 kB Recv 38136 kB | (32 tokens)
+🔷️ Eval 6499 ms Sync 1255 ms | Sent 27648 kB Recv 38136 kB | (32 tokens)
+🔷️ Eval 6525 ms Sync 1322 ms | Sent 27648 kB Recv 38136 kB | (32 tokens)
+🔷️ Eval 6533 ms Sync  980 ms | Sent 27648 kB Recv 38136 kB | (32 tokens)
+🔷️ Eval 6859 ms Sync  816 ms | Sent 27648 kB Recv 38136 kB | (32 tokens)
+🔷️ Eval 6768 ms Sync 1166 ms | Sent 27648 kB Recv 38136 kB | (32 tokens)
+🔷️ Eval 6822 ms Sync 1766 ms | Sent 27648 kB Recv 38136 kB | (32 tokens)
+🔷️ Eval 6950 ms Sync  731 ms | Sent 27648 kB Recv 38136 kB | (32 tokens)
+🔷️ Eval 6973 ms Sync  992 ms | Sent 27648 kB Recv 38136 kB | (32 tokens)
+🔷️ Eval 7088 ms Sync 1300 ms | Sent 27648 kB Recv 38136 kB | (32 tokens)
+🔷️ Eval 7016 ms Sync  707 ms | Sent 27648 kB Recv 38136 kB | (32 tokens)
+🔷️ Eval 7092 ms Sync 1847 ms | Sent 27648 kB Recv 38136 kB | (32 tokens)
+🔷️ Eval 7046 ms Sync 1348 ms | Sent 27648 kB Recv 38136 kB | (32 tokens)
+🔷️ Eval 7092 ms Sync  999 ms | Sent 27648 kB Recv 38136 kB | (32 tokens)
+🔷️ Eval 7251 ms Sync  958 ms | Sent 27648 kB Recv 38136 kB | (32 tokens)
+🔷️ Eval 7663 ms Sync  814 ms | Sent 27648 kB Recv 38136 kB | (32 tokens)
+🔷️ Eval 7206 ms Sync  892 ms | Sent 27648 kB Recv 38136 kB | (32 tokens)
+🔷️ Eval 7461 ms Sync 1411 ms | Sent 27648 kB Recv 38136 kB | (32 tokens)
+🔷️ Eval 7238 ms Sync 1951 ms | Sent 27648 kB Recv 38136 kB | (32 tokens)
+🔷️ Eval 7401 ms Sync 1631 ms | Sent 27648 kB Recv 38136 kB | (32 tokens)
+🔷️ Eval 7705 ms Sync 1620 ms | Sent 27648 kB Recv 38136 kB | (32 tokens)
+🔷️ Eval 7716 ms Sync 1278 ms | Sent 27648 kB Recv 38136 kB | (32 tokens)
+🔷️ Eval 7514 ms Sync 1418 ms | Sent 27648 kB Recv 38136 kB | (32 tokens)
+🔷️ Eval 7455 ms Sync  929 ms | Sent 27648 kB Recv 38136 kB | (32 tokens)
+🔷️ Eval 7600 ms Sync 2173 ms | Sent 27648 kB Recv 38136 kB | (32 tokens)
+🔷️ Eval 7322 ms Sync 2244 ms | Sent 27648 kB Recv 38136 kB | (32 tokens)
+🔷️ Eval 7520 ms Sync 1544 ms | Sent 27648 kB Recv 38136 kB | (32 tokens)
+🔷️ Eval 7666 ms Sync  972 ms | Sent 27648 kB Recv 38136 kB | (32 tokens)
+🔷️ Eval 7636 ms Sync 2044 ms | Sent 27648 kB Recv 38136 kB | (32 tokens)
+🔷️ Eval 7635 ms Sync 1476 ms | Sent 27648 kB Recv 38136 kB | (32 tokens)
+🔷️ Eval 8433 ms Sync 1006 ms | Sent 27648 kB Recv 38136 kB | (32 tokens)
+🔷️ Eval 7909 ms Sync 1543 ms | Sent 27648 kB Recv 38136 kB | (32 tokens)
+🔷️ Eval 8354 ms Sync  793 ms | Sent 27648 kB Recv 38136 kB | (32 tokens)
+🔷️ Eval 7736 ms Sync 1576 ms | Sent 27648 kB Recv 38136 kB | (32 tokens)
+🔷️ Eval 8006 ms Sync 1136 ms | Sent 27648 kB Recv 38136 kB | (32 tokens)
+🔷️ Eval 8321 ms Sync  869 ms | Sent 27648 kB Recv 38136 kB | (32 tokens)
+🔷️ Eval 8855 ms Sync 1039 ms | Sent 27648 kB Recv 38136 kB | (32 tokens)
+🔷️ Eval 8108 ms Sync 1871 ms | Sent 27648 kB Recv 38136 kB | (32 tokens)
+🔷️ Eval 8071 ms Sync 1563 ms | Sent 27648 kB Recv 38136 kB | (32 tokens)
+🔷️ Eval 7880 ms Sync 2351 ms | Sent 27648 kB Recv 38136 kB | (32 tokens)
+🔷️ Eval 8346 ms Sync 1647 ms | Sent 27648 kB Recv 38136 kB | (32 tokens)
+🔷️ Eval 8483 ms Sync 2836 ms | Sent 27648 kB Recv 38136 kB | (32 tokens)
+🔷️ Eval 7818 ms Sync 1328 ms | Sent 27648 kB Recv 38136 kB | (32 tokens)
+🔷️ Eval 8826 ms Sync 1896 ms | Sent 27648 kB Recv 38136 kB | (32 tokens)
+🔷️ Eval 8232 ms Sync 1549 ms | Sent 27648 kB Recv 38136 kB | (32 tokens)
+🔷️ Eval 8192 ms Sync 2265 ms | Sent 27648 kB Recv 38136 kB | (32 tokens)
+🔷️ Eval 8841 ms Sync  906 ms | Sent 27648 kB Recv 38136 kB | (32 tokens)
+🔷️ Eval 8392 ms Sync 2314 ms | Sent 27648 kB Recv 38136 kB | (32 tokens)
+🔷️ Eval 8566 ms Sync 1208 ms | Sent 27648 kB Recv 38136 kB | (32 tokens)
+🔷️ Eval 8226 ms Sync 1734 ms | Sent 27648 kB Recv 38136 kB | (32 tokens)
+🔷️ Eval 8422 ms Sync 1738 ms | Sent 27648 kB Recv 38136 kB | (32 tokens)
+🔷️ Eval 8358 ms Sync 1859 ms | Sent 27648 kB Recv 38136 kB | (32 tokens)
+🔷️ Eval 8451 ms Sync 1888 ms | Sent 27648 kB Recv 38136 kB | (32 tokens)
+🔷️ Eval 8771 ms Sync 2296 ms | Sent 27648 kB Recv 38136 kB | (32 tokens)
+🔷️ Eval 9354 ms Sync  879 ms | Sent 27648 kB Recv 38136 kB | (32 tokens)
+🔷️ Eval 8926 ms Sync  797 ms | Sent 27648 kB Recv 38136 kB | (32 tokens)
+🔷️ Eval 8759 ms Sync 1526 ms | Sent 27648 kB Recv 38136 kB | (32 tokens)
+🔷️ Eval 9720 ms Sync 1111 ms | Sent 27648 kB Recv 38136 kB | (32 tokens)
+🔷️ Eval 8386 ms Sync 2540 ms | Sent 27648 kB Recv 38136 kB | (32 tokens)
+🔷️ Eval 9166 ms Sync 3547 ms | Sent 27648 kB Recv 38136 kB | (32 tokens)
+🔷️ Eval 9428 ms Sync 1156 ms | Sent 27648 kB Recv 38136 kB | (32 tokens)
+🔷️ Eval 8650 ms Sync 4160 ms | Sent 27648 kB Recv 38136 kB | (32 tokens)
+🔷️ Eval 8760 ms Sync 2043 ms | Sent 27648 kB Recv 38136 kB | (32 tokens)
+🔷️ Eval 9477 ms Sync 1333 ms | Sent 27648 kB Recv 38136 kB | (32 tokens)
+🔷️ Eval 8330 ms Sync 1927 ms | Sent 27648 kB Recv 38136 kB | (32 tokens)
+🔷️ Eval 9303 ms Sync 1833 ms | Sent 27648 kB Recv 38136 kB | (32 tokens)
+🔷️ Eval10053 ms Sync 1527 ms | Sent 27648 kB Recv 38136 kB | (32 tokens)
+🔷️ Eval 8936 ms Sync 2707 ms | Sent 27648 kB Recv 38136 kB | (32 tokens)
+🔷️ Eval 8908 ms Sync 1306 ms | Sent 27648 kB Recv 38136 kB | (32 tokens)
+🔷️ Eval10209 ms Sync 1775 ms | Sent 27648 kB Recv 38136 kB | (32 tokens)
+🔷️ Eval 9185 ms Sync 1980 ms | Sent 27648 kB Recv 38136 kB | (32 tokens)
+🔷️ Eval10391 ms Sync 1079 ms | Sent 27648 kB Recv 38136 kB | (32 tokens)
+🔷️ Eval 8978 ms Sync 2377 ms | Sent 27648 kB Recv 38136 kB | (32 tokens)
+🔷️ Eval 9476 ms Sync 1316 ms | Sent 27648 kB Recv 38136 kB | (32 tokens)
+🔷️ Eval10462 ms Sync  863 ms | Sent 27648 kB Recv 38136 kB | (32 tokens)
+🔷️ Eval 9519 ms Sync 1471 ms | Sent 27648 kB Recv 38136 kB | (32 tokens)
+🔷️ Eval 9095 ms Sync 4289 ms | Sent 27648 kB Recv 38136 kB | (32 tokens)
+🔷️ Eval 9138 ms Sync 1871 ms | Sent 27648 kB Recv 38136 kB | (32 tokens)
+🔷️ Eval 9669 ms Sync 1461 ms | Sent 27648 kB Recv 38136 kB | (32 tokens)
+🔷️ Eval11135 ms Sync  940 ms | Sent 27648 kB Recv 38136 kB | (32 tokens)
+🔷️ Eval 9881 ms Sync 1406 ms | Sent 27648 kB Recv 38136 kB | (32 tokens)
+🔷️ Eval 8717 ms Sync 3316 ms | Sent 27648 kB Recv 38136 kB | (32 tokens)
+🔷️ Eval 9367 ms Sync 1753 ms | Sent 27648 kB Recv 38136 kB | (32 tokens)
+🔷️ Eval 8582 ms Sync 1377 ms | Sent 24192 kB Recv 33369 kB | (28 tokens)
+🔶 Pred  323 ms Sync   30 ms | Sent   864 kB Recv  1191 kB |  Dh
+🔶 Pred  297 ms Sync   38 ms | Sent   864 kB Recv  1191 kB | arm
+🔶 Pred  327 ms Sync   32 ms | Sent   864 kB Recv  1191 kB | at
+🔶 Pred  322 ms Sync   37 ms | Sent   864 kB Recv  1191 kB | ma
+🔶 Pred  295 ms Sync   45 ms | Sent   864 kB Recv  1191 kB | .
+🔶 Pred  298 ms Sync   38 ms | Sent   864 kB Recv  1191 kB |  }
+🔶 Pred  300 ms Sync   50 ms | Sent   864 kB Recv  1191 kB | "
+
+
+🔶 Pred  317 ms Sync   74 ms | Sent   864 kB Recv  1191 kB | I
+🔶 Pred  306 ms Sync   43 ms | Sent   864 kB Recv  1191 kB |  will
+🔶 Pred  314 ms Sync   35 ms | Sent   864 kB Recv  1191 kB |  solve
+🔶 Pred  314 ms Sync   41 ms | Sent   864 kB Recv  1191 kB |  it
+🔶 Pred  312 ms Sync   37 ms | Sent   864 kB Recv  1191 kB |  now
+🔶 Pred  323 ms Sync   42 ms | Sent   864 kB Recv  1191 kB | .
+
+🔶 Pred  320 ms Sync   46 ms | Sent   864 kB Recv  1191 kB | The
+🔶 Pred  300 ms Sync   47 ms | Sent   864 kB Recv  1191 kB |  answer
+🔶 Pred  295 ms Sync   56 ms | Sent   864 kB Recv  1191 kB |  is
+🔶 Pred  311 ms Sync   37 ms | Sent   864 kB Recv  1191 kB |  Dh
+🔶 Pred  290 ms Sync   48 ms | Sent   864 kB Recv  1191 kB | arm
+🔶 Pred  309 ms Sync   39 ms | Sent   864 kB Recv  1191 kB | at
+🔶 Pred  296 ms Sync   47 ms | Sent   864 kB Recv  1191 kB | ma
+🔶 Pred  304 ms Sync  183 ms | Sent   864 kB Recv  1191 kB | .
+🔶 Pred  284 ms Sync  207 ms | Sent   864 kB Recv  1191 kB |  }
+🔶 Pred  288 ms Sync   52 ms | Sent   864 kB Recv  1191 kB | "
+🔶 Pred  292 ms Sync  156 ms | Sent   864 kB Recv  1191 kB | DH
+🔶 Pred  286 ms Sync   53 ms | Sent   864 kB Recv  1191 kB | ARM
+🔶 Pred  286 ms Sync   93 ms | Sent   864 kB Recv  1191 kB | AT
+🔶 Pred  285 ms Sync   55 ms | Sent   864 kB Recv  1191 kB | MA
+🔶 Pred  311 ms Sync   33 ms | Sent   864 kB Recv  1191 kB | "
+🔶 Pred  311 ms Sync   87 ms | Sent   864 kB Recv  1191 kB | {}
+🔶 Pred  302 ms Sync   89 ms | Sent   864 kB Recv  1191 kB | {}
+🔶 Pred  281 ms Sync   97 ms | Sent   864 kB Recv  1191 kB | {}
+🔶 Pred  289 ms Sync   44 ms | Sent   864 kB Recv  1191 kB | {}
+🔶 Pred  291 ms Sync  114 ms | Sent   864 kB Recv  1191 kB | {}
+🔶 Pred  286 ms Sync   42 ms | Sent   864 kB Recv  1191 kB | {}
+🔶 Pred  308 ms Sync   33 ms | Sent   864 kB Recv  1191 kB | {}
+🔶 Pred  301 ms Sync   80 ms | Sent   864 kB Recv  1191 kB | {}
+🔶 Pred  282 ms Sync   79 ms | Sent   864 kB Recv  1191 kB | {}
+🔶 Pred  301 ms Sync   57 ms | Sent   864 kB Recv  1191 kB | {}
+🔶 Pred  305 ms Sync   33 ms | Sent   864 kB Recv  1191 kB | {}
+🔶 Pred  307 ms Sync   47 ms | Sent   864 kB Recv  1191 kB | {}
+🔶 Pred  309 ms Sync   39 ms | Sent   864 kB Recv  1191 kB | {}
+🔶 Pred  295 ms Sync   42 ms | Sent   864 kB Recv  1191 kB | {}
+🔶 Pred  288 ms Sync   47 ms | Sent   864 kB Recv  1191 kB | {}
+🔶 Pred  290 ms Sync   53 ms | Sent   864 kB Recv  1191 kB | {}
+🔶 Pred  291 ms Sync   42 ms | Sent   864 kB Recv  1191 kB | {}
+🔶 Pred  311 ms Sync   33 ms | Sent   864 kB Recv  1191 kB | {}
+🔶 Pred  328 ms Sync   26 ms | Sent   864 kB Recv  1191 kB | {}
+🔶 Pred  295 ms Sync   35 ms | Sent   864 kB Recv  1191 kB | {}
+🔶 Pred  285 ms Sync   49 ms | Sent   864 kB Recv  1191 kB | {}
+🔶 Pred  313 ms Sync   40 ms | Sent   864 kB Recv  1191 kB | {}
+🔶 Pred  330 ms Sync   25 ms | Sent   864 kB Recv  1191 kB | {}
+🔶 Pred  321 ms Sync   36 ms | Sent   864 kB Recv  1191 kB | {}
+🔶 Pred  311 ms Sync   42 ms | Sent   864 kB Recv  1191 kB | {}
+🔶 Pred  329 ms Sync   27 ms | Sent   864 kB Recv  1191 kB | {}
+🔶 Pred  335 ms Sync   27 ms | Sent   864 kB Recv  1191 kB | {}
+🔶 Pred  331 ms Sync   29 ms | Sent   864 kB Recv  1191 kB | {}
+🔶 Pred  310 ms Sync   40 ms | Sent   864 kB Recv  1191 kB | {}
+🔶 Pred  308 ms Sync   37 ms | Sent   864 kB Recv  1191 kB | {}
+🔶 Pred  295 ms Sync   44 ms | Sent   864 kB Recv  1191 kB | {}
+🔶 Pred  296 ms Sync   46 ms | Sent   864 kB Recv  1191 kB | {}
+🔶 Pred  304 ms Sync   39 ms | Sent   864 kB Recv  1191 kB | {}
+🔶 Pred  308 ms Sync   58 ms | Sent   864 kB Recv  1191 kB | {}
+🔶 Pred  297 ms Sync   65 ms | Sent   864 kB Recv  1191 kB | {}
+🔶 Pred  312 ms Sync   35 ms | Sent   864 kB Recv  1191 kB | {}
+🔶 Pred  304 ms Sync   39 ms | Sent   864 kB Recv  1191 kB | {}
+🔶 Pred  310 ms Sync   47 ms | Sent   864 kB Recv  1191 kB | {}
+🔶 Pred  301 ms Sync   46 ms | Sent   864 kB Recv  1191 kB | {}
+🔶 Pred  300 ms Sync   64 ms | Sent   864 kB Recv  1191 kB | {}
+🔶 Pred  303 ms Sync   43 ms | Sent   864 kB Recv  1191 kB | {}
+🔶 Pred  294 ms Sync   61 ms | Sent   864 kB Recv  1191 kB | {}
+🔶 Pred  297 ms Sync   49 ms | Sent   864 kB Recv  1191 kB | {}
+🔶 Pred  303 ms Sync   69 ms | Sent   864 kB Recv  1191 kB | {}
+🔶 Pred  292 ms Sync   59 ms | Sent   864 kB Recv  1191 kB | {}
+🔶 Pred  344 ms Sync   41 ms | Sent   864 kB Recv  1191 kB | {}
+🔶 Pred  333 ms Sync   32 ms | Sent   864 kB Recv  1191 kB | {}
+🔶 Pred  323 ms Sync   47 ms | Sent   864 kB Recv  1191 kB | {}
+🔶 Pred  319 ms Sync   49 ms | Sent   864 kB Recv  1191 kB | {}
+🔶 Pred  291 ms Sync   65 ms | Sent   864 kB Recv  1191 kB | {}
+🔶 Pred  292 ms Sync   50 ms | Sent   864 kB Recv  1191 kB | {}
+🔶 Pred  284 ms Sync   81 ms | Sent   864 kB Recv  1191 kB | {}
+🔶 Pred  296 ms Sync   86 ms | Sent   864 kB Recv  1191 kB | {}
+🔶 Pred  294 ms Sync   57 ms | Sent   864 kB Recv  1191 kB | {}
+🔶 Pred  323 ms Sync   50 ms | Sent   864 kB Recv  1191 kB | {}
+🔶 Pred  311 ms Sync   36 ms | Sent   864 kB Recv  1191 kB | {}
+🔶 Pred  292 ms Sync   64 ms | Sent   864 kB Recv  1191 kB | {}
+🔶 Pred  308 ms Sync   53 ms | Sent   864 kB Recv  1191 kB | {}
+🔶 Pred  302 ms Sync   86 ms | Sent   864 kB Recv  1191 kB | {}
+🔶 Pred  303 ms Sync   86 ms | Sent   864 kB Recv  1191 kB | {}
+🔶 Pred  300 ms Sync   77 ms | Sent   864 kB Recv  1191 kB | {}
+🔶 Pred  313 ms Sync   76 ms | Sent   864 kB Recv  1191 kB | {}
+🔶 Pred  288 ms Sync   96 ms | Sent   864 kB Recv  1191 kB | {}
+🔶 Pred  299 ms Sync   78 ms | Sent   864 kB Recv  1191 kB | {}
+🔶 Pred  299 ms Sync   90 ms | Sent   864 kB Recv  1191 kB | {}
+🔶 Pred  296 ms Sync   96 ms | Sent   864 kB Recv  1191 kB | {}
+🔶 Pred  297 ms Sync   91 ms | Sent   864 kB Recv  1191 kB | {}
+🔶 Pred  298 ms Sync   87 ms | Sent   864 kB Recv  1191 kB | {}
+🔶 Pred  307 ms Sync   58 ms | Sent   864 kB Recv  1191 kB | {}
+🔶 Pred  294 ms Sync   74 ms | Sent   864 kB Recv  1191 kB | {}
+🔶 Pred  309 ms Sync   54 ms | Sent   864 kB Recv  1191 kB | {}
+🔶 Pred  298 ms Sync   45 ms | Sent   864 kB Recv  1191 kB | {}
+🔶 Pred  309 ms Sync   45 ms | Sent   864 kB Recv  1191 kB | {}
+🔶 Pred  301 ms Sync   75 ms | Sent   864 kB Recv  1191 kB | {}
+🔶 Pred  318 ms Sync   52 ms | Sent   864 kB Recv  1191 kB | {}
+🔶 Pred  317 ms Sync   35 ms | Sent   864 kB Recv  1191 kB | {}
+🔶 Pred  296 ms Sync   48 ms | Sent   864 kB Recv  1191 kB | {}
+🔶 Pred  297 ms Sync   68 ms | Sent   864 kB Recv  1191 kB | {}
+🔶 Pred  298 ms Sync   69 ms | Sent   864 kB Recv  1191 kB | {}
+🔶 Pred  311 ms Sync   55 ms | Sent   864 kB Recv  1191 kB | {}
+🔶 Pred  312 ms Sync   54 ms | Sent   864 kB Recv  1191 kB | {}
+🔶 Pred  324 ms Sync   48 ms | Sent   864 kB Recv  1191 kB | {}
+🔶 Pred  332 ms Sync   34 ms | Sent   864 kB Recv  1191 kB | {}
+🔶 Pred  316 ms Sync   46 ms | Sent   864 kB Recv  1191 kB | {}
+🔶 Pred  313 ms Sync   49 ms | Sent   864 kB Recv  1191 kB | {}
+🔶 Pred  306 ms Sync   66 ms | Sent   864 kB Recv  1191 kB | {}
+🔶 Pred  314 ms Sync   47 ms | Sent   864 kB Recv  1191 kB | {}
+🔶 Pred  303 ms Sync   57 ms | Sent   864 kB Recv  1191 kB | {}
+🔶 Pred  300 ms Sync   79 ms | Sent   864 kB Recv  1191 kB | {}
+🔶 Pred  299 ms Sync   62 ms | Sent   864 kB Recv  1191 kB | {}
+🔶 Pred  305 ms Sync   46 ms | Sent   864 kB Recv  1191 kB | {}
+🔶 Pred  300 ms Sync   72 ms | Sent   864 kB Recv  1191 kB | {}
+🔶 Pred  302 ms Sync   67 ms | Sent   864 kB Recv  1191 kB | {}
+🔶 Pred  310 ms Sync   62 ms | Sent   864 kB Recv  1191 kB | {}
+🔶 Pred  322 ms Sync   47 ms | Sent   864 kB Recv  1191 kB | {}
+🔶 Pred  295 ms Sync   69 ms | Sent   864 kB Recv  1191 kB | {}
+🔶 Pred  296 ms Sync   73 ms | Sent   864 kB Recv  1191 kB | {}
+🔶 Pred  293 ms Sync   72 ms | Sent   864 kB Recv  1191 kB | {}
+🔶 Pred  294 ms Sync   68 ms | Sent   864 kB Recv  1191 kB | {}
+🔶 Pred  338 ms Sync   39 ms | Sent   864 kB Recv  1191 kB | {}
+🔶 Pred  331 ms Sync   42 ms | Sent   864 kB Recv  1191 kB | {}
+🔶 Pred  341 ms Sync   43 ms | Sent   864 kB Recv  1191 kB | {}
+🔶 Pred  292 ms Sync   66 ms | Sent   864 kB Recv  1191 kB | {}
+🔶 Pred  319 ms Sync   55 ms | Sent   864 kB Recv  1191 kB | {}
+🔶 Pred  296 ms Sync   68 ms | Sent   864 kB Recv  1191 kB | {}
+🔶 Pred  293 ms Sync   74 ms | Sent   864 kB Recv  1191 kB | {}
+🔶 Pred  303 ms Sync   67 ms | Sent   864 kB Recv  1191 kB | {}
+🔶 Pred  331 ms Sync   47 ms | Sent   864 kB Recv  1191 kB | {}
+🔶 Pred  322 ms Sync   50 ms | Sent   864 kB Recv  1191 kB | {}
+🔶 Pred  319 ms Sync   48 ms | Sent   864 kB Recv  1191 kB | {}
+🔶 Pred  313 ms Sync   68 ms | Sent   864 kB Recv  1191 kB | {}
+🔶 Pred  340 ms Sync   67 ms | Sent   864 kB Recv  1191 kB | {}
+🔶 Pred  330 ms Sync   33 ms | Sent   864 kB Recv  1191 kB | {}
+🔶 Pred  340 ms Sync   55 ms | Sent   864 kB Recv  1191 kB | {}
+🔶 Pred  293 ms Sync   98 ms | Sent   864 kB Recv  1191 kB | {}
+🔶 Pred  342 ms Sync   69 ms | Sent   864 kB Recv  1191 kB | {}
+🔶 Pred  326 ms Sync   64 ms | Sent   864 kB Recv  1191 kB | {}
+🔶 Pred  297 ms Sync   96 ms | Sent   864 kB Recv  1191 kB | {}
+🔶 Pred  331 ms Sync   62 ms | Sent   864 kB Recv  1191 kB | {}
+🔶 Pred  329 ms Sync   68 ms | Sent   864 kB Recv  1191 kB | {}
+🔶 Pred  294 ms Sync   87 ms | Sent   864 kB Recv  1191 kB | {}
+🔶 Pred  305 ms Sync   67 ms | Sent   864 kB Recv  1191 kB | {}
+🔶 Pred  292 ms Sync   91 ms | Sent   864 kB Recv  1191 kB | {}
+🔶 Pred  313 ms Sync   71 ms | Sent   864 kB Recv  1191 kB | {}
+🔶 Pred  311 ms Sync   39 ms | Sent   864 kB Recv  1191 kB | {}
+🔶 Pred  314 ms Sync   41 ms | Sent   864 kB Recv  1191 kB | {}
+🔶 Pred  300 ms Sync   49 ms | Sent   864 kB Recv  1191 kB | {}
+🔶 Pred  315 ms Sync   60 ms | Sent   864 kB Recv  1191 kB | {}
+🔶 Pred  297 ms Sync   80 ms | Sent   864 kB Recv  1191 kB | {}
+🔶 Pred  305 ms Sync   72 ms | Sent   864 kB Recv  1191 kB | {}
+🔶 Pred  302 ms Sync  104 ms | Sent   864 kB Recv  1191 kB | {}
+🔶 Pred  301 ms Sync   90 ms | Sent   864 kB Recv  1191 kB | {}
+🔶 Pred  297 ms Sync   94 ms | Sent   864 kB Recv  1191 kB | {}
+🔶 Pred  292 ms Sync  104 ms | Sent   864 kB Recv  1191 kB | {}
+🔶 Pred  301 ms Sync  101 ms | Sent   864 kB Recv  1191 kB | {}
+🔶 Pred  295 ms Sync  117 ms | Sent   864 kB Recv  1191 kB | {}
+🔶 Pred  311 ms Sync   93 ms | Sent   864 kB Recv  1191 kB | {}
+🔶 Pred  310 ms Sync   89 ms | Sent   864 kB Recv  1191 kB | {}
+🔶 Pred  294 ms Sync  141 ms | Sent   864 kB Recv  1191 kB | {}
+🔶 Pred  300 ms Sync  176 ms | Sent   864 kB Recv  1191 kB | {}
+🔶 Pred  299 ms Sync  143 ms | Sent   864 kB Recv  1191 kB | {}
+🔶 Pred  292 ms Sync  155 ms | Sent   864 kB Recv  1191 kB | {}
+🔶 Pred  302 ms Sync   56 ms | Sent   864 kB Recv  1191 kB | {}
+🔶 Pred  309 ms Sync  174 ms | Sent   864 kB Recv  1191 kB | {}
+🔶 Pred  295 ms Sync  142 ms | Sent   864 kB Recv  1191 kB | {}
+🔶 Pred  304 ms Sync   62 ms | Sent   864 kB Recv  1191 kB | {}
+🔶 Pred  321 ms Sync  160 ms | Sent   864 kB Recv  1191 kB | {}
+🔶 Pred  315 ms Sync  125 ms | Sent   864 kB Recv  1191 kB | {}
+🔶 Pred  327 ms Sync   90 ms | Sent   864 kB Recv  1191 kB | {}
+🔶 Pred  319 ms Sync  132 ms | Sent   864 kB Recv  1191 kB | {}
+🔶 Pred  298 ms Sync  151 ms | Sent   864 kB Recv  1191 kB | {}
+🔶 Pred  300 ms Sync  124 ms | Sent   864 kB Recv  1191 kB | {}
+🔶 Pred  299 ms Sync  156 ms | Sent   864 kB Recv  1191 kB | {}
+🔶 Pred  294 ms Sync  165 ms | Sent   864 kB Recv  1191 kB | {}
+🔶 Pred  300 ms Sync  145 ms | Sent   864 kB Recv  1191 kB | {}
+🔶 Pred  296 ms Sync  121 ms | Sent   864 kB Recv  1191 kB | {}
+🔶 Pred  294 ms Sync   67 ms | Sent   864 kB Recv  1191 kB | {}
+🔶 Pred  307 ms Sync   86 ms | Sent   864 kB Recv  1191 kB | {}
+🔶 Pred  303 ms Sync   77 ms | Sent   864 kB Recv  1191 kB | {}
+🔶 Pred  296 ms Sync  122 ms | Sent   864 kB Recv  1191 kB | {}
+🔶 Pred  306 ms Sync  104 ms | Sent   864 kB Recv  1191 kB | {}
+🔶 Pred  298 ms Sync  111 ms | Sent   864 kB Recv  1191 kB | {}
+🔶 Pred  308 ms Sync   98 ms | Sent   864 kB Recv  1191 kB | {}
+🔶 Pred  297 ms Sync  105 ms | Sent   864 kB Recv  1191 kB | {}
+🔶 Pred  302 ms Sync   99 ms | Sent   864 kB Recv  1191 kB | {}
+🔶 Pred  304 ms Sync   90 ms | Sent   864 kB Recv  1191 kB | {}
+🔶 Pred  310 ms Sync   99 ms | Sent   864 kB Recv  1191 kB | {}
+🔶 Pred  302 ms Sync  116 ms | Sent   864 kB Recv  1191 kB | {}
+🔶 Pred  307 ms Sync   50 ms | Sent   864 kB Recv  1191 kB | {}
+🔶 Pred  324 ms Sync   83 ms | Sent   864 kB Recv  1191 kB | {}
+🔶 Pred  299 ms Sync  104 ms | Sent   864 kB Recv  1191 kB | {}
+🔶 Pred  309 ms Sync   97 ms | Sent   864 kB Recv  1191 kB | {}
+🔶 Pred  310 ms Sync   88 ms | Sent   864 kB Recv  1191 kB | {}
+🔶 Pred  311 ms Sync   81 ms | Sent   864 kB Recv  1191 kB | {}
+🔶 Pred  309 ms Sync   96 ms | Sent   864 kB Recv  1191 kB | {}
+🔶 Pred  311 ms Sync   97 ms | Sent   864 kB Recv  1191 kB | {}
+🔶 Pred  303 ms Sync   96 ms | Sent   864 kB Recv  1191 kB | {}
+🔶 Pred  311 ms Sync   81 ms | Sent   864 kB Recv  1191 kB | {}
+🔶 Pred  310 ms Sync   87 ms | Sent   864 kB Recv  1191 kB | {}
+🔶 Pred  314 ms Sync   96 ms | Sent   864 kB Recv  1191 kB | {}
+🔶 Pred  315 ms Sync   52 ms | Sent   864 kB Recv  1191 kB | {}
+🔶 Pred  314 ms Sync   70 ms | Sent   864 kB Recv  1191 kB | {}
+🔶 Pred  312 ms Sync   70 ms | Sent   864 kB Recv  1191 kB | {}
+🔶 Pred  307 ms Sync   77 ms | Sent   864 kB Recv  1191 kB | {}
+🔶 Pred  306 ms Sync   85 ms | Sent   864 kB Recv  1191 kB | {}
+🔶 Pred  316 ms Sync   80 ms | Sent   864 kB Recv  1191 kB | {}
+🔶 Pred  310 ms Sync   71 ms | Sent   864 kB Recv  1191 kB | {}
+🔶 Pred  310 ms Sync   76 ms | Sent   864 kB Recv  1191 kB | {}
+🔶 Pred  302 ms Sync   83 ms | Sent   864 kB Recv  1191 kB | {}
+🔶 Pred  310 ms Sync   78 ms | Sent   864 kB Recv  1191 kB | {}
+🔶 Pred  313 ms Sync   76 ms | Sent   864 kB Recv  1191 kB | {}
+🔶 Pred  307 ms Sync   76 ms | Sent   864 kB Recv  1191 kB | {}
+🔶 Pred  304 ms Sync   67 ms | Sent   864 kB Recv  1191 kB | {}
+🔶 Pred  311 ms Sync   70 ms | Sent   864 kB Recv  1191 kB | {}
+🔶 Pred  319 ms Sync   57 ms | Sent   864 kB Recv  1191 kB | {}
+🔶 Pred  305 ms Sync   71 ms | Sent   864 kB Recv  1191 kB | {}
+🔶 Pred  309 ms Sync   58 ms | Sent   864 kB Recv  1191 kB | {}
+🔶 Pred  303 ms Sync   74 ms | Sent   864 kB Recv  1191 kB | {}
+🔶 Pred  303 ms Sync   73 ms | Sent   864 kB Recv  1191 kB | {}
+🔶 Pred  330 ms Sync   44 ms | Sent   864 kB Recv  1191 kB | {}
+🔶 Pred  311 ms Sync   61 ms | Sent   864 kB Recv  1191 kB | {}
+🔶 Pred  309 ms Sync   68 ms | Sent   864 kB Recv  1191 kB | {}
+🔶 Pred  297 ms Sync   66 ms | Sent   864 kB Recv  1191 kB | {}
+🔶 Pred  323 ms Sync   58 ms | Sent   864 kB Recv  1191 kB | {}
+🔶 Pred  315 ms Sync   53 ms | Sent   864 kB Recv  1191 kB | {}
+🔶 Pred  319 ms Sync   63 ms | Sent   864 kB Recv  1191 kB | {}
+🔶 Pred  323 ms Sync   53 ms | Sent   864 kB Recv  1191 kB | {}
+🔶 Pred  303 ms Sync   84 ms | Sent   864 kB Recv  1191 kB | {}
+🔶 Pred  301 ms Sync   86 ms | Sent   864 kB Recv  1191 kB | {}
+🔶 Pred  300 ms Sync   81 ms | Sent   864 kB Recv  1191 kB | {}
+🔶 Pred  310 ms Sync   80 ms | Sent   864 kB Recv  1191 kB | {}
+🔶 Pred  308 ms Sync   75 ms | Sent   864 kB Recv  1191 kB | {}
+🔶 Pred  305 ms Sync   80 ms | Sent   864 kB Recv  1191 kB | {}
+🔶 Pred  324 ms Sync   46 ms | Sent   864 kB Recv  1191 kB | {}
+🔶 Pred  328 ms Sync   52 ms | Sent   864 kB Recv  1191 kB | {}
+🔶 Pred  330 ms Sync   66 ms | Sent   864 kB Recv  1191 kB | {}
+🔶 Pred  340 ms Sync   35 ms | Sent   864 kB Recv  1191 kB | {}
+🔶 Pred  311 ms Sync   77 ms | Sent   864 kB Recv  1191 kB | {}
+🔶 Pred  308 ms Sync   86 ms | Sent   864 kB Recv  1191 kB | {}
+🔶 Pred  316 ms Sync   49 ms | Sent   864 kB Recv  1191 kB | {}
+🔶 Pred  314 ms Sync   55 ms | Sent   864 kB Recv  1191 kB | {}
+🔶 Pred  306 ms Sync   70 ms | Sent   864 kB Recv  1191 kB | {}
+🔶 Pred  323 ms Sync   50 ms | Sent   864 kB Recv  1191 kB | {}
+🔶 Pred  335 ms Sync   61 ms | Sent   864 kB Recv  1191 kB | {}
+🔶 Pred  361 ms Sync   33 ms | Sent   864 kB Recv  1191 kB | {}
+🔶 Pred  370 ms Sync   46 ms | Sent   864 kB Recv  1191 kB | {}
+🔶 Pred  367 ms Sync   41 ms | Sent   864 kB Recv  1191 kB | {}
+🔶 Pred  340 ms Sync   67 ms | Sent   864 kB Recv  1191 kB | {}
+🔶 Pred  297 ms Sync   85 ms | Sent   864 kB Recv  1191 kB | {}
+🔶 Pred  382 ms Sync   44 ms | Sent   864 kB Recv  1191 kB | {}
+🔶 Pred  370 ms Sync   52 ms | Sent   864 kB Recv  1191 kB | {}
+🔶 Pred  368 ms Sync   41 ms | Sent   864 kB Recv  1191 kB | {}
+🔶 Pred  361 ms Sync   52 ms | Sent   864 kB Recv  1191 kB | {}
+🔶 Pred  382 ms Sync   61 ms | Sent   864 kB Recv  1191 kB | {}
+🔶 Pred  377 ms Sync   42 ms | Sent   864 kB Recv  1191 kB | {}
+🔶 Pred  374 ms Sync   49 ms | Sent   864 kB Recv  1191 kB | {}
+🔶 Pred  359 ms Sync   53 ms | Sent   864 kB Recv  1191 kB | {}
+🔶 Pred  372 ms Sync   27 ms | Sent   864 kB Recv  1191 kB | {}
+🔶 Pred  361 ms Sync   27 ms | Sent   864 kB Recv  1191 kB | {}
+🔶 Pred  284 ms Sync   66 ms | Sent   864 kB Recv  1191 kB | {}
+🔶 Pred  307 ms Sync   51 ms | Sent   864 kB Recv  1191 kB | {}
+🔶 Pred  301 ms Sync   89 ms | Sent   864 kB Recv  1191 kB | {}
+🔶 Pred  299 ms Sync   62 ms | Sent   864 kB Recv  1191 kB | {}
+🔶 Pred  301 ms Sync   61 ms | Sent   864 kB Recv  1191 kB | {}
+🔶 Pred  424 ms Sync    9 ms | Sent   864 kB Recv  1191 kB | {}
+🔶 Pred  284 ms Sync   94 ms | Sent   864 kB Recv  1191 kB | {}
+🔶 Pred  299 ms Sync   49 ms | Sent   864 kB Recv  1191 kB | {}
+🔶 Pred  372 ms Sync   23 ms | Sent   864 kB Recv  1191 kB | {}
+🔶 Pred  372 ms Sync   21 ms | Sent   864 kB Recv  1191 kB | {}
+🔶 Pred  358 ms Sync   33 ms | Sent   864 kB Recv  1191 kB | {}
+🔶 Pred  298 ms Sync   61 ms | Sent   864 kB Recv  1191 kB | {}
+🔶 Pred  298 ms Sync   59 ms | Sent   864 kB Recv  1191 kB | {}
+🔶 Pred  306 ms Sync   50 ms | Sent   864 kB Recv  1191 kB | {}
+🔶 Pred  307 ms Sync   77 ms | Sent   864 kB Recv  1191 kB | {}
+🔶 Pred  428 ms Sync   19 ms | Sent   864 kB Recv  1191 kB | {}
+🔶 Pred  324 ms Sync   54 ms | Sent   864 kB Recv  1191 kB | {}
+🔶 Pred  320 ms Sync   58 ms | Sent   864 kB Recv  1191 kB | {}
+🔶 Pred  306 ms Sync   87 ms | Sent   864 kB Recv  1191 kB | {}
+🔶 Pred  314 ms Sync   63 ms | Sent   864 kB Recv  1191 kB | {}
+🔶 Pred  311 ms Sync   68 ms | Sent   864 kB Recv  1191 kB | {}
+🔶 Pred  412 ms Sync   33 ms | Sent   864 kB Recv  1191 kB | {}
+🔶 Pred  436 ms Sync   18 ms | Sent   864 kB Recv  1191 kB | {}
+🔶 Pred  478 ms Sync   14 ms | Sent   864 kB Recv  1191 kB | {}
+🔶 Pred  474 ms Sync   11 ms | Sent   864 kB Recv  1191 kB | {}
+🔶 Pred  494 ms Sync    8 ms | Sent   864 kB Recv  1191 kB | {}
+🔶 Pred  319 ms Sync   42 ms | Sent   864 kB Recv  1191 kB | {}
+🔶 Pred  335 ms Sync   51 ms | Sent   864 kB Recv  1191 kB | {}
+🔶 Pred  336 ms Sync   46 ms | Sent   864 kB Recv  1191 kB | {}
+🔶 Pred  334 ms Sync   52 ms | Sent   864 kB Recv  1191 kB | {}
+🔶 Pred  340 ms Sync   38 ms | Sent   864 kB Recv  1191 kB | {}
+🔶 Pred  339 ms Sync   36 ms | Sent   864 kB Recv  1191 kB | {}
+🔶 Pred  331 ms Sync   43 ms | Sent   864 kB Recv  1191 kB | {}
+🔶 Pred  534 ms Sync    5 ms | Sent   864 kB Recv  1191 kB | {}
+🔶 Pred  504 ms Sync    8 ms | Sent   864 kB Recv  1191 kB | {}
+🔶 Pred  506 ms Sync    9 ms | Sent   864 kB Recv  1191 kB | {}
+🔶 Pred  422 ms Sync   32 ms | Sent   864 kB Recv  1191 kB | {}
+🔶 Pred  291 ms Sync   83 ms | Sent   864 kB Recv  1191 kB | {}
+🔶 Pred  324 ms Sync   63 ms | Sent   864 kB Recv  1191 kB | {}
+🔶 Pred  296 ms Sync   82 ms | Sent   864 kB Recv  1191 kB | {}
+🔶 Pred  290 ms Sync   84 ms | Sent   864 kB Recv  1191 kB | {}
+🔶 Pred  290 ms Sync   81 ms | Sent   864 kB Recv  1191 kB | {}
+🔶 Pred  290 ms Sync   87 ms | Sent   864 kB Recv  1191 kB | {}
+🔶 Pred  295 ms Sync   79 ms | Sent   864 kB Recv  1191 kB | {}
+🔶 Pred  316 ms Sync   64 ms | Sent   864 kB Recv  1191 kB | {}
+🔶 Pred  303 ms Sync   74 ms | Sent   864 kB Recv  1191 kB | {}
+🔶 Pred  316 ms Sync   56 ms | Sent   864 kB Recv  1191 kB | {}
+🔶 Pred  308 ms Sync   66 ms | Sent   864 kB Recv  1191 kB | {}
+🔶 Pred  308 ms Sync   70 ms | Sent   864 kB Recv  1191 kB | {}
+🔶 Pred  309 ms Sync   63 ms | Sent   864 kB Recv  1191 kB | {}
+🔶 Pred  312 ms Sync   64 ms | Sent   864 kB Recv  1191 kB | {}
+🔶 Pred  314 ms Sync   64 ms | Sent   864 kB Recv  1191 kB | {}
+🔶 Pred  319 ms Sync   70 ms | Sent   864 kB Recv  1191 kB | {}
+🔶 Pred  309 ms Sync   71 ms | Sent   864 kB Recv  1191 kB | {}
+🔶 Pred  317 ms Sync   62 ms | Sent   864 kB Recv  1191 kB | {}
+🔶 Pred  327 ms Sync   34 ms | Sent   864 kB Recv  1191 kB | {}
+🔶 Pred  335 ms Sync   34 ms | Sent   864 kB Recv  1191 kB | {}
+🔶 Pred  322 ms Sync   80 ms | Sent   864 kB Recv  1191 kB | {}
+🔶 Pred  323 ms Sync   34 ms | Sent   864 kB Recv  1191 kB | {}
+🔶 Pred  329 ms Sync   32 ms | Sent   864 kB Recv  1191 kB | {}
+🔶 Pred  326 ms Sync   60 ms | Sent   864 kB Recv  1191 kB | {}
+🔶 Pred  326 ms Sync   37 ms | Sent   864 kB Recv  1191 kB | {}
+🔶 Pred  313 ms Sync   42 ms | Sent   864 kB Recv  1191 kB | {}
+🔶 Pred  300 ms Sync   67 ms | Sent   864 kB Recv  1191 kB | {}
+🔶 Pred  320 ms Sync   67 ms | Sent   864 kB Recv  1191 kB | {}
+🔶 Pred  306 ms Sync   47 ms | Sent   864 kB Recv  1191 kB | {}
+🔶 Pred  299 ms Sync   48 ms | Sent   864 kB Recv  1191 kB | {}
+🔶 Pred  310 ms Sync  132 ms | Sent   864 kB Recv  1191 kB | {}
+🔶 Pred  307 ms Sync   41 ms | Sent   864 kB Recv  1191 kB | {}
+🔶 Pred  312 ms Sync   41 ms | Sent   864 kB Recv  1191 kB | {}
+🔶 Pred  309 ms Sync   43 ms | Sent   864 kB Recv  1191 kB | {}
+🔶 Pred  324 ms Sync   36 ms | Sent   864 kB Recv  1191 kB | {}
+🔶 Pred  317 ms Sync  106 ms | Sent   864 kB Recv  1191 kB | {}
+🔶 Pred  322 ms Sync   27 ms | Sent   864 kB Recv  1191 kB | {}
+🔶 Pred  312 ms Sync   42 ms | Sent   864 kB Recv  1191 kB | {}
+🔶 Pred  299 ms Sync   48 ms | Sent   864 kB Recv  1191 kB | {}
+🔶 Pred  303 ms Sync  103 ms | Sent   864 kB Recv  1191 kB | {}
+🔶 Pred  294 ms Sync   92 ms | Sent   864 kB Recv  1191 kB | {}
+🔶 Pred  306 ms Sync   43 ms | Sent   864 kB Recv  1191 kB | {}
+🔶 Pred  308 ms Sync   91 ms | Sent   864 kB Recv  1191 kB | {}
+🔶 Pred  310 ms Sync   36 ms | Sent   864 kB Recv  1191 kB | {}
+🔶 Pred  295 ms Sync   50 ms | Sent   864 kB Recv  1191 kB | {}
+🔶 Pred  305 ms Sync   49 ms | Sent   864 kB Recv  1191 kB | {}
+🔶 Pred  304 ms Sync   49 ms | Sent   864 kB Recv  1191 kB | {}
+🔶 Pred  317 ms Sync   41 ms | Sent   864 kB Recv  1191 kB | {}
+🔶 Pred  293 ms Sync   59 ms | Sent   864 kB Recv  1191 kB | {}
+🔶 Pred  291 ms Sync  143 ms | Sent   864 kB Recv  1191 kB | {}
+🔶 Pred  313 ms Sync   46 ms | Sent   864 kB Recv  1191 kB | {}
+🔶 Pred  297 ms Sync   62 ms | Sent   864 kB Recv  1191 kB | {}
+🔶 Pred  349 ms Sync   36 ms | Sent   864 kB Recv  1191 kB | {}
+🔶 Pred  302 ms Sync   79 ms | Sent   864 kB Recv  1191 kB | {}
+🔶 Pred  307 ms Sync   71 ms | Sent   864 kB Recv  1191 kB | {}
+🔶 Pred  303 ms Sync   73 ms | Sent   864 kB Recv  1191 kB | {}
+🔶 Pred  307 ms Sync   64 ms | Sent   864 kB Recv  1191 kB | {}
+🔶 Pred  311 ms Sync   70 ms | Sent   864 kB Recv  1191 kB | {}
+🔶 Pred  309 ms Sync   72 ms | Sent   864 kB Recv  1191 kB | {}
+🔶 Pred  311 ms Sync   54 ms | Sent   864 kB Recv  1191 kB | {}
+🔶 Pred  315 ms Sync   57 ms | Sent   864 kB Recv  1191 kB | {}
+🔶 Pred  315 ms Sync   50 ms | Sent   864 kB Recv  1191 kB | {}
+🔶 Pred  318 ms Sync   58 ms | Sent   864 kB Recv  1191 kB | {}
+🔶 Pred  313 ms Sync   58 ms | Sent   864 kB Recv  1191 kB | {}
+🔶 Pred  316 ms Sync   60 ms | Sent   864 kB Recv  1191 kB | {}
+🔶 Pred  329 ms Sync   35 ms | Sent   864 kB Recv  1191 kB | {}
+🔶 Pred  315 ms Sync   59 ms | Sent   864 kB Recv  1191 kB | {}
+🔶 Pred  328 ms Sync   45 ms | Sent   864 kB Recv  1191 kB | {}
+🔶 Pred  322 ms Sync   62 ms | Sent   864 kB Recv  1191 kB | {}
+🔶 Pred  318 ms Sync   46 ms | Sent   864 kB Recv  1191 kB | {}
+🔶 Pred  316 ms Sync   52 ms | Sent   864 kB Recv  1191 kB | {}
+🔶 Pred  327 ms Sync   31 ms | Sent   864 kB Recv  1191 kB | {}
+🔶 Pred  317 ms Sync   48 ms | Sent   864 kB Recv  1191 kB | {}
+🔶 Pred  322 ms Sync   37 ms | Sent   864 kB Recv  1191 kB | {}
+🔶 Pred  305 ms Sync   56 ms | Sent   864 kB Recv  1191 kB | {}
+🔶 Pred  307 ms Sync   55 ms | Sent   864 kB Recv  1191 kB | {}
+🔶 Pred  310 ms Sync   50 ms | Sent   864 kB Recv  1191 kB | {}
+🔶 Pred  298 ms Sync   56 ms | Sent   864 kB Recv  1191 kB | {}
+🔶 Pred  312 ms Sync   41 ms | Sent   864 kB Recv  1191 kB | {}
+🔶 Pred  311 ms Sync   47 ms | Sent   864 kB Recv  1191 kB | {}
+🔶 Pred  320 ms Sync   40 ms | Sent   864 kB Recv  1191 kB | {}
+🔶 Pred  324 ms Sync   33 ms | Sent   864 kB Recv  1191 kB | {}
+🔶 Pred  316 ms Sync   43 ms | Sent   864 kB Recv  1191 kB | {}
+🔶 Pred  305 ms Sync   45 ms | Sent   864 kB Recv  1191 kB | {}
+🔶 Pred  302 ms Sync   52 ms | Sent   864 kB Recv  1191 kB | {}
+🔶 Pred  309 ms Sync   41 ms | Sent   864 kB Recv  1191 kB | {}
+🔶 Pred  318 ms Sync   39 ms | Sent   864 kB Recv  1191 kB | {}
+🔶 Pred  314 ms Sync   40 ms | Sent   864 kB Recv  1191 kB | {}
+🔶 Pred  294 ms Sync   55 ms | Sent   864 kB Recv  1191 kB | {}
+🔶 Pred  299 ms Sync   56 ms | Sent   864 kB Recv  1191 kB | {}
+🔶 Pred  298 ms Sync   62 ms | Sent   864 kB Recv  1191 kB | {}
+🔶 Pred  300 ms Sync   70 ms | Sent   864 kB Recv  1191 kB | {}
+🔶 Pred  313 ms Sync   53 ms | Sent   864 kB Recv  1191 kB | {}
+🔶 Pred  308 ms Sync   51 ms | Sent   864 kB Recv  1191 kB | {}
+🔶 Pred  309 ms Sync   48 ms | Sent   864 kB Recv  1191 kB | {}
+🔶 Pred  300 ms Sync   61 ms | Sent   864 kB Recv  1191 kB | {}
+🔶 Pred  330 ms Sync   52 ms | Sent   864 kB Recv  1191 kB | {}
+🔶 Pred  323 ms Sync   48 ms | Sent   864 kB Recv  1191 kB | {}
+🔶 Pred  324 ms Sync   45 ms | Sent   864 kB Recv  1191 kB | {}
+🔶 Pred  312 ms Sync   65 ms | Sent   864 kB Recv  1191 kB | {}
+🔶 Pred  312 ms Sync   60 ms | Sent   864 kB Recv  1191 kB | {}
+🔶 Pred  333 ms Sync   45 ms | Sent   864 kB Recv  1191 kB | {}
+🔶 Pred  313 ms Sync   48 ms | Sent   864 kB Recv  1191 kB | {}
+🔶 Pred  309 ms Sync   58 ms | Sent   864 kB Recv  1191 kB | {}
+🔶 Pred  321 ms Sync   42 ms | Sent   864 kB Recv  1191 kB | {}
+🔶 Pred  308 ms Sync   43 ms | Sent   864 kB Recv  1191 kB | {}
+🔶 Pred  298 ms Sync   62 ms | Sent   864 kB Recv  1191 kB | {}
+🔶 Pred  310 ms Sync   50 ms | Sent   864 kB Recv  1191 kB | {}
+🔶 Pred  313 ms Sync   63 ms | Sent   864 kB Recv  1191 kB | {}
+🔶 Pred  307 ms Sync   56 ms | Sent   864 kB Recv  1191 kB | {}
+🔶 Pred  306 ms Sync   86 ms | Sent   864 kB Recv  1191 kB | {}
+🔶 Pred  319 ms Sync   69 ms | Sent   864 kB Recv  1191 kB | {}
+🔶 Pred  308 ms Sync   72 ms | Sent   864 kB Recv  1191 kB | {}
+🔶 Pred  318 ms Sync   69 ms | Sent   864 kB Recv  1191 kB | {}
+🔶 Pred  313 ms Sync   44 ms | Sent   864 kB Recv  1191 kB | {}
+🔶 Pred  306 ms Sync   62 ms | Sent   864 kB Recv  1191 kB | {}
+🔶 Pred  316 ms Sync   75 ms | Sent   864 kB Recv  1191 kB | {}
+🔶 Pred  312 ms Sync   68 ms | Sent   864 kB Recv  1191 kB | {}
+🔶 Pred  317 ms Sync   57 ms | Sent   864 kB Recv  1191 kB | {}
+🔶 Pred  321 ms Sync   64 ms | Sent   864 kB Recv  1191 kB | {}
+🔶 Pred  313 ms Sync   56 ms | Sent   864 kB Recv  1191 kB | {}
+🔶 Pred  304 ms Sync   64 ms | Sent   864 kB Recv  1191 kB | {}
+🔶 Pred  302 ms Sync   60 ms | Sent   864 kB Recv  1191 kB | {}
+🔶 Pred  325 ms Sync   52 ms | Sent   864 kB Recv  1191 kB | {}
+🔶 Pred  318 ms Sync   56 ms | Sent   864 kB Recv  1191 kB | {}
+🔶 Pred  317 ms Sync   60 ms | Sent   864 kB Recv  1191 kB | {}
+🔶 Pred  312 ms Sync   60 ms | Sent   864 kB Recv  1191 kB | {}
+🔶 Pred  309 ms Sync   54 ms | Sent   864 kB Recv  1191 kB | {}
+🔶 Pred  314 ms Sync   64 ms | Sent   864 kB Recv  1191 kB | {}
+🔶 Pred  306 ms Sync   58 ms | Sent   864 kB Recv  1191 kB | {}
+🔶 Pred  318 ms Sync   58 ms | Sent   864 kB Recv  1191 kB | {}
+🔶 Pred  320 ms Sync   58 ms | Sent   864 kB Recv  1191 kB | {}
+🔶 Pred  318 ms Sync   61 ms | Sent   864 kB Recv  1191 kB | {}
+🔶 Pred  321 ms Sync   46 ms | Sent   864 kB Recv  1191 kB | {}
+🔶 Pred  330 ms Sync   46 ms | Sent   864 kB Recv  1191 kB | {}
+🔶 Pred  322 ms Sync   64 ms | Sent   864 kB Recv  1191 kB | {}
+🔶 Pred  314 ms Sync   60 ms | Sent   864 kB Recv  1191 kB | {}
+🔶 Pred  338 ms Sync   47 ms | Sent   864 kB Recv  1191 kB | {}
+🔶 Pred  316 ms Sync   60 ms | Sent   864 kB Recv  1191 kB | {}
+🔶 Pred  338 ms Sync   55 ms | Sent   864 kB Recv  1191 kB | {}
+🔶 Pred  297 ms Sync   79 ms | Sent   864 kB Recv  1191 kB | {}
+🔶 Pred  300 ms Sync   83 ms | Sent   864 kB Recv  1191 kB | {}
+🔶 Pred  307 ms Sync   59 ms | Sent   864 kB Recv  1191 kB | {}
+🔶 Pred  332 ms Sync   67 ms | Sent   864 kB Recv  1191 kB | {}
+🔶 Pred  316 ms Sync   68 ms | Sent   864 kB Recv  1191 kB | {}
+🔶 Pred  327 ms Sync   71 ms | Sent   864 kB Recv  1191 kB | {}
+🔶 Pred  316 ms Sync   75 ms | Sent   864 kB Recv  1191 kB | {}
+🔶 Pred  323 ms Sync   93 ms | Sent   864 kB Recv  1191 kB | {}
+🔶 Pred  334 ms Sync   80 ms | Sent   864 kB Recv  1191 kB | {}
+🔶 Pred  317 ms Sync   61 ms | Sent   864 kB Recv  1191 kB | {}
+🔶 Pred  328 ms Sync   53 ms | Sent   864 kB Recv  1191 kB | {}
+🔶 Pred  316 ms Sync  125 ms | Sent   864 kB Recv  1191 kB | {}
+🔶 Pred  334 ms Sync   98 ms | Sent   864 kB Recv  1191 kB | {}
+🔶 Pred  323 ms Sync   96 ms | Sent   864 kB Recv  1191 kB | {}
+🔶 Pred  327 ms Sync   67 ms | Sent   864 kB Recv  1191 kB | {}
+🔶 Pred  334 ms Sync   94 ms | Sent   864 kB Recv  1191 kB | {}
+🔶 Pred  332 ms Sync   80 ms | Sent   864 kB Recv  1191 kB | {}
+🔶 Pred  346 ms Sync   71 ms | Sent   864 kB Recv  1191 kB | {}
+🔶 Pred  336 ms Sync   76 ms | Sent   864 kB Recv  1191 kB | {}
+🔶 Pred  336 ms Sync   72 ms | Sent   864 kB Recv  1191 kB | {}
+🔶 Pred  342 ms Sync   60 ms | Sent   864 kB Recv  1191 kB | {}
+🔶 Pred  359 ms Sync   58 ms | Sent   864 kB Recv  1191 kB | {}
+🔶 Pred  361 ms Sync   58 ms | Sent   864 kB Recv  1191 kB | {}
+🔶 Pred  351 ms Sync   67 ms | Sent   864 kB Recv  1191 kB | {}
+🔶 Pred  371 ms Sync   52 ms | Sent   864 kB Recv  1191 kB | {}
+🔶 Pred  346 ms Sync   61 ms | Sent   864 kB Recv  1191 kB | {}
+🔶 Pred  354 ms Sync   65 ms | Sent   864 kB Recv  1191 kB | {}
+🔶 Pred  337 ms Sync   63 ms | Sent   864 kB Recv  1191 kB | {}
+🔶 Pred  324 ms Sync   71 ms | Sent   864 kB Recv  1191 kB | {}
+🔶 Pred  335 ms Sync   71 ms | Sent   864 kB Recv  1191 kB | {}
+🔶 Pred  317 ms Sync   96 ms | Sent   864 kB Recv  1191 kB | {}
+🔶 Pred  326 ms Sync   86 ms | Sent   864 kB Recv  1191 kB | {}
+🔶 Pred  320 ms Sync   74 ms | Sent   864 kB Recv  1191 kB | {}
+🔶 Pred  329 ms Sync  112 ms | Sent   864 kB Recv  1191 kB | {}
+🔶 Pred  329 ms Sync   61 ms | Sent   864 kB Recv  1191 kB | {}
+🔶 Pred  334 ms Sync  141 ms | Sent   864 kB Recv  1191 kB | {}
+🔶 Pred  314 ms Sync  142 ms | Sent   864 kB Recv  1191 kB | {}
+🔶 Pred  312 ms Sync   65 ms | Sent   864 kB Recv  1191 kB | {}
+🔶 Pred  306 ms Sync  188 ms | Sent   864 kB Recv  1191 kB | {}
+🔶 Pred  310 ms Sync  126 ms | Sent   864 kB Recv  1191 kB | {}
+🔶 Pred  395 ms Sync   37 ms | Sent   864 kB Recv  1191 kB | {}
+🔶 Pred  321 ms Sync  150 ms | Sent   864 kB Recv  1191 kB | {}
+🔶 Pred  359 ms Sync  107 ms | Sent   864 kB Recv  1191 kB | {}
+🔶 Pred  377 ms Sync   43 ms | Sent   864 kB Recv  1191 kB | {}
+🔶 Pred  311 ms Sync  162 ms | Sent   864 kB Recv  1191 kB | {}
+🔶 Pred  313 ms Sync  133 ms | Sent   864 kB Recv  1191 kB | {}
+🔶 Pred  384 ms Sync   46 ms | Sent   864 kB Recv  1191 kB | {}
+🔶 Pred  369 ms Sync   65 ms | Sent   864 kB Recv  1191 kB | {}
+🔶 Pred  381 ms Sync   45 ms | Sent   864 kB Recv  1191 kB | {}
+🔶 Pred  316 ms Sync  100 ms | Sent   864 kB Recv  1191 kB | {}
+🔶 Pred  305 ms Sync  147 ms | Sent   864 kB Recv  1191 kB | {}
+🔶 Pred  340 ms Sync  125 ms | Sent   864 kB Recv  1191 kB | {}
+🔶 Pred  313 ms Sync   65 ms | Sent   864 kB Recv  1191 kB | {}
+🔶 Pred  313 ms Sync   78 ms | Sent   864 kB Recv  1191 kB | {}
+🔶 Pred  436 ms Sync   20 ms | Sent   864 kB Recv  1191 kB | {}
+🔶 Pred  436 ms Sync   21 ms | Sent   864 kB Recv  1191 kB | {}
+🔶 Pred  317 ms Sync   83 ms | Sent   864 kB Recv  1191 kB | {}
+🔶 Pred  322 ms Sync  137 ms | Sent   864 kB Recv  1191 kB | {}
+🔶 Pred  316 ms Sync  106 ms | Sent   864 kB Recv  1191 kB | {}
+🔶 Pred  401 ms Sync   38 ms | Sent   864 kB Recv  1191 kB | {}
+🔶 Pred  417 ms Sync   45 ms | Sent   864 kB Recv  1191 kB | {}
+🔶 Pred  306 ms Sync  156 ms | Sent   864 kB Recv  1191 kB | {}
+🔶 Pred  304 ms Sync  151 ms | Sent   864 kB Recv  1191 kB | {}
+🔶 Pred  439 ms Sync   24 ms | Sent   864 kB Recv  1191 kB | {}
+🔶 Pred  296 ms Sync  175 ms | Sent   864 kB Recv  1191 kB | {}
+🔶 Pred  299 ms Sync  141 ms | Sent   864 kB Recv  1191 kB | {}
+🔶 Pred  302 ms Sync   88 ms | Sent   864 kB Recv  1191 kB | {}
+🔶 Pred  453 ms Sync   72 ms | Sent   864 kB Recv  1191 kB | {}
+🔶 Pred  299 ms Sync  230 ms | Sent   864 kB Recv  1191 kB | {}
+🔶 Pred  298 ms Sync  229 ms | Sent   864 kB Recv  1191 kB | {}
+🔶 Pred  297 ms Sync  231 ms | Sent   864 kB Recv  1191 kB | {}
+🔶 Pred  515 ms Sync   21 ms | Sent   864 kB Recv  1191 kB | {}
+🔶 Pred  398 ms Sync  138 ms | Sent   864 kB Recv  1191 kB | {}
+🔶 Pred  306 ms Sync  174 ms | Sent   864 kB Recv  1191 kB | {}
+🔶 Pred  474 ms Sync   66 ms | Sent   864 kB Recv  1191 kB | {}
+🔶 Pred  303 ms Sync  197 ms | Sent   864 kB Recv  1191 kB | {}
+🔶 Pred  299 ms Sync  207 ms | Sent   864 kB Recv  1191 kB | {}
+🔶 Pred  295 ms Sync  213 ms | Sent   864 kB Recv  1191 kB | {}
+🔶 Pred  299 ms Sync  168 ms | Sent   864 kB Recv  1191 kB | {}
+🔶 Pred  299 ms Sync  199 ms | Sent   864 kB Recv  1191 kB | {}
+🔶 Pred  296 ms Sync  217 ms | Sent   864 kB Recv  1191 kB | {}
+🔶 Pred  300 ms Sync  213 ms | Sent   864 kB Recv  1191 kB | {}
+🔶 Pred  467 ms Sync   65 ms | Sent   864 kB Recv  1191 kB | {}
+🔶 Pred  443 ms Sync   81 ms | Sent   864 kB Recv  1191 kB | {}
+🔶 Pred  305 ms Sync  197 ms | Sent   864 kB Recv  1191 kB | {}
+🔶 Pred  596 ms Sync    3 ms | Sent   864 kB Recv  1191 kB | {}
+🔶 Pred  555 ms Sync   25 ms | Sent   864 kB Recv  1191 kB | {}
+🔶 Pred  308 ms Sync  221 ms | Sent   864 kB Recv  1191 kB | {}
+🔶 Pred  308 ms Sync   83 ms | Sent   864 kB Recv  1191 kB | {}
+🔶 Pred  305 ms Sync   53 ms | Sent   864 kB Recv  1191 kB | {}
+🔶 Pred  313 ms Sync   59 ms | Sent   864 kB Recv  1191 kB | {}
+🔶 Pred  316 ms Sync   50 ms | Sent   864 kB Recv  1191 kB | {}
+🔶 Pred  314 ms Sync   53 ms | Sent   864 kB Recv  1191 kB | {}
+🔶 Pred  313 ms Sync   57 ms | Sent   864 kB Recv  1191 kB | {}
+🔶 Pred  430 ms Sync   20 ms | Sent   864 kB Recv  1191 kB | {}
+🔶 Pred  372 ms Sync   27 ms | Sent   864 kB Recv  1191 kB | {}
+🔶 Pred  310 ms Sync   61 ms | Sent   864 kB Recv  1191 kB | {}
+🔶 Pred  306 ms Sync   73 ms | Sent   864 kB Recv  1191 kB | {}
+🔶 Pred  314 ms Sync   65 ms | Sent   864 kB Recv  1191 kB | {}
+🔶 Pred  368 ms Sync   37 ms | Sent   864 kB Recv  1191 kB | {}
+🔶 Pred  309 ms Sync   66 ms | Sent   864 kB Recv  1191 kB | {}
+🔶 Pred  309 ms Sync   77 ms | Sent   864 kB Recv  1191 kB | {}
+🔶 Pred  328 ms Sync   55 ms | Sent   864 kB Recv  1191 kB | {}
+🔶 Pred  308 ms Sync   58 ms | Sent   864 kB Recv  1191 kB | {}
+🔶 Pred  309 ms Sync   65 ms | Sent   864 kB Recv  1191 kB | {}
+🔶 Pred  393 ms Sync   15 ms | Sent   864 kB Recv  1191 kB | {}
+🔶 Pred  302 ms Sync   65 ms | Sent   864 kB Recv  1191 kB | {}
+🔶 Pred  328 ms Sync   50 ms | Sent   864 kB Recv  1191 kB | {}
+🔶 Pred  357 ms Sync   33 ms | Sent   864 kB Recv  1191 kB | {}
+🔶 Pred  328 ms Sync   60 ms | Sent   864 kB Recv  1191 kB | {}
+🔶 Pred  332 ms Sync   56 ms | Sent   864 kB Recv  1191 kB | {}
+🔶 Pred  318 ms Sync   54 ms | Sent   864 kB Recv  1191 kB | {}
+🔶 Pred  314 ms Sync   52 ms | Sent   864 kB Recv  1191 kB | {}
+🔶 Pred  313 ms Sync   81 ms | Sent   864 kB Recv  1191 kB | {}
+🔶 Pred  311 ms Sync   54 ms | Sent   864 kB Recv  1191 kB | {}
+🔶 Pred  316 ms Sync   51 ms | Sent   864 kB Recv  1191 kB | {}
+🔶 Pred  310 ms Sync  106 ms | Sent   864 kB Recv  1191 kB | {}
+🔶 Pred  309 ms Sync   70 ms | Sent   864 kB Recv  1191 kB | {}
+🔶 Pred  315 ms Sync   65 ms | Sent   864 kB Recv  1191 kB | {}
+🔶 Pred  320 ms Sync   72 ms | Sent   864 kB Recv  1191 kB | {}
+🔶 Pred  319 ms Sync   68 ms | Sent   864 kB Recv  1191 kB | {}
+🔶 Pred  331 ms Sync   50 ms | Sent   864 kB Recv  1191 kB | {}
+🔶 Pred  334 ms Sync   48 ms | Sent   864 kB Recv  1191 kB | {}
+🔶 Pred  317 ms Sync   58 ms | Sent   864 kB Recv  1191 kB | {}
+🔶 Pred  324 ms Sync   60 ms | Sent   864 kB Recv  1191 kB | {}
+🔶 Pred  314 ms Sync   43 ms | Sent   864 kB Recv  1191 kB | {}
+🔶 Pred  324 ms Sync   57 ms | Sent   864 kB Recv  1191 kB | {}
+🔶 Pred  314 ms Sync   48 ms | Sent   864 kB Recv  1191 kB | {}
+🔶 Pred  332 ms Sync   40 ms | Sent   864 kB Recv  1191 kB | {}
+🔶 Pred  308 ms Sync   52 ms | Sent   864 kB Recv  1191 kB | {}
+🔶 Pred  300 ms Sync   74 ms | Sent   864 kB Recv  1191 kB | {}
+🔶 Pred  302 ms Sync   82 ms | Sent   864 kB Recv  1191 kB | {}
+🔶 Pred  310 ms Sync   78 ms | Sent   864 kB Recv  1191 kB | {}
+🔶 Pred  305 ms Sync   78 ms | Sent   864 kB Recv  1191 kB | {}
+🔶 Pred  308 ms Sync   99 ms | Sent   864 kB Recv  1191 kB | {}
+🔶 Pred  332 ms Sync   48 ms | Sent   864 kB Recv  1191 kB | {}
+🔶 Pred  316 ms Sync   74 ms | Sent   864 kB Recv  1191 kB | {}
+🔶 Pred  315 ms Sync   65 ms | Sent   864 kB Recv  1191 kB | {}
+🔶 Pred  317 ms Sync   56 ms | Sent   864 kB Recv  1191 kB | {}
+🔶 Pred  300 ms Sync   91 ms | Sent   864 kB Recv  1191 kB | {}
+🔶 Pred  310 ms Sync   74 ms | Sent   864 kB Recv  1191 kB | {}
+🔶 Pred  323 ms Sync   40 ms | Sent   864 kB Recv  1191 kB | {}
+🔶 Pred  320 ms Sync   72 ms | Sent   864 kB Recv  1191 kB | {}
+🔶 Pred  314 ms Sync   49 ms | Sent   864 kB Recv  1191 kB | {}
+🔶 Pred  321 ms Sync   80 ms | Sent   864 kB Recv  1191 kB | {}
+🔶 Pred  324 ms Sync   66 ms | Sent   864 kB Recv  1191 kB | {}
+🔶 Pred  310 ms Sync   88 ms | Sent   864 kB Recv  1191 kB | {}
+🔶 Pred  307 ms Sync   81 ms | Sent   864 kB Recv  1191 kB | {}
+🔶 Pred  306 ms Sync   51 ms | Sent   864 kB Recv  1191 kB | {}
+🔶 Pred  323 ms Sync   67 ms | Sent   864 kB Recv  1191 kB | {}
+🔶 Pred  310 ms Sync   56 ms | Sent   864 kB Recv  1191 kB | {}
+🔶 Pred  312 ms Sync   60 ms | Sent   864 kB Recv  1191 kB | {}
+🔶 Pred  302 ms Sync   72 ms | Sent   864 kB Recv  1191 kB | {}
+🔶 Pred  299 ms Sync   72 ms | Sent   864 kB Recv  1191 kB | {}
+🔶 Pred  310 ms Sync   58 ms | Sent   864 kB Recv  1191 kB | {}
+🔶 Pred  316 ms Sync   48 ms | Sent   864 kB Recv  1191 kB | {}
+🔶 Pred  309 ms Sync   56 ms | Sent   864 kB Recv  1191 kB | {}
+🔶 Pred  304 ms Sync   90 ms | Sent   864 kB Recv  1191 kB | {}
+🔶 Pred  317 ms Sync   50 ms | Sent   864 kB Recv  1191 kB | {}
+🔶 Pred  309 ms Sync   57 ms | Sent   864 kB Recv  1191 kB | {}
+🔶 Pred  304 ms Sync   60 ms | Sent   864 kB Recv  1191 kB | {}
+🔶 Pred  317 ms Sync   51 ms | Sent   864 kB Recv  1191 kB | {}
+🔶 Pred  303 ms Sync   94 ms | Sent   864 kB Recv  1191 kB | {}
+🔶 Pred  317 ms Sync   60 ms | Sent   864 kB Recv  1191 kB | {}
+🔶 Pred  302 ms Sync   83 ms | Sent   864 kB Recv  1191 kB | {}
+🔶 Pred  314 ms Sync   72 ms | Sent   864 kB Recv  1191 kB | {}
+🔶 Pred  307 ms Sync   74 ms | Sent   864 kB Recv  1191 kB | {}
+🔶 Pred  325 ms Sync   48 ms | Sent   864 kB Recv  1191 kB | {}
+🔶 Pred  315 ms Sync   54 ms | Sent   864 kB Recv  1191 kB | {}
+🔶 Pred  307 ms Sync   56 ms | Sent   864 kB Recv  1191 kB | {}
+🔶 Pred  321 ms Sync   40 ms | Sent   864 kB Recv  1191 kB | {}
+🔶 Pred  308 ms Sync   55 ms | Sent   864 kB Recv  1191 kB | {}
+🔶 Pred  308 ms Sync   61 ms | Sent   864 kB Recv  1191 kB | {}
+🔶 Pred  309 ms Sync   54 ms | Sent   864 kB Recv  1191 kB | {}
+🔶 Pred  306 ms Sync   61 ms | Sent   864 kB Recv  1191 kB | {}
+🔶 Pred  309 ms Sync   56 ms | Sent   864 kB Recv  1191 kB | {}
+🔶 Pred  311 ms Sync   55 ms | Sent   864 kB Recv  1191 kB | {}
+🔶 Pred  304 ms Sync   51 ms | Sent   864 kB Recv  1191 kB | {}
+🔶 Pred  326 ms Sync   46 ms | Sent   864 kB Recv  1191 kB | {}
+🔶 Pred  313 ms Sync   47 ms | Sent   864 kB Recv  1191 kB | {}
+🔶 Pred  306 ms Sync   48 ms | Sent   864 kB Recv  1191 kB | {}
+🔶 Pred  321 ms Sync   46 ms | Sent   864 kB Recv  1191 kB | {}
+🔶 Pred  297 ms Sync   59 ms | Sent   864 kB Recv  1191 kB | {}
+🔶 Pred  312 ms Sync   61 ms | Sent   864 kB Recv  1191 kB | {}
+🔶 Pred  315 ms Sync   61 ms | Sent   864 kB Recv  1191 kB | {}
+🔶 Pred  300 ms Sync   71 ms | Sent   864 kB Recv  1191 kB | {}
+🔶 Pred  311 ms Sync   52 ms | Sent   864 kB Recv  1191 kB | {}
+🔶 Pred  324 ms Sync   38 ms | Sent   864 kB Recv  1191 kB | {}
+🔶 Pred  331 ms Sync   42 ms | Sent   864 kB Recv  1191 kB | {}
+🔶 Pred  312 ms Sync   58 ms | Sent   864 kB Recv  1191 kB | {}
+🔶 Pred  315 ms Sync   38 ms | Sent   864 kB Recv  1191 kB | {}
+🔶 Pred  311 ms Sync   42 ms | Sent   864 kB Recv  1191 kB | {}
+🔶 Pred  325 ms Sync   39 ms | Sent   864 kB Recv  1191 kB | {}
+🔶 Pred  326 ms Sync   39 ms | Sent   864 kB Recv  1191 kB | {}
+🔶 Pred  305 ms Sync   56 ms | Sent   864 kB Recv  1191 kB | {}
+🔶 Pred  306 ms Sync   77 ms | Sent   864 kB Recv  1191 kB | {}
+🔶 Pred  312 ms Sync   50 ms | Sent   864 kB Recv  1191 kB | {}
+🔶 Pred  319 ms Sync   44 ms | Sent   864 kB Recv  1191 kB | {}
+🔶 Pred  306 ms Sync   55 ms | Sent   864 kB Recv  1191 kB | {}
+🔶 Pred  313 ms Sync   63 ms | Sent   864 kB Recv  1191 kB | {}
+🔶 Pred  314 ms Sync   49 ms | Sent   864 kB Recv  1191 kB | {}
+🔶 Pred  297 ms Sync   55 ms | Sent   864 kB Recv  1191 kB | {}
+🔶 Pred  315 ms Sync   63 ms | Sent   864 kB Recv  1191 kB | {}
+🔶 Pred  308 ms Sync   66 ms | Sent   864 kB Recv  1191 kB | {}
+🔶 Pred  315 ms Sync   58 ms | Sent   864 kB Recv  1191 kB | {}
+🔶 Pred  303 ms Sync   84 ms | Sent   864 kB Recv  1191 kB | {}
+🔶 Pred  324 ms Sync   41 ms | Sent   864 kB Recv  1191 kB | {}
+🔶 Pred  304 ms Sync   71 ms | Sent   864 kB Recv  1191 kB | {}
+🔶 Pred  307 ms Sync   96 ms | Sent   864 kB Recv  1191 kB | {}
+🔶 Pred  321 ms Sync   80 ms | Sent   864 kB Recv  1191 kB | {}
+🔶 Pred  313 ms Sync   66 ms | Sent   864 kB Recv  1191 kB | {}
+🔶 Pred  316 ms Sync   85 ms | Sent   864 kB Recv  1191 kB | {}
+🔶 Pred  308 ms Sync   65 ms | Sent   864 kB Recv  1191 kB | {}
+🔶 Pred  311 ms Sync   53 ms | Sent   864 kB Recv  1191 kB | {}
+🔶 Pred  315 ms Sync   54 ms | Sent   864 kB Recv  1191 kB | {}
+🔶 Pred  316 ms Sync   70 ms | Sent   864 kB Recv  1191 kB | {}
+🔶 Pred  332 ms Sync   36 ms | Sent   864 kB Recv  1191 kB | {}
+🔶 Pred  315 ms Sync   56 ms | Sent   864 kB Recv  1191 kB | {}
+🔶 Pred  307 ms Sync   67 ms | Sent   864 kB Recv  1191 kB | {}
+🔶 Pred  306 ms Sync   66 ms | Sent   864 kB Recv  1191 kB | {}
+🔶 Pred  308 ms Sync   63 ms | Sent   864 kB Recv  1191 kB | {}
+🔶 Pred  309 ms Sync   73 ms | Sent   864 kB Recv  1191 kB | {}
+🔶 Pred  328 ms Sync   59 ms | Sent   864 kB Recv  1191 kB | {}
+🔶 Pred  314 ms Sync   71 ms | Sent   864 kB Recv  1191 kB | {}
+🔶 Pred  312 ms Sync   68 ms | Sent   864 kB Recv  1191 kB | {}
+🔶 Pred  327 ms Sync   54 ms | Sent   864 kB Recv  1191 kB | {}
+🔶 Pred  320 ms Sync   63 ms | Sent   864 kB Recv  1191 kB | {}
+🔶 Pred  317 ms Sync   83 ms | Sent   864 kB Recv  1191 kB | {}
+🔶 Pred  327 ms Sync   36 ms | Sent   864 kB Recv  1191 kB | {}
+🔶 Pred  322 ms Sync   39 ms | Sent   864 kB Recv  1191 kB | {}
+🔶 Pred  312 ms Sync   47 ms | Sent   864 kB Recv  1191 kB | {}
+🔶 Pred  308 ms Sync   54 ms | Sent   864 kB Recv  1191 kB | {}
+
+Evaluation
+   nBatches: 32
+    nTokens: 3324
+   tokens/s: 3.42 (292.17 ms/tok)
+Prediction
+    nTokens: 676
+   tokens/s: 2.58 (387.75 ms/tok)
+⭕ Network is closed

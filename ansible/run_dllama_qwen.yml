@@ -1,24 +1,24 @@
 ---
 # Usage:
-#   ansible-playbook run_dllama.yml -e "run_type=short"
-#   ansible-playbook run_dllama.yml -e "run_type=long"
-#   ansible-playbook run_dllama.yml -e "run_type=leaderboard"
+#   ansible-playbook run_qwen.yml -e "run_type=short"
+#   ansible-playbook run_qwen.yml -e "run_type=long"
+#   ansible-playbook run_qwen.yml -e "run_type=leaderboard"
 #
 # Workers must be started manually before running this playbook:
-#   ssh orangepi@172.17.1.51 'nohup /home/orangepi/KUSC_2026-SBCC-Docs/DLLAMA/distributed-llama/dllama worker --port 9999 --nthreads 2 > /home/orangepi/dllama_worker.log 2>&1 &'
-#   ssh orangepi@172.17.1.52 'nohup /home/orangepi/KUSC_2026-SBCC-Docs/DLLAMA/distributed-llama/dllama worker --port 9999 --nthreads 2 > /home/orangepi/dllama_worker.log 2>&1 &'
-#   ssh orangepi@172.17.1.53 'nohup /home/orangepi/KUSC_2026-SBCC-Docs/DLLAMA/distributed-llama/dllama worker --port 9999 --nthreads 2 > /home/orangepi/dllama_worker.log 2>&1 &'
+#   ssh orangepi@172.17.1.51 'nohup /home/orangepi/KUSC_2026-SBCC-Docs/DLLAMA/def-distributed-llama/dllama worker --port 9999 --nthreads 2 > /home/orangepi/dllama_worker.log 2>&1 &'
+#   ssh orangepi@172.17.1.52 'nohup /home/orangepi/KUSC_2026-SBCC-Docs/DLLAMA/def-distributed-llama/dllama worker --port 9999 --nthreads 2 > /home/orangepi/dllama_worker.log 2>&1 &'
+#   ssh orangepi@172.17.1.53 'nohup /home/orangepi/KUSC_2026-SBCC-Docs/DLLAMA/def-distributed-llama/dllama worker --port 9999 --nthreads 2 > /home/orangepi/dllama_worker.log 2>&1 &'
 # Wait for all three to finish loading before running this playbook.
 #
 # ================================================================== #
-- name: Run dllama inference on root
+- name: Run qwen inference on root
   hosts: dllama_root
   gather_facts: false
   vars:
-    dllama_dir: /home/orangepi/KUSC_2026-SBCC-Docs/DLLAMA/distributed-llama
+    dllama_dir: /home/orangepi/KUSC_2026-SBCC-Docs/DLLAMA/def-distributed-llama
     prompts_dir: /home/orangepi/KUSC_2026-SBCC-Docs/DLLAMA/dllama-prompts
-    output_base: /home/orangepi/KUSC_2026-SBCC-Docs/ansible/dllama-out
-    model_name: llama3_1_8b_instruct_q40
+    output_base: /home/orangepi/KUSC_2026-SBCC-Docs/ansible/dllama-out/task_2
+    model_name: qwen3_8b_q40
     nthreads: 2
     max_seq_len: 4096
     worker_port: 9999

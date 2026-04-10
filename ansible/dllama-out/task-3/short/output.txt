@@ -1,0 +1,655 @@
+📄 AddBos: 0
+📄 BosId: 128000 (<|begin_of_text|>)
+📄 EosId: 128001 (<|end_of_text|>) 128009 (<|eot_id|>) 
+📄 RegularVocabSize: 128000
+📄 SpecialVocabSize: 256
+💡 Arch: Llama
+💡 HiddenAct: Silu
+💡 Dim: 4096
+💡 HeadDim: 128
+💡 QDim: 4096
+💡 KvDim: 1024
+💡 HiddenDim: 14336
+💡 VocabSize: 128256
+💡 nLayers: 32
+💡 nHeads: 32
+💡 nKvHeads: 8
+💡 OrigSeqLen: 131072
+💡 SeqLen: 4096
+💡 NormEpsilon: 0.000010
+💡 RopeType: Llama3.1
+💡 RopeTheta: 500000
+💡 RopeScaling: f=8.0, l=1.0, h=4.0, o=8192
+📀 RequiredMemory: 3312 MB
+⭕ Socket[0]: connecting to 172.17.1.51:9999 worker
+⭕ Socket[0]: connected
+⭕ Socket[1]: connecting to 172.17.1.52:9999 worker
+⭕ Socket[1]: connected
+⭕ Socket[2]: connecting to 172.17.1.53:9999 worker
+⭕ Socket[2]: connected
+⭕ Network is initialized
+🧠 CPU: neon fp16
+💿 Loading weights...
+💿 Loaded 12/32
+💿 Loaded 13/32
+💿 Loaded 14/32
+💿 Loaded 15/32
+💿 Loaded 16/32
+💿 Loaded 17/32
+💿 Loaded 18/32
+💿 Loaded 19/32
+💿 Loaded 20/32
+💿 Loaded 21/32
+💿 Loaded 22/32
+💿 Loaded 23/32
+💿 Loaded 24/32
+💿 Loaded 25/32
+💿 Loaded 26/32
+💿 Loaded 27/32
+💿 Loaded 28/32
+💿 Loaded 29/32
+💿 Loaded 30/32
+💿 Loaded 31/32
+💿 Loaded 32/32
+💿 Weights loaded
+🚁 Network is in non-blocking mode
+Cellular respiration is a set of metabolic pathways that allow cells to convert energy stored in organic molecules into ATP. In eukaryotic cells, these processes occur in different cellular compartments and are tightly regulated based on environmental conditions. A team of researchers is investigating how oxygen availability affects ATP production and metabolic pathway usage in cultured animal cells. The researchers grow identical populations of cells under two different conditions: Condition 1 (Aerobic): Cells are supplied with abundant oxygen Condition 2 (Anaerobic): Cells are deprived of oxygen. The researchers measure ATP production, levels of metabolic intermediates, and enzyme activity over time. Their observations include the following: Under aerobic conditions, cells produce large amounts of ATP and show high activity of enzymes involved in the citric acid cycle and oxidative phosphorylation. Under anaerobic conditions, cells produce significantly less ATP overall. However, glycolysis rates increase, and lactate accumulates in the cells. The researchers observe that NAD+ levels decrease initially under anaerobic conditions but are later restored as lactate production increases. In a third experimental setup, the researchers add a chemical inhibitor that blocks the electron transport chain in cells that are otherwise supplied with oxygen. These cells show similar metabolic patterns to anaerobic cells. (a)  Describe the role of oxygen in cellular respiration. Include its function in the electron transport chain. (b) Explain why ATP production is lower under anaerobic conditions compared to aerobic conditions. (c) Describe how cells are able to continue producing ATP in the absence of oxygen. Include the role of NAD+. (d) Explain why lactate accumulates in cells under anaerobic conditions. (e) Using the observations from the inhibitor experiment, explain why blocking the electron transport chain leads to similar effects as oxygen deprivation. (f) Predict how the activity of the enzyme phosphofructokinase (PFK), a key regulatory enzyme in glycolysis, would change under anaerobic conditions
+🔷️ Eval 6158 ms Sync  717 ms | Sent 27648 kB Recv 38136 kB | (32 tokens)
+🔷️ Eval 6182 ms Sync  695 ms | Sent 27648 kB Recv 38136 kB | (32 tokens)
+🔷️ Eval 6142 ms Sync  718 ms | Sent 27648 kB Recv 38136 kB | (32 tokens)
+🔷️ Eval 6160 ms Sync  702 ms | Sent 27648 kB Recv 38136 kB | (32 tokens)
+🔷️ Eval 6219 ms Sync  703 ms | Sent 27648 kB Recv 38136 kB | (32 tokens)
+🔷️ Eval 6229 ms Sync  701 ms | Sent 27648 kB Recv 38136 kB | (32 tokens)
+🔷️ Eval 6263 ms Sync  691 ms | Sent 27648 kB Recv 38136 kB | (32 tokens)
+🔷️ Eval 6274 ms Sync  695 ms | Sent 27648 kB Recv 38136 kB | (32 tokens)
+🔷️ Eval 6295 ms Sync  692 ms | Sent 27648 kB Recv 38136 kB | (32 tokens)
+🔷️ Eval 6305 ms Sync  694 ms | Sent 27648 kB Recv 38136 kB | (32 tokens)
+🔷️ Eval 6267 ms Sync  706 ms | Sent 27648 kB Recv 38136 kB | (32 tokens)
+🔷️ Eval 6326 ms Sync  702 ms | Sent 27648 kB Recv 38136 kB | (32 tokens)
+🔷️ Eval 2796 ms Sync  316 ms | Sent 12096 kB Recv 16684 kB | (14 tokens)
+🔶 Pred  215 ms Sync   28 ms | Sent   864 kB Recv  1191 kB | .
+🔶 Pred  213 ms Sync   27 ms | Sent   864 kB Recv  1191 kB |  (
+🔶 Pred  211 ms Sync   31 ms | Sent   864 kB Recv  1191 kB | g
+🔶 Pred  211 ms Sync   31 ms | Sent   864 kB Recv  1191 kB | )
+🔶 Pred  210 ms Sync   32 ms | Sent   864 kB Recv  1191 kB |  Based
+🔶 Pred  214 ms Sync   26 ms | Sent   864 kB Recv  1191 kB |  on
+🔶 Pred  213 ms Sync   31 ms | Sent   864 kB Recv  1191 kB |  the
+🔶 Pred  214 ms Sync   26 ms | Sent   864 kB Recv  1191 kB |  observations
+🔶 Pred  214 ms Sync   25 ms | Sent   864 kB Recv  1191 kB | ,
+🔶 Pred  212 ms Sync   28 ms | Sent   864 kB Recv  1191 kB |  propose
+🔶 Pred  211 ms Sync   28 ms | Sent   864 kB Recv  1191 kB |  a
+🔶 Pred  212 ms Sync   27 ms | Sent   864 kB Recv  1191 kB |  mechanism
+🔶 Pred  212 ms Sync   28 ms | Sent   864 kB Recv  1191 kB |  for
+🔶 Pred  211 ms Sync   28 ms | Sent   864 kB Recv  1191 kB |  how
+🔶 Pred  212 ms Sync   27 ms | Sent   864 kB Recv  1191 kB |  cells
+🔶 Pred  213 ms Sync   26 ms | Sent   864 kB Recv  1191 kB |  adapt
+🔶 Pred  215 ms Sync   25 ms | Sent   864 kB Recv  1191 kB |  to
+🔶 Pred  212 ms Sync   29 ms | Sent   864 kB Recv  1191 kB |  low
+🔶 Pred  210 ms Sync   27 ms | Sent   864 kB Recv  1191 kB |  oxygen
+🔶 Pred  213 ms Sync   30 ms | Sent   864 kB Recv  1191 kB |  levels
+🔶 Pred  215 ms Sync   28 ms | Sent   864 kB Recv  1191 kB | .
+🔶 Pred  213 ms Sync   25 ms | Sent   864 kB Recv  1191 kB |  (
+🔶 Pred  212 ms Sync   28 ms | Sent   864 kB Recv  1191 kB | h
+🔶 Pred  216 ms Sync   25 ms | Sent   864 kB Recv  1191 kB | )
+🔶 Pred  214 ms Sync   27 ms | Sent   864 kB Recv  1191 kB |  Discuss
+🔶 Pred  213 ms Sync   27 ms | Sent   864 kB Recv  1191 kB |  the
+🔶 Pred  216 ms Sync   26 ms | Sent   864 kB Recv  1191 kB |  implications
+🔶 Pred  210 ms Sync   29 ms | Sent   864 kB Recv  1191 kB |  of
+🔶 Pred  215 ms Sync   27 ms | Sent   864 kB Recv  1191 kB |  these
+🔶 Pred  214 ms Sync   27 ms | Sent   864 kB Recv  1191 kB |  findings
+🔶 Pred  212 ms Sync   28 ms | Sent   864 kB Recv  1191 kB |  for
+🔶 Pred  212 ms Sync   29 ms | Sent   864 kB Recv  1191 kB |  our
+🔶 Pred  213 ms Sync   26 ms | Sent   864 kB Recv  1191 kB |  understanding
+🔶 Pred  211 ms Sync   30 ms | Sent   864 kB Recv  1191 kB |  of
+🔶 Pred  213 ms Sync   28 ms | Sent   864 kB Recv  1191 kB |  cellular
+🔶 Pred  214 ms Sync   27 ms | Sent   864 kB Recv  1191 kB |  res
+🔶 Pred  213 ms Sync   25 ms | Sent   864 kB Recv  1191 kB | piration
+🔶 Pred  211 ms Sync   27 ms | Sent   864 kB Recv  1191 kB |  and
+🔶 Pred  213 ms Sync   25 ms | Sent   864 kB Recv  1191 kB |  the
+🔶 Pred  215 ms Sync   26 ms | Sent   864 kB Recv  1191 kB |  regulation
+🔶 Pred  213 ms Sync   32 ms | Sent   864 kB Recv  1191 kB |  of
+🔶 Pred  213 ms Sync   27 ms | Sent   864 kB Recv  1191 kB |  metabolic
+🔶 Pred  211 ms Sync   27 ms | Sent   864 kB Recv  1191 kB |  pathways
+🔶 Pred  215 ms Sync   26 ms | Sent   864 kB Recv  1191 kB | .
+🔶 Pred  214 ms Sync   26 ms | Sent   864 kB Recv  1191 kB |  (
+🔶 Pred  214 ms Sync   27 ms | Sent   864 kB Recv  1191 kB | i
+🔶 Pred  214 ms Sync   25 ms | Sent   864 kB Recv  1191 kB | )
+🔶 Pred  212 ms Sync   29 ms | Sent   864 kB Recv  1191 kB |  Spec
+🔶 Pred  215 ms Sync   27 ms | Sent   864 kB Recv  1191 kB | ulate
+🔶 Pred  213 ms Sync   25 ms | Sent   864 kB Recv  1191 kB |  on
+🔶 Pred  214 ms Sync   26 ms | Sent   864 kB Recv  1191 kB |  the
+🔶 Pred  213 ms Sync   27 ms | Sent   864 kB Recv  1191 kB |  potential
+🔶 Pred  213 ms Sync   25 ms | Sent   864 kB Recv  1191 kB |  applications
+🔶 Pred  216 ms Sync   25 ms | Sent   864 kB Recv  1191 kB |  of
+🔶 Pred  212 ms Sync   34 ms | Sent   864 kB Recv  1191 kB |  these
+🔶 Pred  216 ms Sync   30 ms | Sent   864 kB Recv  1191 kB |  findings
+🔶 Pred  212 ms Sync   28 ms | Sent   864 kB Recv  1191 kB |  in
+🔶 Pred  213 ms Sync   26 ms | Sent   864 kB Recv  1191 kB |  the
+🔶 Pred  213 ms Sync   28 ms | Sent   864 kB Recv  1191 kB |  fields
+🔶 Pred  217 ms Sync   24 ms | Sent   864 kB Recv  1191 kB |  of
+🔶 Pred  212 ms Sync   29 ms | Sent   864 kB Recv  1191 kB |  medicine
+🔶 Pred  213 ms Sync   31 ms | Sent   864 kB Recv  1191 kB |  and
+🔶 Pred  214 ms Sync   28 ms | Sent   864 kB Recv  1191 kB |  bi
+🔶 Pred  214 ms Sync   25 ms | Sent   864 kB Recv  1191 kB | otechnology
+🔶 Pred  216 ms Sync   25 ms | Sent   864 kB Recv  1191 kB | .
+🔶 Pred  214 ms Sync   26 ms | Sent   864 kB Recv  1191 kB |  (
+🔶 Pred  209 ms Sync   31 ms | Sent   864 kB Recv  1191 kB | j
+🔶 Pred  222 ms Sync   25 ms | Sent   864 kB Recv  1191 kB | )
+🔶 Pred  213 ms Sync   28 ms | Sent   864 kB Recv  1191 kB |  Consider
+🔶 Pred  213 ms Sync   25 ms | Sent   864 kB Recv  1191 kB |  the
+🔶 Pred  214 ms Sync   32 ms | Sent   864 kB Recv  1191 kB |  broader
+🔶 Pred  214 ms Sync   25 ms | Sent   864 kB Recv  1191 kB |  context
+🔶 Pred  212 ms Sync   29 ms | Sent   864 kB Recv  1191 kB |  of
+🔶 Pred  214 ms Sync   25 ms | Sent   864 kB Recv  1191 kB |  these
+🔶 Pred  216 ms Sync   30 ms | Sent   864 kB Recv  1191 kB |  findings
+🔶 Pred  214 ms Sync   27 ms | Sent   864 kB Recv  1191 kB |  in
+🔶 Pred  218 ms Sync   25 ms | Sent   864 kB Recv  1191 kB |  the
+🔶 Pred  214 ms Sync   28 ms | Sent   864 kB Recv  1191 kB |  context
+🔶 Pred  214 ms Sync   28 ms | Sent   864 kB Recv  1191 kB |  of
+🔶 Pred  214 ms Sync   26 ms | Sent   864 kB Recv  1191 kB |  the
+🔶 Pred  213 ms Sync   26 ms | Sent   864 kB Recv  1191 kB |  human
+🔶 Pred  215 ms Sync   27 ms | Sent   864 kB Recv  1191 kB |  body
+🔶 Pred  211 ms Sync   27 ms | Sent   864 kB Recv  1191 kB |  and
+🔶 Pred  216 ms Sync   27 ms | Sent   864 kB Recv  1191 kB |  the
+🔶 Pred  213 ms Sync   27 ms | Sent   864 kB Recv  1191 kB |  environment
+🔶 Pred  215 ms Sync   26 ms | Sent   864 kB Recv  1191 kB | .
+🔶 Pred  212 ms Sync   26 ms | Sent   864 kB Recv  1191 kB |  (
+🔶 Pred  212 ms Sync   29 ms | Sent   864 kB Recv  1191 kB | k
+🔶 Pred  213 ms Sync   27 ms | Sent   864 kB Recv  1191 kB | )
+🔶 Pred  214 ms Sync   25 ms | Sent   864 kB Recv  1191 kB |  Discuss
+🔶 Pred  215 ms Sync   27 ms | Sent   864 kB Recv  1191 kB |  the
+🔶 Pred  214 ms Sync   25 ms | Sent   864 kB Recv  1191 kB |  potential
+🔶 Pred  212 ms Sync   29 ms | Sent   864 kB Recv  1191 kB |  for
+🔶 Pred  214 ms Sync   25 ms | Sent   864 kB Recv  1191 kB |  these
+🔶 Pred  212 ms Sync   31 ms | Sent   864 kB Recv  1191 kB |  findings
+🔶 Pred  214 ms Sync   27 ms | Sent   864 kB Recv  1191 kB |  to
+🔶 Pred  214 ms Sync   30 ms | Sent   864 kB Recv  1191 kB |  contribute
+🔶 Pred  214 ms Sync   28 ms | Sent   864 kB Recv  1191 kB |  to
+🔶 Pred  214 ms Sync   27 ms | Sent   864 kB Recv  1191 kB |  the
+🔶 Pred  211 ms Sync   33 ms | Sent   864 kB Recv  1191 kB |  development
+🔶 Pred  214 ms Sync   28 ms | Sent   864 kB Recv  1191 kB |  of
+🔶 Pred  214 ms Sync   28 ms | Sent   864 kB Recv  1191 kB |  new
+🔶 Pred  214 ms Sync   26 ms | Sent   864 kB Recv  1191 kB |  therapeutic
+🔶 Pred  215 ms Sync   30 ms | Sent   864 kB Recv  1191 kB |  strategies
+🔶 Pred  217 ms Sync   25 ms | Sent   864 kB Recv  1191 kB |  for
+🔶 Pred  215 ms Sync   29 ms | Sent   864 kB Recv  1191 kB |  diseases
+🔶 Pred  215 ms Sync   29 ms | Sent   864 kB Recv  1191 kB |  related
+🔶 Pred  213 ms Sync   27 ms | Sent   864 kB Recv  1191 kB |  to
+🔶 Pred  214 ms Sync   29 ms | Sent   864 kB Recv  1191 kB |  cellular
+🔶 Pred  216 ms Sync   25 ms | Sent   864 kB Recv  1191 kB |  res
+🔶 Pred  214 ms Sync   25 ms | Sent   864 kB Recv  1191 kB | piration
+🔶 Pred  216 ms Sync   25 ms | Sent   864 kB Recv  1191 kB | .
+🔶 Pred  215 ms Sync   31 ms | Sent   864 kB Recv  1191 kB |  (
+🔶 Pred  216 ms Sync   26 ms | Sent   864 kB Recv  1191 kB | l
+🔶 Pred  215 ms Sync   25 ms | Sent   864 kB Recv  1191 kB | )
+🔶 Pred  213 ms Sync   29 ms | Sent   864 kB Recv  1191 kB |  Consider
+🔶 Pred  214 ms Sync   26 ms | Sent   864 kB Recv  1191 kB |  the
+🔶 Pred  214 ms Sync   26 ms | Sent   864 kB Recv  1191 kB |  potential
+🔶 Pred  213 ms Sync   26 ms | Sent   864 kB Recv  1191 kB |  for
+🔶 Pred  212 ms Sync   27 ms | Sent   864 kB Recv  1191 kB |  these
+🔶 Pred  215 ms Sync   26 ms | Sent   864 kB Recv  1191 kB |  findings
+🔶 Pred  216 ms Sync   25 ms | Sent   864 kB Recv  1191 kB |  to
+🔶 Pred  212 ms Sync   29 ms | Sent   864 kB Recv  1191 kB |  contribute
+🔶 Pred  217 ms Sync   29 ms | Sent   864 kB Recv  1191 kB |  to
+🔶 Pred  214 ms Sync   27 ms | Sent   864 kB Recv  1191 kB |  the
+🔶 Pred  215 ms Sync   25 ms | Sent   864 kB Recv  1191 kB |  development
+🔶 Pred  216 ms Sync   26 ms | Sent   864 kB Recv  1191 kB |  of
+🔶 Pred  213 ms Sync   30 ms | Sent   864 kB Recv  1191 kB |  more
+🔶 Pred  217 ms Sync   24 ms | Sent   864 kB Recv  1191 kB |  efficient
+🔶 Pred  214 ms Sync   31 ms | Sent   864 kB Recv  1191 kB |  bi
+🔶 Pred  216 ms Sync   26 ms | Sent   864 kB Recv  1191 kB | otechn
+🔶 Pred  215 ms Sync   26 ms | Sent   864 kB Recv  1191 kB | ological
+🔶 Pred  216 ms Sync   25 ms | Sent   864 kB Recv  1191 kB |  processes
+🔶 Pred  217 ms Sync   25 ms | Sent   864 kB Recv  1191 kB | .
+🔶 Pred  214 ms Sync   28 ms | Sent   864 kB Recv  1191 kB |  (
+🔶 Pred  214 ms Sync   27 ms | Sent   864 kB Recv  1191 kB | m
+🔶 Pred  215 ms Sync   29 ms | Sent   864 kB Recv  1191 kB | )
+🔶 Pred  214 ms Sync   27 ms | Sent   864 kB Recv  1191 kB |  Discuss
+🔶 Pred  215 ms Sync   28 ms | Sent   864 kB Recv  1191 kB |  the
+🔶 Pred  212 ms Sync   27 ms | Sent   864 kB Recv  1191 kB |  potential
+🔶 Pred  216 ms Sync   29 ms | Sent   864 kB Recv  1191 kB |  for
+🔶 Pred  216 ms Sync   25 ms | Sent   864 kB Recv  1191 kB |  these
+🔶 Pred  217 ms Sync   27 ms | Sent   864 kB Recv  1191 kB |  findings
+🔶 Pred  214 ms Sync   30 ms | Sent   864 kB Recv  1191 kB |  to
+🔶 Pred  217 ms Sync   24 ms | Sent   864 kB Recv  1191 kB |  contribute
+🔶 Pred  214 ms Sync   27 ms | Sent   864 kB Recv  1191 kB |  to
+🔶 Pred  212 ms Sync   30 ms | Sent   864 kB Recv  1191 kB |  the
+🔶 Pred  213 ms Sync   31 ms | Sent   864 kB Recv  1191 kB |  development
+🔶 Pred  217 ms Sync   29 ms | Sent   864 kB Recv  1191 kB |  of
+🔶 Pred  214 ms Sync   26 ms | Sent   864 kB Recv  1191 kB |  more
+🔶 Pred  226 ms Sync   25 ms | Sent   864 kB Recv  1191 kB |  sustainable
+🔶 Pred  215 ms Sync   28 ms | Sent   864 kB Recv  1191 kB |  energy
+🔶 Pred  216 ms Sync   29 ms | Sent   864 kB Recv  1191 kB |  sources
+🔶 Pred  214 ms Sync   29 ms | Sent   864 kB Recv  1191 kB | .
+🔶 Pred  213 ms Sync   31 ms | Sent   864 kB Recv  1191 kB |  (
+🔶 Pred  215 ms Sync   28 ms | Sent   864 kB Recv  1191 kB | n
+🔶 Pred  214 ms Sync   31 ms | Sent   864 kB Recv  1191 kB | )
+🔶 Pred  215 ms Sync   31 ms | Sent   864 kB Recv  1191 kB |  Consider
+🔶 Pred  216 ms Sync   29 ms | Sent   864 kB Recv  1191 kB |  the
+🔶 Pred  213 ms Sync   33 ms | Sent   864 kB Recv  1191 kB |  potential
+🔶 Pred  212 ms Sync   32 ms | Sent   864 kB Recv  1191 kB |  for
+🔶 Pred  215 ms Sync   26 ms | Sent   864 kB Recv  1191 kB |  these
+🔶 Pred  215 ms Sync   29 ms | Sent   864 kB Recv  1191 kB |  findings
+🔶 Pred  213 ms Sync   30 ms | Sent   864 kB Recv  1191 kB |  to
+🔶 Pred  214 ms Sync   29 ms | Sent   864 kB Recv  1191 kB |  contribute
+🔶 Pred  216 ms Sync   27 ms | Sent   864 kB Recv  1191 kB |  to
+🔶 Pred  218 ms Sync   26 ms | Sent   864 kB Recv  1191 kB |  the
+🔶 Pred  216 ms Sync   26 ms | Sent   864 kB Recv  1191 kB |  development
+🔶 Pred  214 ms Sync   27 ms | Sent   864 kB Recv  1191 kB |  of
+🔶 Pred  218 ms Sync   25 ms | Sent   864 kB Recv  1191 kB |  new
+🔶 Pred  215 ms Sync   29 ms | Sent   864 kB Recv  1191 kB |  diagnostic
+🔶 Pred  219 ms Sync   25 ms | Sent   864 kB Recv  1191 kB |  tools
+🔶 Pred  214 ms Sync   29 ms | Sent   864 kB Recv  1191 kB |  for
+🔶 Pred  217 ms Sync   30 ms | Sent   864 kB Recv  1191 kB |  diseases
+🔶 Pred  215 ms Sync   29 ms | Sent   864 kB Recv  1191 kB |  related
+🔶 Pred  212 ms Sync   30 ms | Sent   864 kB Recv  1191 kB |  to
+🔶 Pred  216 ms Sync   30 ms | Sent   864 kB Recv  1191 kB |  cellular
+🔶 Pred  214 ms Sync   31 ms | Sent   864 kB Recv  1191 kB |  res
+🔶 Pred  215 ms Sync   28 ms | Sent   864 kB Recv  1191 kB | piration
+🔶 Pred  216 ms Sync   30 ms | Sent   864 kB Recv  1191 kB | .
+🔶 Pred  217 ms Sync   26 ms | Sent   864 kB Recv  1191 kB |  (
+🔶 Pred  222 ms Sync   24 ms | Sent   864 kB Recv  1191 kB | o
+🔶 Pred  216 ms Sync   30 ms | Sent   864 kB Recv  1191 kB | )
+🔶 Pred  216 ms Sync   26 ms | Sent   864 kB Recv  1191 kB |  Discuss
+🔶 Pred  217 ms Sync   29 ms | Sent   864 kB Recv  1191 kB |  the
+🔶 Pred  217 ms Sync   26 ms | Sent   864 kB Recv  1191 kB |  potential
+🔶 Pred  213 ms Sync   33 ms | Sent   864 kB Recv  1191 kB |  for
+🔶 Pred  216 ms Sync   31 ms | Sent   864 kB Recv  1191 kB |  these
+🔶 Pred  214 ms Sync   30 ms | Sent   864 kB Recv  1191 kB |  findings
+🔶 Pred  217 ms Sync   26 ms | Sent   864 kB Recv  1191 kB |  to
+🔶 Pred  217 ms Sync   29 ms | Sent   864 kB Recv  1191 kB |  contribute
+🔶 Pred  216 ms Sync   26 ms | Sent   864 kB Recv  1191 kB |  to
+🔶 Pred  218 ms Sync   26 ms | Sent   864 kB Recv  1191 kB |  the
+🔶 Pred  213 ms Sync   31 ms | Sent   864 kB Recv  1191 kB |  development
+🔶 Pred  216 ms Sync   27 ms | Sent   864 kB Recv  1191 kB |  of
+🔶 Pred  215 ms Sync   27 ms | Sent   864 kB Recv  1191 kB |  new
+🔶 Pred  218 ms Sync   26 ms | Sent   864 kB Recv  1191 kB |  biom
+🔶 Pred  219 ms Sync   26 ms | Sent   864 kB Recv  1191 kB | arkers
+🔶 Pred  225 ms Sync   26 ms | Sent   864 kB Recv  1191 kB |  for
+🔶 Pred  215 ms Sync   32 ms | Sent   864 kB Recv  1191 kB |  monitoring
+🔶 Pred  215 ms Sync   26 ms | Sent   864 kB Recv  1191 kB |  cellular
+🔶 Pred  215 ms Sync   32 ms | Sent   864 kB Recv  1191 kB |  res
+🔶 Pred  216 ms Sync   27 ms | Sent   864 kB Recv  1191 kB | piration
+🔶 Pred  216 ms Sync   29 ms | Sent   864 kB Recv  1191 kB |  in
+🔶 Pred  214 ms Sync   28 ms | Sent   864 kB Recv  1191 kB |  the
+🔶 Pred  214 ms Sync   32 ms | Sent   864 kB Recv  1191 kB |  human
+🔶 Pred  216 ms Sync   31 ms | Sent   864 kB Recv  1191 kB |  body
+🔶 Pred  214 ms Sync   32 ms | Sent   864 kB Recv  1191 kB | .
+🔶 Pred  214 ms Sync   35 ms | Sent   864 kB Recv  1191 kB |  (
+🔶 Pred  216 ms Sync   28 ms | Sent   864 kB Recv  1191 kB | p
+🔶 Pred  216 ms Sync   29 ms | Sent   864 kB Recv  1191 kB | )
+🔶 Pred  217 ms Sync   25 ms | Sent   864 kB Recv  1191 kB |  Consider
+🔶 Pred  218 ms Sync   26 ms | Sent   864 kB Recv  1191 kB |  the
+🔶 Pred  216 ms Sync   29 ms | Sent   864 kB Recv  1191 kB |  potential
+🔶 Pred  217 ms Sync   27 ms | Sent   864 kB Recv  1191 kB |  for
+🔶 Pred  218 ms Sync   27 ms | Sent   864 kB Recv  1191 kB |  these
+🔶 Pred  217 ms Sync   29 ms | Sent   864 kB Recv  1191 kB |  findings
+🔶 Pred  216 ms Sync   30 ms | Sent   864 kB Recv  1191 kB |  to
+🔶 Pred  216 ms Sync   31 ms | Sent   864 kB Recv  1191 kB |  contribute
+🔶 Pred  215 ms Sync   33 ms | Sent   864 kB Recv  1191 kB |  to
+🔶 Pred  212 ms Sync   31 ms | Sent   864 kB Recv  1191 kB |  the
+🔶 Pred  219 ms Sync   25 ms | Sent   864 kB Recv  1191 kB |  development
+🔶 Pred  215 ms Sync   36 ms | Sent   864 kB Recv  1191 kB |  of
+🔶 Pred  218 ms Sync   27 ms | Sent   864 kB Recv  1191 kB |  new
+🔶 Pred  214 ms Sync   33 ms | Sent   864 kB Recv  1191 kB |  therapeutic
+🔶 Pred  220 ms Sync   26 ms | Sent   864 kB Recv  1191 kB |  strategies
+🔶 Pred  215 ms Sync   33 ms | Sent   864 kB Recv  1191 kB |  for
+🔶 Pred  218 ms Sync   26 ms | Sent   864 kB Recv  1191 kB |  diseases
+🔶 Pred  215 ms Sync   34 ms | Sent   864 kB Recv  1191 kB |  related
+🔶 Pred  216 ms Sync   27 ms | Sent   864 kB Recv  1191 kB |  to
+🔶 Pred  219 ms Sync   26 ms | Sent   864 kB Recv  1191 kB |  cellular
+🔶 Pred  215 ms Sync   32 ms | Sent   864 kB Recv  1191 kB |  res
+🔶 Pred  215 ms Sync   27 ms | Sent   864 kB Recv  1191 kB | piration
+🔶 Pred  215 ms Sync   33 ms | Sent   864 kB Recv  1191 kB | .
+🔶 Pred  216 ms Sync   27 ms | Sent   864 kB Recv  1191 kB |  (
+🔶 Pred  217 ms Sync   28 ms | Sent   864 kB Recv  1191 kB | q
+🔶 Pred  218 ms Sync   25 ms | Sent   864 kB Recv  1191 kB | )
+🔶 Pred  214 ms Sync   33 ms | Sent   864 kB Recv  1191 kB |  Discuss
+🔶 Pred  216 ms Sync   30 ms | Sent   864 kB Recv  1191 kB |  the
+🔶 Pred  217 ms Sync   27 ms | Sent   864 kB Recv  1191 kB |  potential
+🔶 Pred  215 ms Sync   32 ms | Sent   864 kB Recv  1191 kB |  for
+🔶 Pred  213 ms Sync   28 ms | Sent   864 kB Recv  1191 kB |  these
+🔶 Pred  215 ms Sync   28 ms | Sent   864 kB Recv  1191 kB |  findings
+🔶 Pred  216 ms Sync   26 ms | Sent   864 kB Recv  1191 kB |  to
+🔶 Pred  217 ms Sync   32 ms | Sent   864 kB Recv  1191 kB |  contribute
+🔶 Pred  216 ms Sync   32 ms | Sent   864 kB Recv  1191 kB |  to
+🔶 Pred  219 ms Sync   32 ms | Sent   864 kB Recv  1191 kB |  the
+🔶 Pred  216 ms Sync   29 ms | Sent   864 kB Recv  1191 kB |  development
+🔶 Pred  217 ms Sync   30 ms | Sent   864 kB Recv  1191 kB |  of
+🔶 Pred  217 ms Sync   26 ms | Sent   864 kB Recv  1191 kB |  more
+🔶 Pred  216 ms Sync   27 ms | Sent   864 kB Recv  1191 kB |  efficient
+🔶 Pred  214 ms Sync   29 ms | Sent   864 kB Recv  1191 kB |  bi
+🔶 Pred  217 ms Sync   27 ms | Sent   864 kB Recv  1191 kB | otechn
+🔶 Pred  215 ms Sync   35 ms | Sent   864 kB Recv  1191 kB | ological
+🔶 Pred  219 ms Sync   27 ms | Sent   864 kB Recv  1191 kB |  processes
+🔶 Pred  216 ms Sync   26 ms | Sent   864 kB Recv  1191 kB | .
+🔶 Pred  215 ms Sync   32 ms | Sent   864 kB Recv  1191 kB |  (
+🔶 Pred  219 ms Sync   25 ms | Sent   864 kB Recv  1191 kB | r
+🔶 Pred  217 ms Sync   30 ms | Sent   864 kB Recv  1191 kB | )
+🔶 Pred  216 ms Sync   27 ms | Sent   864 kB Recv  1191 kB |  Consider
+🔶 Pred  218 ms Sync   29 ms | Sent   864 kB Recv  1191 kB |  the
+🔶 Pred  215 ms Sync   29 ms | Sent   864 kB Recv  1191 kB |  potential
+🔶 Pred  217 ms Sync   28 ms | Sent   864 kB Recv  1191 kB |  for
+🔶 Pred  218 ms Sync   29 ms | Sent   864 kB Recv  1191 kB |  these
+🔶 Pred  219 ms Sync   28 ms | Sent   864 kB Recv  1191 kB |  findings
+🔶 Pred  216 ms Sync   37 ms | Sent   864 kB Recv  1191 kB |  to
+🔶 Pred  217 ms Sync   27 ms | Sent   864 kB Recv  1191 kB |  contribute
+🔶 Pred  218 ms Sync   32 ms | Sent   864 kB Recv  1191 kB |  to
+🔶 Pred  213 ms Sync   37 ms | Sent   864 kB Recv  1191 kB |  the
+🔶 Pred  217 ms Sync   29 ms | Sent   864 kB Recv  1191 kB |  development
+🔶 Pred  222 ms Sync   27 ms | Sent   864 kB Recv  1191 kB |  of
+🔶 Pred  218 ms Sync   27 ms | Sent   864 kB Recv  1191 kB |  more
+🔶 Pred  218 ms Sync   28 ms | Sent   864 kB Recv  1191 kB |  sustainable
+🔶 Pred  218 ms Sync   28 ms | Sent   864 kB Recv  1191 kB |  energy
+🔶 Pred  222 ms Sync   29 ms | Sent   864 kB Recv  1191 kB |  sources
+🔶 Pred  218 ms Sync   27 ms | Sent   864 kB Recv  1191 kB | .
+🔶 Pred  220 ms Sync   30 ms | Sent   864 kB Recv  1191 kB |  (
+🔶 Pred  215 ms Sync   29 ms | Sent   864 kB Recv  1191 kB | s
+🔶 Pred  217 ms Sync   27 ms | Sent   864 kB Recv  1191 kB | )
+🔶 Pred  219 ms Sync   29 ms | Sent   864 kB Recv  1191 kB |  Discuss
+🔶 Pred  217 ms Sync   27 ms | Sent   864 kB Recv  1191 kB |  the
+🔶 Pred  218 ms Sync   30 ms | Sent   864 kB Recv  1191 kB |  potential
+🔶 Pred  220 ms Sync   25 ms | Sent   864 kB Recv  1191 kB |  for
+🔶 Pred  215 ms Sync   34 ms | Sent   864 kB Recv  1191 kB |  these
+🔶 Pred  215 ms Sync   29 ms | Sent   864 kB Recv  1191 kB |  findings
+🔶 Pred  221 ms Sync   29 ms | Sent   864 kB Recv  1191 kB |  to
+🔶 Pred  218 ms Sync   30 ms | Sent   864 kB Recv  1191 kB |  contribute
+🔶 Pred  218 ms Sync   34 ms | Sent   864 kB Recv  1191 kB |  to
+🔶 Pred  218 ms Sync   30 ms | Sent   864 kB Recv  1191 kB |  the
+🔶 Pred  220 ms Sync   31 ms | Sent   864 kB Recv  1191 kB |  development
+🔶 Pred  219 ms Sync   34 ms | Sent   864 kB Recv  1191 kB |  of
+🔶 Pred  218 ms Sync   32 ms | Sent   864 kB Recv  1191 kB |  new
+🔶 Pred  217 ms Sync   30 ms | Sent   864 kB Recv  1191 kB |  diagnostic
+🔶 Pred  217 ms Sync   28 ms | Sent   864 kB Recv  1191 kB |  tools
+🔶 Pred  218 ms Sync   31 ms | Sent   864 kB Recv  1191 kB |  for
+🔶 Pred  219 ms Sync   41 ms | Sent   864 kB Recv  1191 kB |  diseases
+🔶 Pred  219 ms Sync   26 ms | Sent   864 kB Recv  1191 kB |  related
+🔶 Pred  216 ms Sync   35 ms | Sent   864 kB Recv  1191 kB |  to
+🔶 Pred  220 ms Sync   25 ms | Sent   864 kB Recv  1191 kB |  cellular
+🔶 Pred  218 ms Sync   35 ms | Sent   864 kB Recv  1191 kB |  res
+🔶 Pred  219 ms Sync   34 ms | Sent   864 kB Recv  1191 kB | piration
+🔶 Pred  216 ms Sync   33 ms | Sent   864 kB Recv  1191 kB | .
+🔶 Pred  217 ms Sync   42 ms | Sent   864 kB Recv  1191 kB |  (
+🔶 Pred  217 ms Sync   32 ms | Sent   864 kB Recv  1191 kB | t
+🔶 Pred  218 ms Sync   27 ms | Sent   864 kB Recv  1191 kB | )
+🔶 Pred  218 ms Sync   31 ms | Sent   864 kB Recv  1191 kB |  Consider
+🔶 Pred  220 ms Sync   27 ms | Sent   864 kB Recv  1191 kB |  the
+🔶 Pred  219 ms Sync   27 ms | Sent   864 kB Recv  1191 kB |  potential
+🔶 Pred  218 ms Sync   28 ms | Sent   864 kB Recv  1191 kB |  for
+🔶 Pred  219 ms Sync   29 ms | Sent   864 kB Recv  1191 kB |  these
+🔶 Pred  218 ms Sync   40 ms | Sent   864 kB Recv  1191 kB |  findings
+🔶 Pred  220 ms Sync   38 ms | Sent   864 kB Recv  1191 kB |  to
+🔶 Pred  218 ms Sync   30 ms | Sent   864 kB Recv  1191 kB |  contribute
+🔶 Pred  215 ms Sync   34 ms | Sent   864 kB Recv  1191 kB |  to
+🔶 Pred  218 ms Sync   29 ms | Sent   864 kB Recv  1191 kB |  the
+🔶 Pred  217 ms Sync   42 ms | Sent   864 kB Recv  1191 kB |  development
+🔶 Pred  220 ms Sync   27 ms | Sent   864 kB Recv  1191 kB |  of
+🔶 Pred  218 ms Sync   31 ms | Sent   864 kB Recv  1191 kB |  new
+🔶 Pred  222 ms Sync   26 ms | Sent   864 kB Recv  1191 kB |  biom
+🔶 Pred  218 ms Sync   41 ms | Sent   864 kB Recv  1191 kB | arkers
+🔶 Pred  217 ms Sync   31 ms | Sent   864 kB Recv  1191 kB |  for
+🔶 Pred  219 ms Sync   27 ms | Sent   864 kB Recv  1191 kB |  monitoring
+🔶 Pred  218 ms Sync   29 ms | Sent   864 kB Recv  1191 kB |  cellular
+🔶 Pred  218 ms Sync   37 ms | Sent   864 kB Recv  1191 kB |  res
+🔶 Pred  217 ms Sync   32 ms | Sent   864 kB Recv  1191 kB | piration
+🔶 Pred  217 ms Sync   32 ms | Sent   864 kB Recv  1191 kB |  in
+🔶 Pred  218 ms Sync   30 ms | Sent   864 kB Recv  1191 kB |  the
+🔶 Pred  219 ms Sync   27 ms | Sent   864 kB Recv  1191 kB |  human
+🔶 Pred  220 ms Sync   32 ms | Sent   864 kB Recv  1191 kB |  body
+🔶 Pred  224 ms Sync   27 ms | Sent   864 kB Recv  1191 kB | .
+🔶 Pred  216 ms Sync   33 ms | Sent   864 kB Recv  1191 kB |  (
+🔶 Pred  218 ms Sync   31 ms | Sent   864 kB Recv  1191 kB | u
+🔶 Pred  219 ms Sync   28 ms | Sent   864 kB Recv  1191 kB | )
+🔶 Pred  217 ms Sync   33 ms | Sent   864 kB Recv  1191 kB |  Discuss
+🔶 Pred  218 ms Sync   33 ms | Sent   864 kB Recv  1191 kB |  the
+🔶 Pred  221 ms Sync   34 ms | Sent   864 kB Recv  1191 kB |  potential
+🔶 Pred  217 ms Sync   35 ms | Sent   864 kB Recv  1191 kB |  for
+🔶 Pred  219 ms Sync   28 ms | Sent   864 kB Recv  1191 kB |  these
+🔶 Pred  218 ms Sync   39 ms | Sent   864 kB Recv  1191 kB |  findings
+🔶 Pred  219 ms Sync   28 ms | Sent   864 kB Recv  1191 kB |  to
+🔶 Pred  221 ms Sync   34 ms | Sent   864 kB Recv  1191 kB |  contribute
+🔶 Pred  217 ms Sync   31 ms | Sent   864 kB Recv  1191 kB |  to
+🔶 Pred  225 ms Sync   38 ms | Sent   864 kB Recv  1191 kB |  the
+🔶 Pred  219 ms Sync   28 ms | Sent   864 kB Recv  1191 kB |  development
+🔶 Pred  219 ms Sync   34 ms | Sent   864 kB Recv  1191 kB |  of
+🔶 Pred  219 ms Sync   35 ms | Sent   864 kB Recv  1191 kB |  new
+🔶 Pred  222 ms Sync   28 ms | Sent   864 kB Recv  1191 kB |  therapeutic
+🔶 Pred  219 ms Sync   31 ms | Sent   864 kB Recv  1191 kB |  strategies
+🔶 Pred  221 ms Sync   29 ms | Sent   864 kB Recv  1191 kB |  for
+🔶 Pred  219 ms Sync   26 ms | Sent   864 kB Recv  1191 kB |  diseases
+🔶 Pred  222 ms Sync   39 ms | Sent   864 kB Recv  1191 kB |  related
+🔶 Pred  221 ms Sync   30 ms | Sent   864 kB Recv  1191 kB |  to
+🔶 Pred  219 ms Sync   46 ms | Sent   864 kB Recv  1191 kB |  cellular
+🔶 Pred  219 ms Sync   29 ms | Sent   864 kB Recv  1191 kB |  res
+🔶 Pred  220 ms Sync   32 ms | Sent   864 kB Recv  1191 kB | piration
+🔶 Pred  215 ms Sync   34 ms | Sent   864 kB Recv  1191 kB | .
+🔶 Pred  217 ms Sync   31 ms | Sent   864 kB Recv  1191 kB |  (
+🔶 Pred  219 ms Sync   29 ms | Sent   864 kB Recv  1191 kB | v
+🔶 Pred  218 ms Sync   41 ms | Sent   864 kB Recv  1191 kB | )
+🔶 Pred  219 ms Sync   30 ms | Sent   864 kB Recv  1191 kB |  Consider
+🔶 Pred  221 ms Sync   40 ms | Sent   864 kB Recv  1191 kB |  the
+🔶 Pred  220 ms Sync   39 ms | Sent   864 kB Recv  1191 kB |  potential
+🔶 Pred  220 ms Sync   42 ms | Sent   864 kB Recv  1191 kB |  for
+🔶 Pred  219 ms Sync   35 ms | Sent   864 kB Recv  1191 kB |  these
+🔶 Pred  219 ms Sync   32 ms | Sent   864 kB Recv  1191 kB |  findings
+🔶 Pred  217 ms Sync   31 ms | Sent   864 kB Recv  1191 kB |  to
+🔶 Pred  220 ms Sync   27 ms | Sent   864 kB Recv  1191 kB |  contribute
+🔶 Pred  221 ms Sync   32 ms | Sent   864 kB Recv  1191 kB |  to
+🔶 Pred  223 ms Sync   34 ms | Sent   864 kB Recv  1191 kB |  the
+🔶 Pred  217 ms Sync   36 ms | Sent   864 kB Recv  1191 kB |  development
+🔶 Pred  222 ms Sync   36 ms | Sent   864 kB Recv  1191 kB |  of
+🔶 Pred  219 ms Sync   28 ms | Sent   864 kB Recv  1191 kB |  more
+🔶 Pred  219 ms Sync   48 ms | Sent   864 kB Recv  1191 kB |  efficient
+🔶 Pred  218 ms Sync   33 ms | Sent   864 kB Recv  1191 kB |  bi
+🔶 Pred  222 ms Sync   37 ms | Sent   864 kB Recv  1191 kB | otechn
+🔶 Pred  219 ms Sync   31 ms | Sent   864 kB Recv  1191 kB | ological
+🔶 Pred  221 ms Sync   30 ms | Sent   864 kB Recv  1191 kB |  processes
+🔶 Pred  219 ms Sync   38 ms | Sent   864 kB Recv  1191 kB | .
+🔶 Pred  220 ms Sync   37 ms | Sent   864 kB Recv  1191 kB |  (
+🔶 Pred  220 ms Sync   28 ms | Sent   864 kB Recv  1191 kB | w
+🔶 Pred  222 ms Sync   50 ms | Sent   864 kB Recv  1191 kB | )
+🔶 Pred  221 ms Sync   35 ms | Sent   864 kB Recv  1191 kB |  Discuss
+🔶 Pred  218 ms Sync   40 ms | Sent   864 kB Recv  1191 kB |  the
+🔶 Pred  222 ms Sync   46 ms | Sent   864 kB Recv  1191 kB |  potential
+🔶 Pred  221 ms Sync   31 ms | Sent   864 kB Recv  1191 kB |  for
+🔶 Pred  218 ms Sync   36 ms | Sent   864 kB Recv  1191 kB |  these
+🔶 Pred  218 ms Sync   52 ms | Sent   864 kB Recv  1191 kB |  findings
+🔶 Pred  219 ms Sync   43 ms | Sent   864 kB Recv  1191 kB |  to
+🔶 Pred  220 ms Sync   39 ms | Sent   864 kB Recv  1191 kB |  contribute
+🔶 Pred  223 ms Sync   37 ms | Sent   864 kB Recv  1191 kB |  to
+🔶 Pred  219 ms Sync   40 ms | Sent   864 kB Recv  1191 kB |  the
+🔶 Pred  219 ms Sync   32 ms | Sent   864 kB Recv  1191 kB |  development
+🔶 Pred  220 ms Sync   43 ms | Sent   864 kB Recv  1191 kB |  of
+🔶 Pred  220 ms Sync   33 ms | Sent   864 kB Recv  1191 kB |  more
+🔶 Pred  220 ms Sync   31 ms | Sent   864 kB Recv  1191 kB |  sustainable
+🔶 Pred  218 ms Sync   32 ms | Sent   864 kB Recv  1191 kB |  energy
+🔶 Pred  222 ms Sync   41 ms | Sent   864 kB Recv  1191 kB |  sources
+🔶 Pred  219 ms Sync   33 ms | Sent   864 kB Recv  1191 kB | .
+🔶 Pred  221 ms Sync   35 ms | Sent   864 kB Recv  1191 kB |  (
+🔶 Pred  222 ms Sync   39 ms | Sent   864 kB Recv  1191 kB | x
+🔶 Pred  221 ms Sync   31 ms | Sent   864 kB Recv  1191 kB | )
+🔶 Pred  222 ms Sync   41 ms | Sent   864 kB Recv  1191 kB |  Consider
+🔶 Pred  219 ms Sync   35 ms | Sent   864 kB Recv  1191 kB |  the
+🔶 Pred  221 ms Sync   40 ms | Sent   864 kB Recv  1191 kB |  potential
+🔶 Pred  221 ms Sync   33 ms | Sent   864 kB Recv  1191 kB |  for
+🔶 Pred  219 ms Sync   56 ms | Sent   864 kB Recv  1191 kB |  these
+🔶 Pred  220 ms Sync   41 ms | Sent   864 kB Recv  1191 kB |  findings
+🔶 Pred  217 ms Sync   51 ms | Sent   864 kB Recv  1191 kB |  to
+🔶 Pred  219 ms Sync   31 ms | Sent   864 kB Recv  1191 kB |  contribute
+🔶 Pred  220 ms Sync   30 ms | Sent   864 kB Recv  1191 kB |  to
+🔶 Pred  220 ms Sync   39 ms | Sent   864 kB Recv  1191 kB |  the
+🔶 Pred  218 ms Sync   37 ms | Sent   864 kB Recv  1191 kB |  development
+🔶 Pred  219 ms Sync   35 ms | Sent   864 kB Recv  1191 kB |  of
+🔶 Pred  219 ms Sync   32 ms | Sent   864 kB Recv  1191 kB |  new
+🔶 Pred  217 ms Sync   49 ms | Sent   864 kB Recv  1191 kB |  diagnostic
+🔶 Pred  218 ms Sync   33 ms | Sent   864 kB Recv  1191 kB |  tools
+🔶 Pred  223 ms Sync   30 ms | Sent   864 kB Recv  1191 kB |  for
+🔶 Pred  222 ms Sync   38 ms | Sent   864 kB Recv  1191 kB |  diseases
+🔶 Pred  219 ms Sync   33 ms | Sent   864 kB Recv  1191 kB |  related
+🔶 Pred  219 ms Sync   33 ms | Sent   864 kB Recv  1191 kB |  to
+🔶 Pred  222 ms Sync   33 ms | Sent   864 kB Recv  1191 kB |  cellular
+🔶 Pred  227 ms Sync   37 ms | Sent   864 kB Recv  1191 kB |  res
+🔶 Pred  219 ms Sync   34 ms | Sent   864 kB Recv  1191 kB | piration
+🔶 Pred  222 ms Sync   28 ms | Sent   864 kB Recv  1191 kB | .
+🔶 Pred  220 ms Sync   42 ms | Sent   864 kB Recv  1191 kB |  (
+🔶 Pred  220 ms Sync   38 ms | Sent   864 kB Recv  1191 kB | y
+🔶 Pred  221 ms Sync   42 ms | Sent   864 kB Recv  1191 kB | )
+🔶 Pred  220 ms Sync   34 ms | Sent   864 kB Recv  1191 kB |  Discuss
+🔶 Pred  220 ms Sync   33 ms | Sent   864 kB Recv  1191 kB |  the
+🔶 Pred  222 ms Sync   30 ms | Sent   864 kB Recv  1191 kB |  potential
+🔶 Pred  221 ms Sync   35 ms | Sent   864 kB Recv  1191 kB |  for
+🔶 Pred  219 ms Sync   33 ms | Sent   864 kB Recv  1191 kB |  these
+🔶 Pred  220 ms Sync   38 ms | Sent   864 kB Recv  1191 kB |  findings
+🔶 Pred  220 ms Sync   35 ms | Sent   864 kB Recv  1191 kB |  to
+🔶 Pred  221 ms Sync   33 ms | Sent   864 kB Recv  1191 kB |  contribute
+🔶 Pred  223 ms Sync   30 ms | Sent   864 kB Recv  1191 kB |  to
+🔶 Pred  220 ms Sync   32 ms | Sent   864 kB Recv  1191 kB |  the
+🔶 Pred  220 ms Sync   36 ms | Sent   864 kB Recv  1191 kB |  development
+🔶 Pred  222 ms Sync   33 ms | Sent   864 kB Recv  1191 kB |  of
+🔶 Pred  223 ms Sync   31 ms | Sent   864 kB Recv  1191 kB |  new
+🔶 Pred  221 ms Sync   36 ms | Sent   864 kB Recv  1191 kB |  biom
+🔶 Pred  221 ms Sync   42 ms | Sent   864 kB Recv  1191 kB | arkers
+🔶 Pred  219 ms Sync   96 ms | Sent   864 kB Recv  1191 kB |  for
+🔶 Pred  218 ms Sync   36 ms | Sent   864 kB Recv  1191 kB |  monitoring
+🔶 Pred  231 ms Sync   31 ms | Sent   864 kB Recv  1191 kB |  cellular
+🔶 Pred  222 ms Sync   31 ms | Sent   864 kB Recv  1191 kB |  res
+🔶 Pred  220 ms Sync   42 ms | Sent   864 kB Recv  1191 kB | piration
+🔶 Pred  223 ms Sync   32 ms | Sent   864 kB Recv  1191 kB |  in
+🔶 Pred  224 ms Sync   52 ms | Sent   864 kB Recv  1191 kB |  the
+🔶 Pred  231 ms Sync   30 ms | Sent   864 kB Recv  1191 kB |  human
+🔶 Pred  223 ms Sync   32 ms | Sent   864 kB Recv  1191 kB |  body
+🔶 Pred  229 ms Sync   26 ms | Sent   864 kB Recv  1191 kB | .
+🔶 Pred  224 ms Sync   30 ms | Sent   864 kB Recv  1191 kB |  (
+🔶 Pred  222 ms Sync   33 ms | Sent   864 kB Recv  1191 kB | z
+🔶 Pred  228 ms Sync   35 ms | Sent   864 kB Recv  1191 kB | )
+🔶 Pred  223 ms Sync   32 ms | Sent   864 kB Recv  1191 kB |  Consider
+🔶 Pred  220 ms Sync   39 ms | Sent   864 kB Recv  1191 kB |  the
+🔶 Pred  229 ms Sync   37 ms | Sent   864 kB Recv  1191 kB |  potential
+🔶 Pred  238 ms Sync   24 ms | Sent   864 kB Recv  1191 kB |  for
+🔶 Pred  227 ms Sync   29 ms | Sent   864 kB Recv  1191 kB |  these
+🔶 Pred  223 ms Sync   36 ms | Sent   864 kB Recv  1191 kB |  findings
+🔶 Pred  220 ms Sync   49 ms | Sent   864 kB Recv  1191 kB |  to
+🔶 Pred  221 ms Sync   35 ms | Sent   864 kB Recv  1191 kB |  contribute
+🔶 Pred  231 ms Sync   37 ms | Sent   864 kB Recv  1191 kB |  to
+🔶 Pred  222 ms Sync   41 ms | Sent   864 kB Recv  1191 kB |  the
+🔶 Pred  224 ms Sync   38 ms | Sent   864 kB Recv  1191 kB |  development
+🔶 Pred  223 ms Sync   47 ms | Sent   864 kB Recv  1191 kB |  of
+🔶 Pred  220 ms Sync   46 ms | Sent   864 kB Recv  1191 kB |  new
+🔶 Pred  221 ms Sync   38 ms | Sent   864 kB Recv  1191 kB |  therapeutic
+🔶 Pred  220 ms Sync   51 ms | Sent   864 kB Recv  1191 kB |  strategies
+🔶 Pred  221 ms Sync   41 ms | Sent   864 kB Recv  1191 kB |  for
+🔶 Pred  231 ms Sync   29 ms | Sent   864 kB Recv  1191 kB |  diseases
+🔶 Pred  226 ms Sync   52 ms | Sent   864 kB Recv  1191 kB |  related
+🔶 Pred  224 ms Sync   44 ms | Sent   864 kB Recv  1191 kB |  to
+🔶 Pred  225 ms Sync   35 ms | Sent   864 kB Recv  1191 kB |  cellular
+🔶 Pred  229 ms Sync   33 ms | Sent   864 kB Recv  1191 kB |  res
+🔶 Pred  223 ms Sync   33 ms | Sent   864 kB Recv  1191 kB | piration
+🔶 Pred  222 ms Sync   39 ms | Sent   864 kB Recv  1191 kB | .
+🔶 Pred  220 ms Sync   44 ms | Sent   864 kB Recv  1191 kB |  (
+🔶 Pred  226 ms Sync   39 ms | Sent   864 kB Recv  1191 kB | aa
+🔶 Pred  221 ms Sync   45 ms | Sent   864 kB Recv  1191 kB | )
+🔶 Pred  222 ms Sync   39 ms | Sent   864 kB Recv  1191 kB |  Discuss
+🔶 Pred  223 ms Sync   42 ms | Sent   864 kB Recv  1191 kB |  the
+🔶 Pred  222 ms Sync   48 ms | Sent   864 kB Recv  1191 kB |  potential
+🔶 Pred  230 ms Sync   33 ms | Sent   864 kB Recv  1191 kB |  for
+🔶 Pred  226 ms Sync   34 ms | Sent   864 kB Recv  1191 kB |  these
+🔶 Pred  225 ms Sync   41 ms | Sent   864 kB Recv  1191 kB |  findings
+🔶 Pred  222 ms Sync   34 ms | Sent   864 kB Recv  1191 kB |  to
+🔶 Pred  221 ms Sync   47 ms | Sent   864 kB Recv  1191 kB |  contribute
+🔶 Pred  222 ms Sync   55 ms | Sent   864 kB Recv  1191 kB |  to
+🔶 Pred  221 ms Sync   34 ms | Sent   864 kB Recv  1191 kB |  the
+🔶 Pred  225 ms Sync   53 ms | Sent   864 kB Recv  1191 kB |  development
+🔶 Pred  222 ms Sync   38 ms | Sent   864 kB Recv  1191 kB |  of
+🔶 Pred  222 ms Sync   66 ms | Sent   864 kB Recv  1191 kB |  more
+🔶 Pred  225 ms Sync   50 ms | Sent   864 kB Recv  1191 kB |  efficient
+🔶 Pred  221 ms Sync   33 ms | Sent   864 kB Recv  1191 kB |  bi
+🔶 Pred  223 ms Sync   54 ms | Sent   864 kB Recv  1191 kB | otechn
+🔶 Pred  223 ms Sync   47 ms | Sent   864 kB Recv  1191 kB | ological
+🔶 Pred  222 ms Sync   43 ms | Sent   864 kB Recv  1191 kB |  processes
+🔶 Pred  225 ms Sync   38 ms | Sent   864 kB Recv  1191 kB | .
+🔶 Pred  221 ms Sync   60 ms | Sent   864 kB Recv  1191 kB |  (
+🔶 Pred  223 ms Sync   34 ms | Sent   864 kB Recv  1191 kB | bb
+🔶 Pred  222 ms Sync   60 ms | Sent   864 kB Recv  1191 kB | )
+🔶 Pred  225 ms Sync   46 ms | Sent   864 kB Recv  1191 kB |  Consider
+🔶 Pred  224 ms Sync   33 ms | Sent   864 kB Recv  1191 kB |  the
+🔶 Pred  223 ms Sync   40 ms | Sent   864 kB Recv  1191 kB |  potential
+🔶 Pred  228 ms Sync   27 ms | Sent   864 kB Recv  1191 kB |  for
+🔶 Pred  227 ms Sync   44 ms | Sent   864 kB Recv  1191 kB |  these
+🔶 Pred  229 ms Sync   36 ms | Sent   864 kB Recv  1191 kB |  findings
+🔶 Pred  225 ms Sync   41 ms | Sent   864 kB Recv  1191 kB |  to
+🔶 Pred  231 ms Sync   28 ms | Sent   864 kB Recv  1191 kB |  contribute
+🔶 Pred  228 ms Sync   53 ms | Sent   864 kB Recv  1191 kB |  to
+🔶 Pred  229 ms Sync   37 ms | Sent   864 kB Recv  1191 kB |  the
+🔶 Pred  224 ms Sync   48 ms | Sent   864 kB Recv  1191 kB |  development
+🔶 Pred  224 ms Sync   39 ms | Sent   864 kB Recv  1191 kB |  of
+🔶 Pred  227 ms Sync   54 ms | Sent   864 kB Recv  1191 kB |  more
+🔶 Pred  234 ms Sync   59 ms | Sent   864 kB Recv  1191 kB |  sustainable
+🔶 Pred  224 ms Sync   55 ms | Sent   864 kB Recv  1191 kB |  energy
+🔶 Pred  221 ms Sync   61 ms | Sent   864 kB Recv  1191 kB |  sources
+🔶 Pred  221 ms Sync   68 ms | Sent   864 kB Recv  1191 kB | .
+🔶 Pred  225 ms Sync   28 ms | Sent   864 kB Recv  1191 kB |  (
+🔶 Pred  227 ms Sync   32 ms | Sent   864 kB Recv  1191 kB | cc
+🔶 Pred  229 ms Sync   45 ms | Sent   864 kB Recv  1191 kB | )
+🔶 Pred  230 ms Sync   37 ms | Sent   864 kB Recv  1191 kB |  Discuss
+🔶 Pred  234 ms Sync   30 ms | Sent   864 kB Recv  1191 kB |  the
+🔶 Pred  221 ms Sync   44 ms | Sent   864 kB Recv  1191 kB |  potential
+🔶 Pred  222 ms Sync   43 ms | Sent   864 kB Recv  1191 kB |  for
+🔶 Pred  227 ms Sync   42 ms | Sent   864 kB Recv  1191 kB |  these
+🔶 Pred  233 ms Sync   24 ms | Sent   864 kB Recv  1191 kB |  findings
+🔶 Pred  229 ms Sync   36 ms | Sent   864 kB Recv  1191 kB |  to
+🔶 Pred  223 ms Sync   44 ms | Sent   864 kB Recv  1191 kB |  contribute
+🔶 Pred  225 ms Sync   39 ms | Sent   864 kB Recv  1191 kB |  to
+🔶 Pred  230 ms Sync   27 ms | Sent   864 kB Recv  1191 kB |  the
+🔶 Pred  235 ms Sync   30 ms | Sent   864 kB Recv  1191 kB |  development
+🔶 Pred  227 ms Sync   40 ms | Sent   864 kB Recv  1191 kB |  of
+🔶 Pred  232 ms Sync   33 ms | Sent   864 kB Recv  1191 kB |  new
+🔶 Pred  222 ms Sync   34 ms | Sent   864 kB Recv  1191 kB |  diagnostic
+🔶 Pred  223 ms Sync   39 ms | Sent   864 kB Recv  1191 kB |  tools
+🔶 Pred  219 ms Sync   47 ms | Sent   864 kB Recv  1191 kB |  for
+🔶 Pred  226 ms Sync   36 ms | Sent   864 kB Recv  1191 kB |  diseases
+🔶 Pred  231 ms Sync   32 ms | Sent   864 kB Recv  1191 kB |  related
+🔶 Pred  238 ms Sync   33 ms | Sent   864 kB Recv  1191 kB |  to
+🔶 Pred  227 ms Sync   44 ms | Sent   864 kB Recv  1191 kB |  cellular
+🔶 Pred  229 ms Sync   33 ms | Sent   864 kB Recv  1191 kB |  res
+🔶 Pred  229 ms Sync   36 ms | Sent   864 kB Recv  1191 kB | piration
+🔶 Pred  233 ms Sync   34 ms | Sent   864 kB Recv  1191 kB | .
+🔶 Pred  222 ms Sync   58 ms | Sent   864 kB Recv  1191 kB |  (
+🔶 Pred  224 ms Sync   40 ms | Sent   864 kB Recv  1191 kB | dd
+🔶 Pred  225 ms Sync   38 ms | Sent   864 kB Recv  1191 kB | )
+🔶 Pred  223 ms Sync   33 ms | Sent   864 kB Recv  1191 kB |  Consider
+🔶 Pred  224 ms Sync   34 ms | Sent   864 kB Recv  1191 kB |  the
+🔶 Pred  226 ms Sync   41 ms | Sent   864 kB Recv  1191 kB |  potential
+🔶 Pred  224 ms Sync   45 ms | Sent   864 kB Recv  1191 kB |  for
+🔶 Pred  229 ms Sync   40 ms | Sent   864 kB Recv  1191 kB |  these
+🔶 Pred  237 ms Sync   34 ms | Sent   864 kB Recv  1191 kB |  findings
+🔶 Pred  230 ms Sync   55 ms | Sent   864 kB Recv  1191 kB |  to
+🔶 Pred  230 ms Sync   29 ms | Sent   864 kB Recv  1191 kB |  contribute
+🔶 Pred  231 ms Sync   46 ms | Sent   864 kB Recv  1191 kB |  to
+🔶 Pred  235 ms Sync   48 ms | Sent   864 kB Recv  1191 kB |  the
+🔶 Pred  230 ms Sync   28 ms | Sent   864 kB Recv  1191 kB |  development
+🔶 Pred  234 ms Sync   33 ms | Sent   864 kB Recv  1191 kB |  of
+🔶 Pred  229 ms Sync   35 ms | Sent   864 kB Recv  1191 kB |  new
+🔶 Pred  231 ms Sync   34 ms | Sent   864 kB Recv  1191 kB |  biom
+🔶 Pred  237 ms Sync   37 ms | Sent   864 kB Recv  1191 kB | arkers
+🔶 Pred  230 ms Sync   32 ms | Sent   864 kB Recv  1191 kB |  for
+🔶 Pred  225 ms Sync   50 ms | Sent   864 kB Recv  1191 kB |  monitoring
+🔶 Pred  231 ms Sync   27 ms | Sent   864 kB Recv  1191 kB |  cellular
+🔶 Pred  236 ms Sync   32 ms | Sent   864 kB Recv  1191 kB |  res
+🔶 Pred  227 ms Sync   33 ms | Sent   864 kB Recv  1191 kB | piration
+🔶 Pred  231 ms Sync   30 ms | Sent   864 kB Recv  1191 kB |  in
+🔶 Pred  230 ms Sync   39 ms | Sent   864 kB Recv  1191 kB |  the
+🔶 Pred  229 ms Sync   30 ms | Sent   864 kB Recv  1191 kB |  human
+🔶 Pred  231 ms Sync   42 ms | Sent   864 kB Recv  1191 kB |  body
+🔶 Pred  243 ms Sync   27 ms | Sent   864 kB Recv  1191 kB | .
+🔶 Pred  222 ms Sync   62 ms | Sent   864 kB Recv  1191 kB |  (
+🔶 Pred  242 ms Sync   31 ms | Sent   864 kB Recv  1191 kB | ee
+🔶 Pred  237 ms Sync   38 ms | Sent   864 kB Recv  1191 kB | )
+
+Evaluation
+   nBatches: 32
+    nTokens: 398
+   tokens/s: 4.61 (216.99 ms/tok)
+Prediction
+    nTokens: 577
+   tokens/s: 3.96 (252.43 ms/tok)
+⭕ Network is closed

@@ -1,0 +1,670 @@
+Tokenizer vocab size (151669) does not match the model vocab size (151936)
+📄 AddBos: 0
+📄 BosId: 151643 (<|endoftext|>)
+📄 EosId: 151645 (<|im_end|>) 
+📄 RegularVocabSize: 151643
+📄 SpecialVocabSize: 26
+💡 Arch: Qwen3
+💡 HiddenAct: Silu
+💡 Dim: 4096
+💡 HeadDim: 128
+💡 QDim: 4096
+💡 KvDim: 1024
+💡 HiddenDim: 12288
+💡 VocabSize: 151936
+💡 nLayers: 36
+💡 nHeads: 32
+💡 nKvHeads: 8
+💡 OrigSeqLen: 40960
+💡 SeqLen: 4096
+💡 NormEpsilon: 0.000001
+💡 RopeType: Falcon
+💡 RopeTheta: 1000000
+📀 RequiredMemory: 3712 MB
+⭕ Socket[0]: connecting to 172.17.1.51:9999 worker
+⭕ Socket[0]: connected
+⭕ Socket[1]: connecting to 172.17.1.52:9999 worker
+⭕ Socket[1]: connected
+⭕ Socket[2]: connecting to 172.17.1.53:9999 worker
+⭕ Socket[2]: connected
+⭕ Network is initialized
+🧠 CPU: neon fp16
+💿 Loading weights...
+💿 Loaded 1/36
+💿 Loaded 2/36
+💿 Loaded 3/36
+💿 Loaded 4/36
+💿 Loaded 5/36
+💿 Loaded 6/36
+💿 Loaded 7/36
+💿 Loaded 8/36
+💿 Loaded 9/36
+💿 Loaded 10/36
+💿 Loaded 11/36
+💿 Loaded 12/36
+💿 Loaded 13/36
+💿 Loaded 14/36
+💿 Loaded 15/36
+💿 Loaded 16/36
+💿 Loaded 17/36
+💿 Loaded 18/36
+💿 Loaded 19/36
+💿 Loaded 20/36
+💿 Loaded 21/36
+💿 Loaded 22/36
+💿 Loaded 23/36
+💿 Loaded 24/36
+💿 Loaded 25/36
+💿 Loaded 26/36
+💿 Loaded 27/36
+💿 Loaded 28/36
+💿 Loaded 29/36
+💿 Loaded 30/36
+💿 Loaded 31/36
+💿 Loaded 32/36
+💿 Loaded 33/36
+💿 Loaded 34/36
+💿 Loaded 35/36
+💿 Loaded 36/36
+💿 Weights loaded
+🚁 Network is in non-blocking mode
+Cellular respiration is a set of metabolic pathways that allow cells to convert energy stored in organic molecules into ATP. In eukaryotic cells, these processes occur in different cellular compartments and are tightly regulated based on environmental conditions. A team of researchers is investigating how oxygen availability affects ATP production and metabolic pathway usage in cultured animal cells. The researchers grow identical populations of cells under two different conditions: Condition 1 (Aerobic): Cells are supplied with abundant oxygen Condition 2 (Anaerobic): Cells are deprived of oxygen. The researchers measure ATP production, levels of metabolic intermediates, and enzyme activity over time. Their observations include the following: Under aerobic conditions, cells produce large amounts of ATP and show high activity of enzymes involved in the citric acid cycle and oxidative phosphorylation. Under anaerobic conditions, cells produce significantly less ATP overall. However, glycolysis rates increase, and lactate accumulates in the cells. The researchers observe that NAD+ levels decrease initially under anaerobic conditions but are later restored as lactate production increases. In a third experimental setup, the researchers add a chemical inhibitor that blocks the electron transport chain in cells that are otherwise supplied with oxygen. These cells show similar metabolic patterns to anaerobic cells. (a)  Describe the role of oxygen in cellular respiration. Include its function in the electron transport chain. (b) Explain why ATP production is lower under anaerobic conditions compared to aerobic conditions. (c) Describe how cells are able to continue producing ATP in the absence of oxygen. Include the role of NAD+. (d) Explain why lactate accumulates in cells under anaerobic conditions. (e) Using the observations from the inhibitor experiment, explain why blocking the electron transport chain leads to similar effects as oxygen deprivation. (f) Predict how the activity of the enzyme phosphofructokinase (PFK), a key regulatory enzyme in glycolysis, would change under anaerobic conditions
+🔷️ Eval 6498 ms Sync  816 ms | Sent 30912 kB Recv 43620 kB | (32 tokens)
+🔷️ Eval 6467 ms Sync  803 ms | Sent 30912 kB Recv 43620 kB | (32 tokens)
+🔷️ Eval 6533 ms Sync  803 ms | Sent 30912 kB Recv 43620 kB | (32 tokens)
+🔷️ Eval 6542 ms Sync  810 ms | Sent 30912 kB Recv 43620 kB | (32 tokens)
+🔷️ Eval 6561 ms Sync  802 ms | Sent 30912 kB Recv 43620 kB | (32 tokens)
+🔷️ Eval 6578 ms Sync  797 ms | Sent 30912 kB Recv 43620 kB | (32 tokens)
+🔷️ Eval 6594 ms Sync  797 ms | Sent 30912 kB Recv 43620 kB | (32 tokens)
+🔷️ Eval 6612 ms Sync  804 ms | Sent 30912 kB Recv 43620 kB | (32 tokens)
+🔷️ Eval 6633 ms Sync  799 ms | Sent 30912 kB Recv 43620 kB | (32 tokens)
+🔷️ Eval 6614 ms Sync  801 ms | Sent 30912 kB Recv 43620 kB | (32 tokens)
+🔷️ Eval 6636 ms Sync  801 ms | Sent 30912 kB Recv 43620 kB | (32 tokens)
+🔷️ Eval 6712 ms Sync  791 ms | Sent 30912 kB Recv 43620 kB | (32 tokens)
+🔷️ Eval 2942 ms Sync  366 ms | Sent 13524 kB Recv 19083 kB | (14 tokens)
+🔶 Pred  225 ms Sync   32 ms | Sent   966 kB Recv  1363 kB | .
+🔶 Pred  226 ms Sync   37 ms | Sent   966 kB Recv  1363 kB |  Just
+🔶 Pred  225 ms Sync   37 ms | Sent   966 kB Recv  1363 kB | ify
+🔶 Pred  228 ms Sync   33 ms | Sent   966 kB Recv  1363 kB |  your
+🔶 Pred  224 ms Sync   30 ms | Sent   966 kB Recv  1363 kB |  prediction
+🔶 Pred  227 ms Sync   33 ms | Sent   966 kB Recv  1363 kB | .
+🔶 Pred  225 ms Sync   35 ms | Sent   966 kB Recv  1363 kB |  (
+🔶 Pred  224 ms Sync   38 ms | Sent   966 kB Recv  1363 kB | g
+🔶 Pred  226 ms Sync   30 ms | Sent   966 kB Recv  1363 kB | )
+🔶 Pred  225 ms Sync   36 ms | Sent   966 kB Recv  1363 kB |  Explain
+🔶 Pred  225 ms Sync   30 ms | Sent   966 kB Recv  1363 kB |  how
+🔶 Pred  225 ms Sync   36 ms | Sent   966 kB Recv  1363 kB |  the
+🔶 Pred  223 ms Sync   36 ms | Sent   966 kB Recv  1363 kB |  data
+🔶 Pred  226 ms Sync   35 ms | Sent   966 kB Recv  1363 kB |  supports
+🔶 Pred  225 ms Sync   28 ms | Sent   966 kB Recv  1363 kB |  the
+🔶 Pred  225 ms Sync   29 ms | Sent   966 kB Recv  1363 kB |  idea
+🔶 Pred  227 ms Sync   34 ms | Sent   966 kB Recv  1363 kB |  that
+🔶 Pred  224 ms Sync   28 ms | Sent   966 kB Recv  1363 kB |  the
+🔶 Pred  223 ms Sync   34 ms | Sent   966 kB Recv  1363 kB |  cit
+🔶 Pred  225 ms Sync   29 ms | Sent   966 kB Recv  1363 kB | ric
+🔶 Pred  232 ms Sync   31 ms | Sent   966 kB Recv  1363 kB |  acid
+🔶 Pred  223 ms Sync   30 ms | Sent   966 kB Recv  1363 kB |  cycle
+🔶 Pred  227 ms Sync   30 ms | Sent   966 kB Recv  1363 kB |  and
+🔶 Pred  226 ms Sync   29 ms | Sent   966 kB Recv  1363 kB |  oxidative
+🔶 Pred  225 ms Sync   31 ms | Sent   966 kB Recv  1363 kB |  phosphory
+🔶 Pred  227 ms Sync   28 ms | Sent   966 kB Recv  1363 kB | lation
+🔶 Pred  225 ms Sync   30 ms | Sent   966 kB Recv  1363 kB |  are
+🔶 Pred  226 ms Sync   28 ms | Sent   966 kB Recv  1363 kB |  dependent
+🔶 Pred  225 ms Sync   30 ms | Sent   966 kB Recv  1363 kB |  on
+🔶 Pred  227 ms Sync   31 ms | Sent   966 kB Recv  1363 kB |  the
+🔶 Pred  226 ms Sync   28 ms | Sent   966 kB Recv  1363 kB |  electron
+🔶 Pred  226 ms Sync   32 ms | Sent   966 kB Recv  1363 kB |  transport
+🔶 Pred  225 ms Sync   29 ms | Sent   966 kB Recv  1363 kB |  chain
+🔶 Pred  222 ms Sync   35 ms | Sent   966 kB Recv  1363 kB | .
+🔶 Pred  223 ms Sync   29 ms | Sent   966 kB Recv  1363 kB |  (
+🔶 Pred  226 ms Sync   33 ms | Sent   966 kB Recv  1363 kB | h
+🔶 Pred  223 ms Sync   29 ms | Sent   966 kB Recv  1363 kB | )
+🔶 Pred  227 ms Sync   30 ms | Sent   966 kB Recv  1363 kB |  Explain
+🔶 Pred  227 ms Sync   29 ms | Sent   966 kB Recv  1363 kB |  how
+🔶 Pred  224 ms Sync   32 ms | Sent   966 kB Recv  1363 kB |  the
+🔶 Pred  228 ms Sync   29 ms | Sent   966 kB Recv  1363 kB |  data
+🔶 Pred  226 ms Sync   35 ms | Sent   966 kB Recv  1363 kB |  supports
+🔶 Pred  226 ms Sync   27 ms | Sent   966 kB Recv  1363 kB |  the
+🔶 Pred  225 ms Sync   33 ms | Sent   966 kB Recv  1363 kB |  idea
+🔶 Pred  227 ms Sync   29 ms | Sent   966 kB Recv  1363 kB |  that
+🔶 Pred  226 ms Sync   30 ms | Sent   966 kB Recv  1363 kB |  the
+🔶 Pred  225 ms Sync   29 ms | Sent   966 kB Recv  1363 kB |  cit
+🔶 Pred  227 ms Sync   30 ms | Sent   966 kB Recv  1363 kB | ric
+🔶 Pred  231 ms Sync   28 ms | Sent   966 kB Recv  1363 kB |  acid
+🔶 Pred  223 ms Sync   36 ms | Sent   966 kB Recv  1363 kB |  cycle
+🔶 Pred  226 ms Sync   27 ms | Sent   966 kB Recv  1363 kB |  is
+🔶 Pred  223 ms Sync   32 ms | Sent   966 kB Recv  1363 kB |  dependent
+🔶 Pred  223 ms Sync   34 ms | Sent   966 kB Recv  1363 kB |  on
+🔶 Pred  226 ms Sync   30 ms | Sent   966 kB Recv  1363 kB |  gly
+🔶 Pred  228 ms Sync   30 ms | Sent   966 kB Recv  1363 kB | col
+🔶 Pred  228 ms Sync   44 ms | Sent   966 kB Recv  1363 kB | ysis
+🔶 Pred  226 ms Sync   29 ms | Sent   966 kB Recv  1363 kB | .
+🔶 Pred  227 ms Sync   30 ms | Sent   966 kB Recv  1363 kB |  (
+🔶 Pred  235 ms Sync   29 ms | Sent   966 kB Recv  1363 kB | i
+🔶 Pred  227 ms Sync   30 ms | Sent   966 kB Recv  1363 kB | )
+🔶 Pred  224 ms Sync   31 ms | Sent   966 kB Recv  1363 kB |  Explain
+🔶 Pred  222 ms Sync   32 ms | Sent   966 kB Recv  1363 kB |  how
+🔶 Pred  229 ms Sync   28 ms | Sent   966 kB Recv  1363 kB |  the
+🔶 Pred  224 ms Sync   38 ms | Sent   966 kB Recv  1363 kB |  data
+🔶 Pred  225 ms Sync   34 ms | Sent   966 kB Recv  1363 kB |  supports
+🔶 Pred  225 ms Sync   31 ms | Sent   966 kB Recv  1363 kB |  the
+🔶 Pred  226 ms Sync   33 ms | Sent   966 kB Recv  1363 kB |  idea
+🔶 Pred  228 ms Sync   29 ms | Sent   966 kB Recv  1363 kB |  that
+🔶 Pred  226 ms Sync   33 ms | Sent   966 kB Recv  1363 kB |  gly
+🔶 Pred  226 ms Sync   32 ms | Sent   966 kB Recv  1363 kB | col
+🔶 Pred  228 ms Sync   30 ms | Sent   966 kB Recv  1363 kB | ysis
+🔶 Pred  226 ms Sync   33 ms | Sent   966 kB Recv  1363 kB |  is
+🔶 Pred  224 ms Sync   34 ms | Sent   966 kB Recv  1363 kB |  dependent
+🔶 Pred  224 ms Sync   33 ms | Sent   966 kB Recv  1363 kB |  on
+🔶 Pred  227 ms Sync   31 ms | Sent   966 kB Recv  1363 kB |  the
+🔶 Pred  225 ms Sync   32 ms | Sent   966 kB Recv  1363 kB |  availability
+🔶 Pred  223 ms Sync   34 ms | Sent   966 kB Recv  1363 kB |  of
+🔶 Pred  227 ms Sync   30 ms | Sent   966 kB Recv  1363 kB |  oxygen
+🔶 Pred  226 ms Sync   34 ms | Sent   966 kB Recv  1363 kB | .
+🔶 Pred  225 ms Sync   32 ms | Sent   966 kB Recv  1363 kB |  (
+🔶 Pred  225 ms Sync   31 ms | Sent   966 kB Recv  1363 kB | j
+🔶 Pred  223 ms Sync   35 ms | Sent   966 kB Recv  1363 kB | )
+🔶 Pred  227 ms Sync   30 ms | Sent   966 kB Recv  1363 kB |  Explain
+🔶 Pred  225 ms Sync   34 ms | Sent   966 kB Recv  1363 kB |  how
+🔶 Pred  227 ms Sync   32 ms | Sent   966 kB Recv  1363 kB |  the
+🔶 Pred  223 ms Sync   35 ms | Sent   966 kB Recv  1363 kB |  data
+🔶 Pred  225 ms Sync   31 ms | Sent   966 kB Recv  1363 kB |  supports
+🔶 Pred  225 ms Sync   32 ms | Sent   966 kB Recv  1363 kB |  the
+🔶 Pred  226 ms Sync   30 ms | Sent   966 kB Recv  1363 kB |  idea
+🔶 Pred  226 ms Sync   31 ms | Sent   966 kB Recv  1363 kB |  that
+🔶 Pred  227 ms Sync   31 ms | Sent   966 kB Recv  1363 kB |  the
+🔶 Pred  227 ms Sync   33 ms | Sent   966 kB Recv  1363 kB |  cit
+🔶 Pred  228 ms Sync   31 ms | Sent   966 kB Recv  1363 kB | ric
+🔶 Pred  226 ms Sync   38 ms | Sent   966 kB Recv  1363 kB |  acid
+🔶 Pred  228 ms Sync   29 ms | Sent   966 kB Recv  1363 kB |  cycle
+🔶 Pred  225 ms Sync   38 ms | Sent   966 kB Recv  1363 kB |  is
+🔶 Pred  223 ms Sync   33 ms | Sent   966 kB Recv  1363 kB |  dependent
+🔶 Pred  229 ms Sync   33 ms | Sent   966 kB Recv  1363 kB |  on
+🔶 Pred  228 ms Sync   31 ms | Sent   966 kB Recv  1363 kB |  the
+🔶 Pred  225 ms Sync   34 ms | Sent   966 kB Recv  1363 kB |  availability
+🔶 Pred  229 ms Sync   31 ms | Sent   966 kB Recv  1363 kB |  of
+🔶 Pred  228 ms Sync   32 ms | Sent   966 kB Recv  1363 kB |  oxygen
+🔶 Pred  227 ms Sync   35 ms | Sent   966 kB Recv  1363 kB | .
+🔶 Pred  228 ms Sync   32 ms | Sent   966 kB Recv  1363 kB |  (
+🔶 Pred  227 ms Sync   32 ms | Sent   966 kB Recv  1363 kB | k
+🔶 Pred  230 ms Sync   27 ms | Sent   966 kB Recv  1363 kB | )
+🔶 Pred  229 ms Sync   29 ms | Sent   966 kB Recv  1363 kB |  Explain
+🔶 Pred  225 ms Sync   34 ms | Sent   966 kB Recv  1363 kB |  how
+🔶 Pred  226 ms Sync   36 ms | Sent   966 kB Recv  1363 kB |  the
+🔶 Pred  229 ms Sync   30 ms | Sent   966 kB Recv  1363 kB |  data
+🔶 Pred  226 ms Sync   35 ms | Sent   966 kB Recv  1363 kB |  supports
+🔶 Pred  226 ms Sync   33 ms | Sent   966 kB Recv  1363 kB |  the
+🔶 Pred  226 ms Sync   38 ms | Sent   966 kB Recv  1363 kB |  idea
+🔶 Pred  224 ms Sync   39 ms | Sent   966 kB Recv  1363 kB |  that
+🔶 Pred  226 ms Sync   33 ms | Sent   966 kB Recv  1363 kB |  the
+🔶 Pred  227 ms Sync   33 ms | Sent   966 kB Recv  1363 kB |  electron
+🔶 Pred  226 ms Sync   30 ms | Sent   966 kB Recv  1363 kB |  transport
+🔶 Pred  232 ms Sync   29 ms | Sent   966 kB Recv  1363 kB |  chain
+🔶 Pred  228 ms Sync   29 ms | Sent   966 kB Recv  1363 kB |  is
+🔶 Pred  228 ms Sync   36 ms | Sent   966 kB Recv  1363 kB |  dependent
+🔶 Pred  228 ms Sync   29 ms | Sent   966 kB Recv  1363 kB |  on
+🔶 Pred  228 ms Sync   31 ms | Sent   966 kB Recv  1363 kB |  the
+🔶 Pred  225 ms Sync   32 ms | Sent   966 kB Recv  1363 kB |  availability
+🔶 Pred  224 ms Sync   34 ms | Sent   966 kB Recv  1363 kB |  of
+🔶 Pred  225 ms Sync   35 ms | Sent   966 kB Recv  1363 kB |  oxygen
+🔶 Pred  232 ms Sync   29 ms | Sent   966 kB Recv  1363 kB | .
+🔶 Pred  226 ms Sync   31 ms | Sent   966 kB Recv  1363 kB |  (
+🔶 Pred  226 ms Sync   33 ms | Sent   966 kB Recv  1363 kB | l
+🔶 Pred  226 ms Sync   33 ms | Sent   966 kB Recv  1363 kB | )
+🔶 Pred  227 ms Sync   33 ms | Sent   966 kB Recv  1363 kB |  Explain
+🔶 Pred  226 ms Sync   32 ms | Sent   966 kB Recv  1363 kB |  how
+🔶 Pred  228 ms Sync   33 ms | Sent   966 kB Recv  1363 kB |  the
+🔶 Pred  228 ms Sync   35 ms | Sent   966 kB Recv  1363 kB |  data
+🔶 Pred  228 ms Sync   31 ms | Sent   966 kB Recv  1363 kB |  supports
+🔶 Pred  225 ms Sync   38 ms | Sent   966 kB Recv  1363 kB |  the
+🔶 Pred  229 ms Sync   29 ms | Sent   966 kB Recv  1363 kB |  idea
+🔶 Pred  228 ms Sync   31 ms | Sent   966 kB Recv  1363 kB |  that
+🔶 Pred  227 ms Sync   31 ms | Sent   966 kB Recv  1363 kB |  the
+🔶 Pred  223 ms Sync   36 ms | Sent   966 kB Recv  1363 kB |  electron
+🔶 Pred  229 ms Sync   30 ms | Sent   966 kB Recv  1363 kB |  transport
+🔶 Pred  229 ms Sync   34 ms | Sent   966 kB Recv  1363 kB |  chain
+🔶 Pred  226 ms Sync   32 ms | Sent   966 kB Recv  1363 kB |  is
+🔶 Pred  226 ms Sync   33 ms | Sent   966 kB Recv  1363 kB |  dependent
+🔶 Pred  229 ms Sync   31 ms | Sent   966 kB Recv  1363 kB |  on
+🔶 Pred  227 ms Sync   33 ms | Sent   966 kB Recv  1363 kB |  the
+🔶 Pred  226 ms Sync   32 ms | Sent   966 kB Recv  1363 kB |  cit
+🔶 Pred  225 ms Sync   34 ms | Sent   966 kB Recv  1363 kB | ric
+🔶 Pred  232 ms Sync   27 ms | Sent   966 kB Recv  1363 kB |  acid
+🔶 Pred  228 ms Sync   31 ms | Sent   966 kB Recv  1363 kB |  cycle
+🔶 Pred  228 ms Sync   30 ms | Sent   966 kB Recv  1363 kB | .
+🔶 Pred  230 ms Sync   30 ms | Sent   966 kB Recv  1363 kB |  (
+🔶 Pred  228 ms Sync   30 ms | Sent   966 kB Recv  1363 kB | m
+🔶 Pred  229 ms Sync   31 ms | Sent   966 kB Recv  1363 kB | )
+🔶 Pred  227 ms Sync   36 ms | Sent   966 kB Recv  1363 kB |  Explain
+🔶 Pred  226 ms Sync   33 ms | Sent   966 kB Recv  1363 kB |  how
+🔶 Pred  226 ms Sync   32 ms | Sent   966 kB Recv  1363 kB |  the
+🔶 Pred  225 ms Sync   35 ms | Sent   966 kB Recv  1363 kB |  data
+🔶 Pred  227 ms Sync   32 ms | Sent   966 kB Recv  1363 kB |  supports
+🔶 Pred  226 ms Sync   33 ms | Sent   966 kB Recv  1363 kB |  the
+🔶 Pred  224 ms Sync   33 ms | Sent   966 kB Recv  1363 kB |  idea
+🔶 Pred  226 ms Sync   35 ms | Sent   966 kB Recv  1363 kB |  that
+🔶 Pred  227 ms Sync   34 ms | Sent   966 kB Recv  1363 kB |  the
+🔶 Pred  228 ms Sync   32 ms | Sent   966 kB Recv  1363 kB |  cit
+🔶 Pred  226 ms Sync   36 ms | Sent   966 kB Recv  1363 kB | ric
+🔶 Pred  228 ms Sync   32 ms | Sent   966 kB Recv  1363 kB |  acid
+🔶 Pred  226 ms Sync   33 ms | Sent   966 kB Recv  1363 kB |  cycle
+🔶 Pred  229 ms Sync   30 ms | Sent   966 kB Recv  1363 kB |  is
+🔶 Pred  227 ms Sync   33 ms | Sent   966 kB Recv  1363 kB |  dependent
+🔶 Pred  229 ms Sync   33 ms | Sent   966 kB Recv  1363 kB |  on
+🔶 Pred  228 ms Sync   31 ms | Sent   966 kB Recv  1363 kB |  the
+🔶 Pred  230 ms Sync   33 ms | Sent   966 kB Recv  1363 kB |  availability
+🔶 Pred  230 ms Sync   30 ms | Sent   966 kB Recv  1363 kB |  of
+🔶 Pred  227 ms Sync   35 ms | Sent   966 kB Recv  1363 kB |  oxygen
+🔶 Pred  227 ms Sync   32 ms | Sent   966 kB Recv  1363 kB | .
+🔶 Pred  225 ms Sync   34 ms | Sent   966 kB Recv  1363 kB |  (
+🔶 Pred  228 ms Sync   30 ms | Sent   966 kB Recv  1363 kB | n
+🔶 Pred  230 ms Sync   30 ms | Sent   966 kB Recv  1363 kB | )
+🔶 Pred  228 ms Sync   32 ms | Sent   966 kB Recv  1363 kB |  Explain
+🔶 Pred  226 ms Sync   40 ms | Sent   966 kB Recv  1363 kB |  how
+🔶 Pred  227 ms Sync   31 ms | Sent   966 kB Recv  1363 kB |  the
+🔶 Pred  227 ms Sync   36 ms | Sent   966 kB Recv  1363 kB |  data
+🔶 Pred  226 ms Sync   38 ms | Sent   966 kB Recv  1363 kB |  supports
+🔶 Pred  229 ms Sync   32 ms | Sent   966 kB Recv  1363 kB |  the
+🔶 Pred  231 ms Sync   29 ms | Sent   966 kB Recv  1363 kB |  idea
+🔶 Pred  228 ms Sync   33 ms | Sent   966 kB Recv  1363 kB |  that
+🔶 Pred  228 ms Sync   32 ms | Sent   966 kB Recv  1363 kB |  the
+🔶 Pred  228 ms Sync   34 ms | Sent   966 kB Recv  1363 kB |  electron
+🔶 Pred  229 ms Sync   31 ms | Sent   966 kB Recv  1363 kB |  transport
+🔶 Pred  227 ms Sync   34 ms | Sent   966 kB Recv  1363 kB |  chain
+🔶 Pred  228 ms Sync   35 ms | Sent   966 kB Recv  1363 kB |  is
+🔶 Pred  228 ms Sync   35 ms | Sent   966 kB Recv  1363 kB |  dependent
+🔶 Pred  227 ms Sync   33 ms | Sent   966 kB Recv  1363 kB |  on
+🔶 Pred  228 ms Sync   32 ms | Sent   966 kB Recv  1363 kB |  the
+🔶 Pred  228 ms Sync   39 ms | Sent   966 kB Recv  1363 kB |  cit
+🔶 Pred  227 ms Sync   32 ms | Sent   966 kB Recv  1363 kB | ric
+🔶 Pred  229 ms Sync   29 ms | Sent   966 kB Recv  1363 kB |  acid
+🔶 Pred  229 ms Sync   30 ms | Sent   966 kB Recv  1363 kB |  cycle
+🔶 Pred  229 ms Sync   30 ms | Sent   966 kB Recv  1363 kB | .
+🔶 Pred  231 ms Sync   32 ms | Sent   966 kB Recv  1363 kB |  (
+🔶 Pred  228 ms Sync   33 ms | Sent   966 kB Recv  1363 kB | o
+🔶 Pred  228 ms Sync   35 ms | Sent   966 kB Recv  1363 kB | )
+🔶 Pred  227 ms Sync   34 ms | Sent   966 kB Recv  1363 kB |  Explain
+🔶 Pred  230 ms Sync   32 ms | Sent   966 kB Recv  1363 kB |  how
+🔶 Pred  230 ms Sync   31 ms | Sent   966 kB Recv  1363 kB |  the
+🔶 Pred  231 ms Sync   29 ms | Sent   966 kB Recv  1363 kB |  data
+🔶 Pred  230 ms Sync   32 ms | Sent   966 kB Recv  1363 kB |  supports
+🔶 Pred  230 ms Sync   31 ms | Sent   966 kB Recv  1363 kB |  the
+🔶 Pred  231 ms Sync   31 ms | Sent   966 kB Recv  1363 kB |  idea
+🔶 Pred  231 ms Sync   29 ms | Sent   966 kB Recv  1363 kB |  that
+🔶 Pred  228 ms Sync   37 ms | Sent   966 kB Recv  1363 kB |  the
+🔶 Pred  231 ms Sync   29 ms | Sent   966 kB Recv  1363 kB |  cit
+🔶 Pred  228 ms Sync   34 ms | Sent   966 kB Recv  1363 kB | ric
+🔶 Pred  229 ms Sync   29 ms | Sent   966 kB Recv  1363 kB |  acid
+🔶 Pred  227 ms Sync   36 ms | Sent   966 kB Recv  1363 kB |  cycle
+🔶 Pred  233 ms Sync   29 ms | Sent   966 kB Recv  1363 kB |  is
+🔶 Pred  230 ms Sync   37 ms | Sent   966 kB Recv  1363 kB |  dependent
+🔶 Pred  229 ms Sync   33 ms | Sent   966 kB Recv  1363 kB |  on
+🔶 Pred  227 ms Sync   32 ms | Sent   966 kB Recv  1363 kB |  the
+🔶 Pred  231 ms Sync   31 ms | Sent   966 kB Recv  1363 kB |  availability
+🔶 Pred  231 ms Sync   31 ms | Sent   966 kB Recv  1363 kB |  of
+🔶 Pred  229 ms Sync   35 ms | Sent   966 kB Recv  1363 kB |  oxygen
+🔶 Pred  228 ms Sync   34 ms | Sent   966 kB Recv  1363 kB | .
+🔶 Pred  228 ms Sync   34 ms | Sent   966 kB Recv  1363 kB |  (
+🔶 Pred  230 ms Sync   31 ms | Sent   966 kB Recv  1363 kB | p
+🔶 Pred  230 ms Sync   33 ms | Sent   966 kB Recv  1363 kB | )
+🔶 Pred  229 ms Sync   33 ms | Sent   966 kB Recv  1363 kB |  Explain
+🔶 Pred  229 ms Sync   34 ms | Sent   966 kB Recv  1363 kB |  how
+🔶 Pred  228 ms Sync   36 ms | Sent   966 kB Recv  1363 kB |  the
+🔶 Pred  230 ms Sync   31 ms | Sent   966 kB Recv  1363 kB |  data
+🔶 Pred  228 ms Sync   31 ms | Sent   966 kB Recv  1363 kB |  supports
+🔶 Pred  232 ms Sync   30 ms | Sent   966 kB Recv  1363 kB |  the
+🔶 Pred  229 ms Sync   32 ms | Sent   966 kB Recv  1363 kB |  idea
+🔶 Pred  232 ms Sync   30 ms | Sent   966 kB Recv  1363 kB |  that
+🔶 Pred  232 ms Sync   30 ms | Sent   966 kB Recv  1363 kB |  the
+🔶 Pred  226 ms Sync   35 ms | Sent   966 kB Recv  1363 kB |  electron
+🔶 Pred  231 ms Sync   32 ms | Sent   966 kB Recv  1363 kB |  transport
+🔶 Pred  228 ms Sync   35 ms | Sent   966 kB Recv  1363 kB |  chain
+🔶 Pred  228 ms Sync   35 ms | Sent   966 kB Recv  1363 kB |  is
+🔶 Pred  232 ms Sync   33 ms | Sent   966 kB Recv  1363 kB |  dependent
+🔶 Pred  227 ms Sync   34 ms | Sent   966 kB Recv  1363 kB |  on
+🔶 Pred  229 ms Sync   36 ms | Sent   966 kB Recv  1363 kB |  the
+🔶 Pred  233 ms Sync   30 ms | Sent   966 kB Recv  1363 kB |  availability
+🔶 Pred  236 ms Sync   30 ms | Sent   966 kB Recv  1363 kB |  of
+🔶 Pred  235 ms Sync   30 ms | Sent   966 kB Recv  1363 kB |  oxygen
+🔶 Pred  228 ms Sync   33 ms | Sent   966 kB Recv  1363 kB | .
+🔶 Pred  229 ms Sync   36 ms | Sent   966 kB Recv  1363 kB |  (
+🔶 Pred  233 ms Sync   32 ms | Sent   966 kB Recv  1363 kB | q
+🔶 Pred  231 ms Sync   32 ms | Sent   966 kB Recv  1363 kB | )
+🔶 Pred  228 ms Sync   36 ms | Sent   966 kB Recv  1363 kB |  Explain
+🔶 Pred  230 ms Sync   33 ms | Sent   966 kB Recv  1363 kB |  how
+🔶 Pred  228 ms Sync   35 ms | Sent   966 kB Recv  1363 kB |  the
+🔶 Pred  228 ms Sync   34 ms | Sent   966 kB Recv  1363 kB |  data
+🔶 Pred  231 ms Sync   33 ms | Sent   966 kB Recv  1363 kB |  supports
+🔶 Pred  227 ms Sync   36 ms | Sent   966 kB Recv  1363 kB |  the
+🔶 Pred  232 ms Sync   30 ms | Sent   966 kB Recv  1363 kB |  idea
+🔶 Pred  229 ms Sync   34 ms | Sent   966 kB Recv  1363 kB |  that
+🔶 Pred  232 ms Sync   33 ms | Sent   966 kB Recv  1363 kB |  the
+🔶 Pred  230 ms Sync   33 ms | Sent   966 kB Recv  1363 kB |  electron
+🔶 Pred  229 ms Sync   33 ms | Sent   966 kB Recv  1363 kB |  transport
+🔶 Pred  231 ms Sync   35 ms | Sent   966 kB Recv  1363 kB |  chain
+🔶 Pred  228 ms Sync   30 ms | Sent   966 kB Recv  1363 kB |  is
+🔶 Pred  229 ms Sync   34 ms | Sent   966 kB Recv  1363 kB |  dependent
+🔶 Pred  228 ms Sync   35 ms | Sent   966 kB Recv  1363 kB |  on
+🔶 Pred  233 ms Sync   34 ms | Sent   966 kB Recv  1363 kB |  the
+🔶 Pred  231 ms Sync   32 ms | Sent   966 kB Recv  1363 kB |  availability
+🔶 Pred  229 ms Sync   34 ms | Sent   966 kB Recv  1363 kB |  of
+🔶 Pred  229 ms Sync   35 ms | Sent   966 kB Recv  1363 kB |  oxygen
+🔶 Pred  231 ms Sync   32 ms | Sent   966 kB Recv  1363 kB | .
+🔶 Pred  228 ms Sync   36 ms | Sent   966 kB Recv  1363 kB |  (
+🔶 Pred  229 ms Sync   33 ms | Sent   966 kB Recv  1363 kB | r
+🔶 Pred  228 ms Sync   35 ms | Sent   966 kB Recv  1363 kB | )
+🔶 Pred  230 ms Sync   32 ms | Sent   966 kB Recv  1363 kB |  Explain
+🔶 Pred  230 ms Sync   33 ms | Sent   966 kB Recv  1363 kB |  how
+🔶 Pred  230 ms Sync   33 ms | Sent   966 kB Recv  1363 kB |  the
+🔶 Pred  229 ms Sync   34 ms | Sent   966 kB Recv  1363 kB |  data
+🔶 Pred  227 ms Sync   36 ms | Sent   966 kB Recv  1363 kB |  supports
+🔶 Pred  228 ms Sync   33 ms | Sent   966 kB Recv  1363 kB |  the
+🔶 Pred  228 ms Sync   36 ms | Sent   966 kB Recv  1363 kB |  idea
+🔶 Pred  231 ms Sync   37 ms | Sent   966 kB Recv  1363 kB |  that
+🔶 Pred  233 ms Sync   30 ms | Sent   966 kB Recv  1363 kB |  the
+🔶 Pred  230 ms Sync   34 ms | Sent   966 kB Recv  1363 kB |  electron
+🔶 Pred  231 ms Sync   31 ms | Sent   966 kB Recv  1363 kB |  transport
+🔶 Pred  228 ms Sync   35 ms | Sent   966 kB Recv  1363 kB |  chain
+🔶 Pred  229 ms Sync   34 ms | Sent   966 kB Recv  1363 kB |  is
+🔶 Pred  234 ms Sync   29 ms | Sent   966 kB Recv  1363 kB |  dependent
+🔶 Pred  230 ms Sync   33 ms | Sent   966 kB Recv  1363 kB |  on
+🔶 Pred  230 ms Sync   35 ms | Sent   966 kB Recv  1363 kB |  the
+🔶 Pred  233 ms Sync   32 ms | Sent   966 kB Recv  1363 kB |  availability
+🔶 Pred  231 ms Sync   37 ms | Sent   966 kB Recv  1363 kB |  of
+🔶 Pred  229 ms Sync   38 ms | Sent   966 kB Recv  1363 kB |  oxygen
+🔶 Pred  233 ms Sync   35 ms | Sent   966 kB Recv  1363 kB | .
+🔶 Pred  229 ms Sync   40 ms | Sent   966 kB Recv  1363 kB |  (
+🔶 Pred  232 ms Sync   32 ms | Sent   966 kB Recv  1363 kB | s
+🔶 Pred  231 ms Sync   32 ms | Sent   966 kB Recv  1363 kB | )
+🔶 Pred  231 ms Sync   32 ms | Sent   966 kB Recv  1363 kB |  Explain
+🔶 Pred  229 ms Sync   33 ms | Sent   966 kB Recv  1363 kB |  how
+🔶 Pred  232 ms Sync   32 ms | Sent   966 kB Recv  1363 kB |  the
+🔶 Pred  233 ms Sync   30 ms | Sent   966 kB Recv  1363 kB |  data
+🔶 Pred  230 ms Sync   33 ms | Sent   966 kB Recv  1363 kB |  supports
+🔶 Pred  229 ms Sync   36 ms | Sent   966 kB Recv  1363 kB |  the
+🔶 Pred  231 ms Sync   34 ms | Sent   966 kB Recv  1363 kB |  idea
+🔶 Pred  231 ms Sync   33 ms | Sent   966 kB Recv  1363 kB |  that
+🔶 Pred  232 ms Sync   32 ms | Sent   966 kB Recv  1363 kB |  the
+🔶 Pred  228 ms Sync   38 ms | Sent   966 kB Recv  1363 kB |  electron
+🔶 Pred  231 ms Sync   34 ms | Sent   966 kB Recv  1363 kB |  transport
+🔶 Pred  230 ms Sync   47 ms | Sent   966 kB Recv  1363 kB |  chain
+🔶 Pred  230 ms Sync   37 ms | Sent   966 kB Recv  1363 kB |  is
+🔶 Pred  230 ms Sync   33 ms | Sent   966 kB Recv  1363 kB |  dependent
+🔶 Pred  230 ms Sync   36 ms | Sent   966 kB Recv  1363 kB |  on
+🔶 Pred  230 ms Sync   35 ms | Sent   966 kB Recv  1363 kB |  the
+🔶 Pred  231 ms Sync   37 ms | Sent   966 kB Recv  1363 kB |  availability
+🔶 Pred  237 ms Sync   33 ms | Sent   966 kB Recv  1363 kB |  of
+🔶 Pred  231 ms Sync   40 ms | Sent   966 kB Recv  1363 kB |  oxygen
+🔶 Pred  232 ms Sync   33 ms | Sent   966 kB Recv  1363 kB | .
+🔶 Pred  229 ms Sync   38 ms | Sent   966 kB Recv  1363 kB |  (
+🔶 Pred  233 ms Sync   31 ms | Sent   966 kB Recv  1363 kB | t
+🔶 Pred  229 ms Sync   38 ms | Sent   966 kB Recv  1363 kB | )
+🔶 Pred  234 ms Sync   30 ms | Sent   966 kB Recv  1363 kB |  Explain
+🔶 Pred  232 ms Sync   35 ms | Sent   966 kB Recv  1363 kB |  how
+🔶 Pred  229 ms Sync   38 ms | Sent   966 kB Recv  1363 kB |  the
+🔶 Pred  229 ms Sync   41 ms | Sent   966 kB Recv  1363 kB |  data
+🔶 Pred  234 ms Sync   29 ms | Sent   966 kB Recv  1363 kB |  supports
+🔶 Pred  230 ms Sync   36 ms | Sent   966 kB Recv  1363 kB |  the
+🔶 Pred  234 ms Sync   34 ms | Sent   966 kB Recv  1363 kB |  idea
+🔶 Pred  230 ms Sync   36 ms | Sent   966 kB Recv  1363 kB |  that
+🔶 Pred  231 ms Sync   31 ms | Sent   966 kB Recv  1363 kB |  the
+🔶 Pred  233 ms Sync   35 ms | Sent   966 kB Recv  1363 kB |  electron
+🔶 Pred  231 ms Sync   32 ms | Sent   966 kB Recv  1363 kB |  transport
+🔶 Pred  231 ms Sync   37 ms | Sent   966 kB Recv  1363 kB |  chain
+🔶 Pred  235 ms Sync   44 ms | Sent   966 kB Recv  1363 kB |  is
+🔶 Pred  231 ms Sync   42 ms | Sent   966 kB Recv  1363 kB |  dependent
+🔶 Pred  228 ms Sync   49 ms | Sent   966 kB Recv  1363 kB |  on
+🔶 Pred  233 ms Sync   32 ms | Sent   966 kB Recv  1363 kB |  the
+🔶 Pred  233 ms Sync   31 ms | Sent   966 kB Recv  1363 kB |  availability
+🔶 Pred  233 ms Sync   36 ms | Sent   966 kB Recv  1363 kB |  of
+🔶 Pred  230 ms Sync   36 ms | Sent   966 kB Recv  1363 kB |  oxygen
+🔶 Pred  233 ms Sync   46 ms | Sent   966 kB Recv  1363 kB | .
+🔶 Pred  229 ms Sync   35 ms | Sent   966 kB Recv  1363 kB |  (
+🔶 Pred  229 ms Sync   38 ms | Sent   966 kB Recv  1363 kB | u
+🔶 Pred  230 ms Sync   46 ms | Sent   966 kB Recv  1363 kB | )
+🔶 Pred  234 ms Sync   31 ms | Sent   966 kB Recv  1363 kB |  Explain
+🔶 Pred  233 ms Sync   49 ms | Sent   966 kB Recv  1363 kB |  how
+🔶 Pred  229 ms Sync   45 ms | Sent   966 kB Recv  1363 kB |  the
+🔶 Pred  237 ms Sync   30 ms | Sent   966 kB Recv  1363 kB |  data
+🔶 Pred  231 ms Sync   55 ms | Sent   966 kB Recv  1363 kB |  supports
+🔶 Pred  231 ms Sync   34 ms | Sent   966 kB Recv  1363 kB |  the
+🔶 Pred  236 ms Sync   31 ms | Sent   966 kB Recv  1363 kB |  idea
+🔶 Pred  243 ms Sync   32 ms | Sent   966 kB Recv  1363 kB |  that
+🔶 Pred  231 ms Sync   38 ms | Sent   966 kB Recv  1363 kB |  the
+🔶 Pred  234 ms Sync   33 ms | Sent   966 kB Recv  1363 kB |  electron
+🔶 Pred  231 ms Sync   33 ms | Sent   966 kB Recv  1363 kB |  transport
+🔶 Pred  237 ms Sync   38 ms | Sent   966 kB Recv  1363 kB |  chain
+🔶 Pred  233 ms Sync   35 ms | Sent   966 kB Recv  1363 kB |  is
+🔶 Pred  232 ms Sync   40 ms | Sent   966 kB Recv  1363 kB |  dependent
+🔶 Pred  241 ms Sync   28 ms | Sent   966 kB Recv  1363 kB |  on
+🔶 Pred  233 ms Sync   38 ms | Sent   966 kB Recv  1363 kB |  the
+🔶 Pred  236 ms Sync   33 ms | Sent   966 kB Recv  1363 kB |  availability
+🔶 Pred  232 ms Sync   39 ms | Sent   966 kB Recv  1363 kB |  of
+🔶 Pred  231 ms Sync   34 ms | Sent   966 kB Recv  1363 kB |  oxygen
+🔶 Pred  239 ms Sync   30 ms | Sent   966 kB Recv  1363 kB | .
+🔶 Pred  238 ms Sync   32 ms | Sent   966 kB Recv  1363 kB |  (
+🔶 Pred  239 ms Sync   30 ms | Sent   966 kB Recv  1363 kB | v
+🔶 Pred  232 ms Sync   33 ms | Sent   966 kB Recv  1363 kB | )
+🔶 Pred  234 ms Sync   37 ms | Sent   966 kB Recv  1363 kB |  Explain
+🔶 Pred  233 ms Sync   39 ms | Sent   966 kB Recv  1363 kB |  how
+🔶 Pred  232 ms Sync   37 ms | Sent   966 kB Recv  1363 kB |  the
+🔶 Pred  233 ms Sync   35 ms | Sent   966 kB Recv  1363 kB |  data
+🔶 Pred  232 ms Sync   36 ms | Sent   966 kB Recv  1363 kB |  supports
+🔶 Pred  229 ms Sync   37 ms | Sent   966 kB Recv  1363 kB |  the
+🔶 Pred  233 ms Sync   35 ms | Sent   966 kB Recv  1363 kB |  idea
+🔶 Pred  231 ms Sync   36 ms | Sent   966 kB Recv  1363 kB |  that
+🔶 Pred  234 ms Sync   36 ms | Sent   966 kB Recv  1363 kB |  the
+🔶 Pred  239 ms Sync   32 ms | Sent   966 kB Recv  1363 kB |  electron
+🔶 Pred  235 ms Sync   35 ms | Sent   966 kB Recv  1363 kB |  transport
+🔶 Pred  230 ms Sync   37 ms | Sent   966 kB Recv  1363 kB |  chain
+🔶 Pred  232 ms Sync   42 ms | Sent   966 kB Recv  1363 kB |  is
+🔶 Pred  235 ms Sync   35 ms | Sent   966 kB Recv  1363 kB |  dependent
+🔶 Pred  233 ms Sync   37 ms | Sent   966 kB Recv  1363 kB |  on
+🔶 Pred  239 ms Sync   32 ms | Sent   966 kB Recv  1363 kB |  the
+🔶 Pred  246 ms Sync   27 ms | Sent   966 kB Recv  1363 kB |  availability
+🔶 Pred  235 ms Sync   35 ms | Sent   966 kB Recv  1363 kB |  of
+🔶 Pred  238 ms Sync   38 ms | Sent   966 kB Recv  1363 kB |  oxygen
+🔶 Pred  235 ms Sync   34 ms | Sent   966 kB Recv  1363 kB | .
+🔶 Pred  240 ms Sync   31 ms | Sent   966 kB Recv  1363 kB |  (
+🔶 Pred  232 ms Sync   43 ms | Sent   966 kB Recv  1363 kB | w
+🔶 Pred  232 ms Sync   36 ms | Sent   966 kB Recv  1363 kB | )
+🔶 Pred  233 ms Sync   38 ms | Sent   966 kB Recv  1363 kB |  Explain
+🔶 Pred  232 ms Sync   38 ms | Sent   966 kB Recv  1363 kB |  how
+🔶 Pred  235 ms Sync   39 ms | Sent   966 kB Recv  1363 kB |  the
+🔶 Pred  233 ms Sync   36 ms | Sent   966 kB Recv  1363 kB |  data
+🔶 Pred  239 ms Sync   38 ms | Sent   966 kB Recv  1363 kB |  supports
+🔶 Pred  239 ms Sync   31 ms | Sent   966 kB Recv  1363 kB |  the
+🔶 Pred  240 ms Sync   36 ms | Sent   966 kB Recv  1363 kB |  idea
+🔶 Pred  234 ms Sync   39 ms | Sent   966 kB Recv  1363 kB |  that
+🔶 Pred  232 ms Sync   44 ms | Sent   966 kB Recv  1363 kB |  the
+🔶 Pred  234 ms Sync   44 ms | Sent   966 kB Recv  1363 kB |  electron
+🔶 Pred  234 ms Sync   37 ms | Sent   966 kB Recv  1363 kB |  transport
+🔶 Pred  234 ms Sync   36 ms | Sent   966 kB Recv  1363 kB |  chain
+🔶 Pred  237 ms Sync   34 ms | Sent   966 kB Recv  1363 kB |  is
+🔶 Pred  243 ms Sync   29 ms | Sent   966 kB Recv  1363 kB |  dependent
+🔶 Pred  232 ms Sync   42 ms | Sent   966 kB Recv  1363 kB |  on
+🔶 Pred  239 ms Sync   34 ms | Sent   966 kB Recv  1363 kB |  the
+🔶 Pred  233 ms Sync   39 ms | Sent   966 kB Recv  1363 kB |  availability
+🔶 Pred  238 ms Sync   38 ms | Sent   966 kB Recv  1363 kB |  of
+🔶 Pred  237 ms Sync   40 ms | Sent   966 kB Recv  1363 kB |  oxygen
+🔶 Pred  237 ms Sync   41 ms | Sent   966 kB Recv  1363 kB | .
+🔶 Pred  235 ms Sync   36 ms | Sent   966 kB Recv  1363 kB |  (
+🔶 Pred  233 ms Sync   37 ms | Sent   966 kB Recv  1363 kB | x
+🔶 Pred  235 ms Sync   51 ms | Sent   966 kB Recv  1363 kB | )
+🔶 Pred  233 ms Sync   46 ms | Sent   966 kB Recv  1363 kB |  Explain
+🔶 Pred  232 ms Sync   37 ms | Sent   966 kB Recv  1363 kB |  how
+🔶 Pred  244 ms Sync   35 ms | Sent   966 kB Recv  1363 kB |  the
+🔶 Pred  235 ms Sync   52 ms | Sent   966 kB Recv  1363 kB |  data
+🔶 Pred  235 ms Sync   41 ms | Sent   966 kB Recv  1363 kB |  supports
+🔶 Pred  233 ms Sync   36 ms | Sent   966 kB Recv  1363 kB |  the
+🔶 Pred  234 ms Sync   55 ms | Sent   966 kB Recv  1363 kB |  idea
+🔶 Pred  235 ms Sync   38 ms | Sent   966 kB Recv  1363 kB |  that
+🔶 Pred  232 ms Sync   38 ms | Sent   966 kB Recv  1363 kB |  the
+🔶 Pred  238 ms Sync   46 ms | Sent   966 kB Recv  1363 kB |  electron
+🔶 Pred  243 ms Sync   36 ms | Sent   966 kB Recv  1363 kB |  transport
+🔶 Pred  238 ms Sync   41 ms | Sent   966 kB Recv  1363 kB |  chain
+🔶 Pred  237 ms Sync   36 ms | Sent   966 kB Recv  1363 kB |  is
+🔶 Pred  235 ms Sync   49 ms | Sent   966 kB Recv  1363 kB |  dependent
+🔶 Pred  241 ms Sync   32 ms | Sent   966 kB Recv  1363 kB |  on
+🔶 Pred  247 ms Sync   36 ms | Sent   966 kB Recv  1363 kB |  the
+🔶 Pred  250 ms Sync   29 ms | Sent   966 kB Recv  1363 kB |  availability
+🔶 Pred  234 ms Sync   50 ms | Sent   966 kB Recv  1363 kB |  of
+🔶 Pred  233 ms Sync   34 ms | Sent   966 kB Recv  1363 kB |  oxygen
+🔶 Pred  235 ms Sync   43 ms | Sent   966 kB Recv  1363 kB | .
+🔶 Pred  255 ms Sync   29 ms | Sent   966 kB Recv  1363 kB |  (
+🔶 Pred  255 ms Sync   31 ms | Sent   966 kB Recv  1363 kB | y
+🔶 Pred  248 ms Sync   33 ms | Sent   966 kB Recv  1363 kB | )
+🔶 Pred  250 ms Sync   38 ms | Sent   966 kB Recv  1363 kB |  Explain
+🔶 Pred  235 ms Sync   39 ms | Sent   966 kB Recv  1363 kB |  how
+🔶 Pred  252 ms Sync   35 ms | Sent   966 kB Recv  1363 kB |  the
+🔶 Pred  254 ms Sync   30 ms | Sent   966 kB Recv  1363 kB |  data
+🔶 Pred  236 ms Sync   39 ms | Sent   966 kB Recv  1363 kB |  supports
+🔶 Pred  236 ms Sync   32 ms | Sent   966 kB Recv  1363 kB |  the
+🔶 Pred  259 ms Sync   30 ms | Sent   966 kB Recv  1363 kB |  idea
+🔶 Pred  240 ms Sync   34 ms | Sent   966 kB Recv  1363 kB |  that
+🔶 Pred  240 ms Sync   37 ms | Sent   966 kB Recv  1363 kB |  the
+🔶 Pred  234 ms Sync   43 ms | Sent   966 kB Recv  1363 kB |  electron
+🔶 Pred  234 ms Sync   48 ms | Sent   966 kB Recv  1363 kB |  transport
+🔶 Pred  233 ms Sync   49 ms | Sent   966 kB Recv  1363 kB |  chain
+🔶 Pred  236 ms Sync   43 ms | Sent   966 kB Recv  1363 kB |  is
+🔶 Pred  232 ms Sync   47 ms | Sent   966 kB Recv  1363 kB |  dependent
+🔶 Pred  230 ms Sync   44 ms | Sent   966 kB Recv  1363 kB |  on
+🔶 Pred  237 ms Sync   39 ms | Sent   966 kB Recv  1363 kB |  the
+🔶 Pred  234 ms Sync   38 ms | Sent   966 kB Recv  1363 kB |  availability
+🔶 Pred  239 ms Sync   34 ms | Sent   966 kB Recv  1363 kB |  of
+🔶 Pred  234 ms Sync   41 ms | Sent   966 kB Recv  1363 kB |  oxygen
+🔶 Pred  244 ms Sync   40 ms | Sent   966 kB Recv  1363 kB | .
+🔶 Pred  246 ms Sync   29 ms | Sent   966 kB Recv  1363 kB |  (
+🔶 Pred  247 ms Sync   30 ms | Sent   966 kB Recv  1363 kB | z
+🔶 Pred  235 ms Sync   46 ms | Sent   966 kB Recv  1363 kB | )
+🔶 Pred  234 ms Sync   38 ms | Sent   966 kB Recv  1363 kB |  Explain
+🔶 Pred  253 ms Sync   29 ms | Sent   966 kB Recv  1363 kB |  how
+🔶 Pred  239 ms Sync   34 ms | Sent   966 kB Recv  1363 kB |  the
+🔶 Pred  236 ms Sync   50 ms | Sent   966 kB Recv  1363 kB |  data
+🔶 Pred  251 ms Sync   33 ms | Sent   966 kB Recv  1363 kB |  supports
+🔶 Pred  237 ms Sync   35 ms | Sent   966 kB Recv  1363 kB |  the
+🔶 Pred  244 ms Sync   39 ms | Sent   966 kB Recv  1363 kB |  idea
+🔶 Pred  250 ms Sync   31 ms | Sent   966 kB Recv  1363 kB |  that
+🔶 Pred  238 ms Sync   39 ms | Sent   966 kB Recv  1363 kB |  the
+🔶 Pred  244 ms Sync   28 ms | Sent   966 kB Recv  1363 kB |  electron
+🔶 Pred  242 ms Sync   30 ms | Sent   966 kB Recv  1363 kB |  transport
+🔶 Pred  241 ms Sync   36 ms | Sent   966 kB Recv  1363 kB |  chain
+🔶 Pred  242 ms Sync   36 ms | Sent   966 kB Recv  1363 kB |  is
+🔶 Pred  245 ms Sync   39 ms | Sent   966 kB Recv  1363 kB |  dependent
+🔶 Pred  237 ms Sync   41 ms | Sent   966 kB Recv  1363 kB |  on
+🔶 Pred  242 ms Sync   48 ms | Sent   966 kB Recv  1363 kB |  the
+🔶 Pred  241 ms Sync   35 ms | Sent   966 kB Recv  1363 kB |  availability
+🔶 Pred  241 ms Sync   38 ms | Sent   966 kB Recv  1363 kB |  of
+🔶 Pred  243 ms Sync   36 ms | Sent   966 kB Recv  1363 kB |  oxygen
+🔶 Pred  241 ms Sync   42 ms | Sent   966 kB Recv  1363 kB | .
+🔶 Pred  248 ms Sync   29 ms | Sent   966 kB Recv  1363 kB |  (
+🔶 Pred  242 ms Sync   34 ms | Sent   966 kB Recv  1363 kB | aa
+🔶 Pred  241 ms Sync   35 ms | Sent   966 kB Recv  1363 kB | )
+🔶 Pred  249 ms Sync   35 ms | Sent   966 kB Recv  1363 kB |  Explain
+🔶 Pred  237 ms Sync   41 ms | Sent   966 kB Recv  1363 kB |  how
+🔶 Pred  241 ms Sync   42 ms | Sent   966 kB Recv  1363 kB |  the
+🔶 Pred  242 ms Sync   32 ms | Sent   966 kB Recv  1363 kB |  data
+🔶 Pred  242 ms Sync   56 ms | Sent   966 kB Recv  1363 kB |  supports
+🔶 Pred  233 ms Sync   40 ms | Sent   966 kB Recv  1363 kB |  the
+🔶 Pred  237 ms Sync   41 ms | Sent   966 kB Recv  1363 kB |  idea
+🔶 Pred  241 ms Sync   38 ms | Sent   966 kB Recv  1363 kB |  that
+🔶 Pred  244 ms Sync   32 ms | Sent   966 kB Recv  1363 kB |  the
+🔶 Pred  246 ms Sync   35 ms | Sent   966 kB Recv  1363 kB |  electron
+🔶 Pred  248 ms Sync   38 ms | Sent   966 kB Recv  1363 kB |  transport
+🔶 Pred  248 ms Sync   30 ms | Sent   966 kB Recv  1363 kB |  chain
+🔶 Pred  238 ms Sync   52 ms | Sent   966 kB Recv  1363 kB |  is
+🔶 Pred  238 ms Sync   33 ms | Sent   966 kB Recv  1363 kB |  dependent
+🔶 Pred  242 ms Sync   60 ms | Sent   966 kB Recv  1363 kB |  on
+🔶 Pred  243 ms Sync   29 ms | Sent   966 kB Recv  1363 kB |  the
+🔶 Pred  238 ms Sync   42 ms | Sent   966 kB Recv  1363 kB |  availability
+🔶 Pred  255 ms Sync   51 ms | Sent   966 kB Recv  1363 kB |  of
+🔶 Pred  236 ms Sync   46 ms | Sent   966 kB Recv  1363 kB |  oxygen
+🔶 Pred  235 ms Sync   53 ms | Sent   966 kB Recv  1363 kB | .
+🔶 Pred  243 ms Sync   47 ms | Sent   966 kB Recv  1363 kB |  (
+🔶 Pred  242 ms Sync   55 ms | Sent   966 kB Recv  1363 kB | ab
+🔶 Pred  254 ms Sync   54 ms | Sent   966 kB Recv  1363 kB | )
+🔶 Pred  237 ms Sync   33 ms | Sent   966 kB Recv  1363 kB |  Explain
+🔶 Pred  236 ms Sync   86 ms | Sent   966 kB Recv  1363 kB |  how
+🔶 Pred  236 ms Sync   37 ms | Sent   966 kB Recv  1363 kB |  the
+🔶 Pred  237 ms Sync   91 ms | Sent   966 kB Recv  1363 kB |  data
+🔶 Pred  240 ms Sync   35 ms | Sent   966 kB Recv  1363 kB |  supports
+🔶 Pred  240 ms Sync   39 ms | Sent   966 kB Recv  1363 kB |  the
+🔶 Pred  249 ms Sync   48 ms | Sent   966 kB Recv  1363 kB |  idea
+🔶 Pred  237 ms Sync   35 ms | Sent   966 kB Recv  1363 kB |  that
+🔶 Pred  244 ms Sync   62 ms | Sent   966 kB Recv  1363 kB |  the
+🔶 Pred  243 ms Sync   39 ms | Sent   966 kB Recv  1363 kB |  electron
+🔶 Pred  244 ms Sync   31 ms | Sent   966 kB Recv  1363 kB |  transport
+🔶 Pred  243 ms Sync   38 ms | Sent   966 kB Recv  1363 kB |  chain
+🔶 Pred  238 ms Sync   53 ms | Sent   966 kB Recv  1363 kB |  is
+🔶 Pred  246 ms Sync   45 ms | Sent   966 kB Recv  1363 kB |  dependent
+🔶 Pred  243 ms Sync   34 ms | Sent   966 kB Recv  1363 kB |  on
+🔶 Pred  244 ms Sync   47 ms | Sent   966 kB Recv  1363 kB |  the
+🔶 Pred  247 ms Sync   28 ms | Sent   966 kB Recv  1363 kB |  availability
+🔶 Pred  241 ms Sync   31 ms | Sent   966 kB Recv  1363 kB |  of
+🔶 Pred  247 ms Sync   35 ms | Sent   966 kB Recv  1363 kB |  oxygen
+🔶 Pred  247 ms Sync   33 ms | Sent   966 kB Recv  1363 kB | .
+🔶 Pred  246 ms Sync   46 ms | Sent   966 kB Recv  1363 kB |  (
+🔶 Pred  242 ms Sync   34 ms | Sent   966 kB Recv  1363 kB | ac
+🔶 Pred  250 ms Sync   37 ms | Sent   966 kB Recv  1363 kB | )
+🔶 Pred  252 ms Sync   35 ms | Sent   966 kB Recv  1363 kB |  Explain
+🔶 Pred  246 ms Sync   36 ms | Sent   966 kB Recv  1363 kB |  how
+🔶 Pred  252 ms Sync   29 ms | Sent   966 kB Recv  1363 kB |  the
+🔶 Pred  242 ms Sync   37 ms | Sent   966 kB Recv  1363 kB |  data
+🔶 Pred  249 ms Sync   30 ms | Sent   966 kB Recv  1363 kB |  supports
+🔶 Pred  246 ms Sync   31 ms | Sent   966 kB Recv  1363 kB |  the
+🔶 Pred  238 ms Sync   41 ms | Sent   966 kB Recv  1363 kB |  idea
+🔶 Pred  253 ms Sync   36 ms | Sent   966 kB Recv  1363 kB |  that
+🔶 Pred  243 ms Sync   38 ms | Sent   966 kB Recv  1363 kB |  the
+🔶 Pred  251 ms Sync   27 ms | Sent   966 kB Recv  1363 kB |  electron
+🔶 Pred  246 ms Sync   30 ms | Sent   966 kB Recv  1363 kB |  transport
+🔶 Pred  250 ms Sync   33 ms | Sent   966 kB Recv  1363 kB |  chain
+🔶 Pred  242 ms Sync   39 ms | Sent   966 kB Recv  1363 kB |  is
+🔶 Pred  250 ms Sync   30 ms | Sent   966 kB Recv  1363 kB |  dependent
+🔶 Pred  245 ms Sync   36 ms | Sent   966 kB Recv  1363 kB |  on
+🔶 Pred  238 ms Sync   43 ms | Sent   966 kB Recv  1363 kB |  the
+🔶 Pred  241 ms Sync   30 ms | Sent   966 kB Recv  1363 kB |  availability
+🔶 Pred  246 ms Sync   39 ms | Sent   966 kB Recv  1363 kB |  of
+🔶 Pred  240 ms Sync   48 ms | Sent   966 kB Recv  1363 kB |  oxygen
+🔶 Pred  237 ms Sync   46 ms | Sent   966 kB Recv  1363 kB | .
+🔶 Pred  251 ms Sync   30 ms | Sent   966 kB Recv  1363 kB |  (
+🔶 Pred  245 ms Sync   49 ms | Sent   966 kB Recv  1363 kB | ad
+🔶 Pred  240 ms Sync   46 ms | Sent   966 kB Recv  1363 kB | )
+🔶 Pred  238 ms Sync   37 ms | Sent   966 kB Recv  1363 kB |  Explain
+🔶 Pred  240 ms Sync   41 ms | Sent   966 kB Recv  1363 kB |  how
+🔶 Pred  240 ms Sync   33 ms | Sent   966 kB Recv  1363 kB |  the
+🔶 Pred  242 ms Sync   39 ms | Sent   966 kB Recv  1363 kB |  data
+🔶 Pred  243 ms Sync   32 ms | Sent   966 kB Recv  1363 kB |  supports
+🔶 Pred  246 ms Sync   32 ms | Sent   966 kB Recv  1363 kB |  the
+🔶 Pred  243 ms Sync   42 ms | Sent   966 kB Recv  1363 kB |  idea
+🔶 Pred  238 ms Sync   37 ms | Sent   966 kB Recv  1363 kB |  that
+🔶 Pred  241 ms Sync   34 ms | Sent   966 kB Recv  1363 kB |  the
+🔶 Pred  238 ms Sync   40 ms | Sent   966 kB Recv  1363 kB |  electron
+🔶 Pred  244 ms Sync   33 ms | Sent   966 kB Recv  1363 kB |  transport
+🔶 Pred  247 ms Sync   33 ms | Sent   966 kB Recv  1363 kB |  chain
+🔶 Pred  265 ms Sync   28 ms | Sent   966 kB Recv  1363 kB |  is
+🔶 Pred  255 ms Sync   33 ms | Sent   966 kB Recv  1363 kB |  dependent
+🔶 Pred  248 ms Sync   28 ms | Sent   966 kB Recv  1363 kB |  on
+🔶 Pred  242 ms Sync   42 ms | Sent   966 kB Recv  1363 kB |  the
+🔶 Pred  248 ms Sync   30 ms | Sent   966 kB Recv  1363 kB |  availability
+🔶 Pred  248 ms Sync   41 ms | Sent   966 kB Recv  1363 kB |  of
+🔶 Pred  257 ms Sync   46 ms | Sent   966 kB Recv  1363 kB |  oxygen
+🔶 Pred  256 ms Sync   40 ms | Sent   966 kB Recv  1363 kB | .
+🔶 Pred  261 ms Sync   44 ms | Sent   966 kB Recv  1363 kB |  (
+🔶 Pred  239 ms Sync   33 ms | Sent   966 kB Recv  1363 kB | ae
+🔶 Pred  239 ms Sync   69 ms | Sent   966 kB Recv  1363 kB | )
+🔶 Pred  243 ms Sync   36 ms | Sent   966 kB Recv  1363 kB |  Explain
+🔶 Pred  250 ms Sync   58 ms | Sent   966 kB Recv  1363 kB |  how
+🔶 Pred  249 ms Sync   68 ms | Sent   966 kB Recv  1363 kB |  the
+🔶 Pred  251 ms Sync   50 ms | Sent   966 kB Recv  1363 kB |  data
+🔶 Pred  245 ms Sync   67 ms | Sent   966 kB Recv  1363 kB |  supports
+🔶 Pred  245 ms Sync   33 ms | Sent   966 kB Recv  1363 kB |  the
+🔶 Pred  250 ms Sync   34 ms | Sent   966 kB Recv  1363 kB |  idea
+
+Evaluation
+   nBatches: 32
+    nTokens: 398
+   tokens/s: 4.33 (230.97 ms/tok)
+Prediction
+    nTokens: 577
+   tokens/s: 3.71 (269.46 ms/tok)
+⭕ Network is closed
