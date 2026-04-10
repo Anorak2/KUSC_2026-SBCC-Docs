@@ -2,13 +2,11 @@ CXX = g++
 CXXFLAGS = -std=c++11 -Werror -Wformat -Werror=format-security 
 
 ifndef TERMUX_VERSION
-	CXXFLAGS += -march=native -mtune=native -O3 -ffast-math -funroll-loops -flto=thin
+	CXXFLAGS += -march=native -mtune=native -O3 -ffast-math -funroll-loops -flto=auto
 endif
 
 ifdef DEBUG
 	CXXFLAGS += -g -fsanitize=address
-else
-	CXXFLAGS += -O3
 endif
 
 ifdef WVLA
