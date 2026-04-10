@@ -1,6 +1,6 @@
 ---
 - name: Build and install IQ-TREE 2.4.0 on ARM64 Linux cluster
-  hosts: iqtree_nodes
+  hosts: active
   become: true
   vars:
     iqtree_version: "v2.4.0"
@@ -8,8 +8,8 @@
     iqtree_build_dir: "{{ iqtree_src_dir }}/build"
     iqtree_build_mpi_dir: "{{ iqtree_src_dir }}/build-mpi"
     iqtree_install_prefix: "/usr/local/bin"
-    clang_c: "clang-14"
-    clang_cxx: "clang++-14"
+    clang_c: "clang"
+    clang_cxx: "clang++"
     mpi_hosts_file: "/home/{{ ansible_user }}/mpi_hosts"
     # 1 MPI process per node — -T AUTO handles thread count per-node automatically
     mpi_slots_per_node: 1
@@ -29,7 +29,7 @@
         name:
           - cmake
           - git
-          - clang-14
+          - clang
           - libboost-all-dev
           - libeigen3-dev
           - zlib1g-dev
@@ -38,6 +38,8 @@
           - openmpi-bin
           - make
           - openssh-server
+          - build-essential
+          - gcc
         state: present
 
     - name: Ensure SSH service is running and enabled
@@ -70,18 +72,18 @@
         user: "{{ ansible_user }}"
         key: "{{ hostvars[item]['node_pubkey']['content'] | b64decode }}"
         state: present
-      loop: "{{ groups['iqtree_nodes'] }}"
+      loop: "{{ groups['active'] }}"
       loop_control:
         label: "{{ item }}"
 
     - name: Pre-populate SSH known_hosts so MPI does not get host-key prompts
       become: false
       known_hosts:
-        name: "{{ hostvars[item]['ansible_host'] }}"
-        key: "{{ lookup('pipe', 'ssh-keyscan -t rsa ' + hostvars[item]['ansible_host']) }}"
+        name: "{{ hostvars[item].ansible_host | default(item) }}"
+        key: "{{ lookup('pipe', 'ssh-keyscan -t rsa ' + ( hostvars[item].ansible_host | default(item) ) )}}"
         state: present
         path: "/home/{{ ansible_user }}/.ssh/known_hosts"
-      loop: "{{ groups['iqtree_nodes'] }}"
+      loop: "{{ groups['active'] }}"
       loop_control:
         label: "{{ item }}"
 
@@ -95,8 +97,8 @@
         dest: "{{ mpi_hosts_file }}"
         mode: "0644"
         content: |
-          {% for host in groups['iqtree_nodes'] %}
-          {{ hostvars[host]['ansible_host'] }} slots={{ mpi_slots_per_node }}
+          {% for host in groups['active'] %}
+          {{ hostvars[host].ansible_host | default(host) }} slots={{ mpi_slots_per_node }}
           {% endfor %}
 
     # ------------------------------------------------------------------ #
@@ -120,19 +122,21 @@
         state: directory
         mode: "0755"
 
-    - name: CMake configure — standard build (clang-14, ARM64)
+    - name: CMake configure — standard build (clang, ARM64)
       command: >
         cmake
         -DCMAKE_C_COMPILER={{ clang_c }}
         -DCMAKE_CXX_COMPILER={{ clang_cxx }}
         -DCMAKE_BUILD_TYPE=Release
+        -DCMAKE_CXX_FLAGS="-fopenmp"
+        -DCMAKE_EXE_LINKER_FLAGS="-fopenmp -lomp"
         ..
       args:
         chdir: "{{ iqtree_build_dir }}"
         creates: "{{ iqtree_build_dir }}/Makefile"
 
     - name: Compile standard iqtree2
-      command: make -j{{ ansible_processor_nproc | default(4) }}
+      command: make -j{{ ansible_processor_nproc | default(6) }}
       args:
         chdir: "{{ iqtree_build_dir }}"
         creates: "{{ iqtree_build_dir }}/iqtree2"
