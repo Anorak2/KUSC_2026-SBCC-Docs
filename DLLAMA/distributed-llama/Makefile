@@ -2,7 +2,7 @@ CXX = g++
 CXXFLAGS = -std=c++11 -Werror -Wformat -Werror=format-security 
 
 ifndef TERMUX_VERSION
-	CXXFLAGS += -march=native -mtune=native
+	CXXFLAGS += -march=native -mtune=native -O3 -ffast-math -funroll-loops -flto=thin
 endif
 
 ifdef DEBUG
