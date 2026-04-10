@@ -10,7 +10,11 @@ Upstream repo: https://github.com/b4rtaz/distributed-llama
 
 ## What are we testing?
 
-We are using the Llama 3.1 8B Instruct Q40 model on providing prompts to test the throughput of tokens.
+We are using the Llama 3.1 8B Instruct Q40 model on providing prompts to test the throughput of tokens. 
+
+## Bottlenecks 
+
+Our bottlenecks for DLLAMA are cooling, and a demand for faster nodes. Cooling in particular seems to be necessary for better performance, as the orangepis are throttling without it.
 
 ## Steps to install / run
 
