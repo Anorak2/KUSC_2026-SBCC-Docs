@@ -1,22 +1,122 @@
-# `______` Documentation
+# Distributed Llama (DLLAMA) Documentation
 
-Your docs should answer the following
- - [ ] Basic, what is it
- - [ ] what does it test
- - [ ] run it on the cluster/nichols
- - [ ] What might go wrong with this test, and how could we quickly fix it
- - [ ] Other
+## What is Distributed Llama
 
-# What is `______`
-What does it actually do
+Distributed Llama splits LLM inference across multiple devices using tensor parallelism over Ethernet. One node acts as the root (loads the model and coordinates), and the rest act as workers. Each node holds a slice of the model in RAM, so the memory cost is split across all nodes.
 
-# What are the computational bottlenecks
-Does the application take high memory, CPU, etc
+The binary we build is `dllama`. It supports `inference` (benchmark), `chat`, and `worker` subcommands. There's also `dllama-api` for an HTTP-compatible API server.
 
-# What steps did it take to install / run in your test
-What did you have to do to run it as prep
+Upstream repo: https://github.com/b4rtaz/distributed-llama
 
-# Issues and Troubleshooting
-What might go wrong, what do people struggle with AND **how do we fix it quickly**
+## What does it test
 
-# Other
+CPU-bound matrix multiplications (quantized int4/int8 GEMM), memory bandwidth (loading weights), and network throughput between nodes (synchronizing activations over TCP). The bottleneck on the Orange Pi's will be CPU compute and network latency between nodes.
+
+## What are the computational bottlenecks
+
+- **CPU**: The bulk of time is spent in quantized matrix multiplications on ARM NEON. More cores and higher clock speeds help directly.
+- **RAM bandwidth**: Weights are streamed from memory every token. The Orange Pi's LPDDR4 bandwidth is the ceiling here.
+- **Network**: Every layer requires a round-trip sync between all nodes. Gigabit Ethernet is fine for small models, but larger models will bottleneck on network latency and bandwidth. Use a direct switch, not WiFi.
+
+Node count must be a power of 2 (1, 2, 4, ...), and the max node count equals the number of KV heads in the model.
+
+## What steps did it take to install / run
+
+### On every node (root + workers):
+
+```bash
+sudo apt install git build-essential
+git clone https://github.com/b4rtaz/distributed-llama.git
+cd distributed-llama
+make clean && make -j4 dllama
+```
+
+### On the root node only, download a model:
+
+```bash
+python3 launch.py llama3_2_3b_instruct_q40
+```
+
+### Start workers (on each worker node):
+
+```bash
+./dllama worker --port 9999 --nthreads 4
+```
+
+### Run inference benchmark (on root):
+
+```bash
+./dllama inference \
+  --prompt "Hello world" \
+  --steps 32 \
+  --model models/llama3_2_3b_instruct_q40/dllama_model_llama3_2_3b_instruct_q40.m \
+  --tokenizer models/llama3_2_3b_instruct_q40/dllama_tokenizer_llama3_2_3b_instruct_q40.t \
+  --buffer-float-type q80 \
+  --nthreads 4 \
+  --max-seq-len 4096 \
+  --workers 10.0.0.2:9999 10.0.0.3:9999 10.0.0.4:9999
+```
+
+We'll adjust `--nthreads` to match the core count on the boards, and adjust `--workers` to match the IP addresses.
+
+## Changes from upstream
+
+We forked from upstream and made two fixes to the `Makefile` for GCC on the Orange Pi's. No inference code was changed.
+
+### 1. `-flto=thin` changed to `-flto=auto`
+
+**Line 5 of `Makefile`**
+
+The upstream Makefile uses `-flto=thin`, which is a Clang/LLVM-only flag. The Orange Pi's use GCC (from `build-essential`), so GCC silently ignores this and LTO never gets applied.
+
+`-flto=auto` is the GCC-compatible equivalent. It tells GCC to use all available cores during link-time optimization. This should produce a faster binary since the compiler can now optimize across translation units.
+
+```makefile
+# upstream
+CXXFLAGS += -march=native -mtune=native -O3 -ffast-math -funroll-loops -flto=thin
+
+# ours
+CXXFLAGS += -march=native -mtune=native -O3 -ffast-math -funroll-loops -flto=auto
+```
+
+### 2. Removed duplicate `-O3`
+
+**Lines 8-12 of `Makefile`**
+
+The upstream Makefile adds `-O3` on line 5 (inside the `ifndef TERMUX_VERSION` block, which is always true on the Pi's), then adds it again in the `else` branch of the `DEBUG` ifdef on line 11. The second `-O3` does nothing since it's already set.
+
+We removed the `else` branch to avoid confusion. Behavior is identical.
+
+```makefile
+# upstream
+ifdef DEBUG
+    CXXFLAGS += -g -fsanitize=address
+else
+    CXXFLAGS += -O3
+endif
+
+# ours
+ifdef DEBUG
+    CXXFLAGS += -g -fsanitize=address
+endif
+```
+
+### What we intentionally left alone
+
+- The Makefile doesn't track header (`.hpp`) dependencies on `.o` targets. This means if you edit a header, you need to `make clean && make -j4 dllama` instead of just `make`. Fixing this would require a bigger Makefile restructure and isn't worth it for competition prep.
+- `.PHONY: dllama` is declared intentionally because of the missing header deps.
+- The rest of the build flags (`-march=native`, `-mtune=native`, `-ffast-math`, `-funroll-loops`) are already good for ARM.
+
+## Issues and Troubleshooting
+
+**Build fails after editing a header file**: The Makefile doesn't track `.hpp` dependencies. We have to run `make clean && make -j4 dllama` instead of just `make`.
+
+**Slow inference**: it's important that we use`--nthreads` equal to our core count otherwise performance will be significantly hit.
+
+**Node count errors**: Node count (root + workers) must be a power of 2. If we have 4 total nodes that's valid, while 2 workers with 3 nodes is invalid
+
+## Other
+
+- The `launch.py` script handles downloading models from HuggingFace. 
+- `dllama-api` exposes an OpenAI-compatible HTTP API if you want to test with a web UI. See the upstream docs for details.
+- Only `q40` model with `q80` buffer-float-type and `f32` model with `f32` buffer-float-type quantization combos are supported.
