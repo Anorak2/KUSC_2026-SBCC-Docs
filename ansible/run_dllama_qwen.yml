@@ -19,7 +19,7 @@
     prompts_dir: /home/orangepi/KUSC_2026-SBCC-Docs/DLLAMA/dllama-prompts
     output_base: /home/orangepi/KUSC_2026-SBCC-Docs/ansible/dllama-out/task_2
     model_name: qwen3_8b_q40
-    nthreads: 2
+    nthreads: 8
     max_seq_len: 4096
     worker_port: 9999
     run_type: "short"
