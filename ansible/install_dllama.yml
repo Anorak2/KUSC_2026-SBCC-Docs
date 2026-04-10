@@ -1,0 +1,96 @@
+---
+# Distributed Llama deployment playbook
+# Syncs the patched repo, builds on each node, downloads model on root.
+#
+# Usage:
+#   cd ansible && ansible-playbook install_dllama.yml
+
+# ================================================================== #
+# Play 1: All dllama nodes — deps, sync, build, verify, perf tuning
+# ================================================================== #
+- name: Deploy distributed-llama to all nodes
+  hosts: dllama_nodes
+  gather_facts: false
+
+  vars:
+    dllama_dir: /home/orangepi/distributed-llama
+
+  tasks:
+
+    # -------------------------------------------------------------- #
+    # 1. Dependencies
+    # -------------------------------------------------------------- #
+    - name: Install build dependencies
+      become: true
+      apt:
+        name:
+          - git
+          - build-essential
+          - python3
+        state: present
+        update_cache: true
+        cache_valid_time: 3600
+
+    # -------------------------------------------------------------- #
+    # 2. Sync patched repo from head node
+    # -------------------------------------------------------------- #
+    - name: Sync patched distributed-llama repo to each node
+      ansible.builtin.synchronize:
+        src: ../DLLAMA/distributed-llama/
+        dest: "{{ dllama_dir }}/"
+        delete: true
+        rsync_opts:
+          - "--exclude=.git/"
+          - "--exclude=models/"
+          - "--exclude=*.o"
+          - "--exclude=dllama"
+          - "--exclude=dllama-api"
+
+    # -------------------------------------------------------------- #
+    # 3. Build — each node compiles its own binary (-march=native)
+    # -------------------------------------------------------------- #
+    - name: Build dllama (clean + compile)
+      command: bash -c "make clean && make -j8 dllama"
+      args:
+        chdir: "{{ dllama_dir }}"
+
+    # -------------------------------------------------------------- #
+    # 4. Verify binary exists
+    # -------------------------------------------------------------- #
+    - name: Stat dllama binary
+      stat:
+        path: "{{ dllama_dir }}/dllama"
+      register: dllama_bin
+
+    - name: Assert dllama binary was built
+      assert:
+        that: dllama_bin.stat.exists
+        fail_msg: "Build failed — dllama binary not found on {{ inventory_hostname }}!"
+        success_msg: "dllama built successfully on {{ inventory_hostname }}."
+
+    # -------------------------------------------------------------- #
+    # 5. Performance tuning — CPU governor to performance
+    # -------------------------------------------------------------- #
+    - name: Set CPU governor to performance on all cores
+      become: true
+      shell: echo performance | tee /sys/devices/system/cpu/cpu*/cpufreq/scaling_governor
+      changed_when: true
+
+# ================================================================== #
+# Play 2: Root node only — download model
+# ================================================================== #
+- name: Download model on root node
+  hosts: dllama_root
+  gather_facts: false
+
+  vars:
+    dllama_dir: /home/orangepi/distributed-llama
+    model_name: llama3_1_8b_instruct_q40
+
+  tasks:
+
+    - name: Download {{ model_name }} (requires internet)
+      command: python3 launch.py {{ model_name }}
+      args:
+        chdir: "{{ dllama_dir }}"
+        creates: "{{ dllama_dir }}/models/{{ model_name }}"

@@ -18,7 +18,7 @@ CPU-bound matrix multiplications (quantized int4/int8 GEMM), memory bandwidth (l
 - **RAM bandwidth**: Weights are streamed from memory every token. The Orange Pi's LPDDR4 bandwidth is the ceiling here.
 - **Network**: Every layer requires a round-trip sync between all nodes. Gigabit Ethernet is fine for small models, but larger models will bottleneck on network latency and bandwidth. Use a direct switch, not WiFi.
 
-Node count must be a power of 2 (1, 2, 4, ...), and the max node count equals the number of KV heads in the model.
+Node count must divide evenly into the model dimensions. Valid counts for Llama 3.1 8B (which has 8 KV heads): 1, 2, 4, or 8 nodes. The code enforces `nNodes <= nKvHeads`, so 8 is the hard max. The team should sweep 4 vs 8 nodes during competition to find the throughput sweet spot (more nodes = less compute per node but more network sync overhead).
 
 ## What steps did it take to install / run
 
@@ -28,13 +28,19 @@ Node count must be a power of 2 (1, 2, 4, ...), and the max node count equals th
 sudo apt install git build-essential
 git clone https://github.com/b4rtaz/distributed-llama.git
 cd distributed-llama
-make clean && make -j4 dllama
+make clean && make -j8 dllama
 ```
+
+> **Warning:** The Makefile uses `-march=native`, which generates CPU-specific instructions. Each node **must** compile its own binary. Do not copy a binary compiled on one board to another — it can segfault due to differing hardware revisions.
+
+> **Note:** `python3` is required for `launch.py`. Armbian CLI images may not include it — install with `sudo apt install python3` if missing.
 
 ### On the root node only, download a model:
 
+> **Note:** Model download requires internet access on the root node. Pre-download models before competition day to avoid delays.
+
 ```bash
-python3 launch.py llama3_2_3b_instruct_q40
+python3 launch.py llama3_1_8b_instruct_q40
 ```
 
 ### Start workers (on each worker node):
@@ -49,15 +55,15 @@ python3 launch.py llama3_2_3b_instruct_q40
 ./dllama inference \
   --prompt "Hello world" \
   --steps 32 \
-  --model models/llama3_2_3b_instruct_q40/dllama_model_llama3_2_3b_instruct_q40.m \
-  --tokenizer models/llama3_2_3b_instruct_q40/dllama_tokenizer_llama3_2_3b_instruct_q40.t \
+  --model models/llama3_1_8b_instruct_q40/dllama_model_llama3_1_8b_instruct_q40.m \
+  --tokenizer models/llama3_1_8b_instruct_q40/dllama_tokenizer_llama3_1_8b_instruct_q40.t \
   --buffer-float-type q80 \
   --nthreads 4 \
   --max-seq-len 4096 \
-  --workers 10.0.0.2:9999 10.0.0.3:9999 10.0.0.4:9999
+  --workers 172.17.1.51:9999 172.17.1.52:9999 172.17.1.53:9999
 ```
 
-We'll adjust `--nthreads` to match the core count on the boards, and adjust `--workers` to match the IP addresses.
+We use `--nthreads 4` (not 8) because the RK3588 is a big.LITTLE CPU: 4x Cortex-A76 (fast) + 4x Cortex-A55 (slow). Using 8 threads puts work on the slow A55 cores, which create straggler threads that bottleneck inference since all threads must synchronize at barriers. Keeping to 4 threads ensures computation stays on the fast A76 big cores only.
 
 ## Changes from upstream
 
@@ -103,15 +109,15 @@ endif
 
 ### What we intentionally left alone
 
-- The Makefile doesn't track header (`.hpp`) dependencies on `.o` targets. This means if you edit a header, you need to `make clean && make -j4 dllama` instead of just `make`. Fixing this would require a bigger Makefile restructure and isn't worth it for competition prep.
+- The Makefile doesn't track header (`.hpp`) dependencies on `.o` targets. This means if you edit a header, you need to `make clean && make -j8 dllama` instead of just `make`. Fixing this would require a bigger Makefile restructure and isn't worth it for competition prep.
 - `.PHONY: dllama` is declared intentionally because of the missing header deps.
 - The rest of the build flags (`-march=native`, `-mtune=native`, `-ffast-math`, `-funroll-loops`) are already good for ARM.
 
 ## Issues and Troubleshooting
 
-**Build fails after editing a header file**: The Makefile doesn't track `.hpp` dependencies. We have to run `make clean && make -j4 dllama` instead of just `make`.
+**Build fails after editing a header file**: The Makefile doesn't track `.hpp` dependencies. We have to run `make clean && make -j8 dllama` instead of just `make`.
 
-**Slow inference**: it's important that we use`--nthreads` equal to our core count otherwise performance will be significantly hit.
+**Slow inference**: Use `--nthreads 4` (big cores only), not 8. The RK3588's slow A55 cores create straggler threads that bottleneck all of inference. See the thread count explanation above.
 
 **Node count errors**: Node count (root + workers) must be a power of 2. If we have 4 total nodes that's valid, while 2 workers with 3 nodes is invalid
 
@@ -120,3 +126,4 @@ endif
 - The `launch.py` script handles downloading models from HuggingFace. 
 - `dllama-api` exposes an OpenAI-compatible HTTP API if you want to test with a web UI. See the upstream docs for details.
 - Only `q40` model with `q80` buffer-float-type and `f32` model with `f32` buffer-float-type quantization combos are supported.
+- For automated deployment to all nodes, use the Ansible playbook: `ansible/install_dllama.yml`.
