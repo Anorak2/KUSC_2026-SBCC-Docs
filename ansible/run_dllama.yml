@@ -1,0 +1,98 @@
+---
+# Run a dllama inference benchmark across the cluster.
+# Workers start on all non-root nodes, root runs inference, then workers are stopped.
+#
+# Usage:
+#   ansible-playbook run_dllama.yml
+#
+# Override defaults:
+#   ansible-playbook run_dllama.yml -e nthreads=2 -e steps=256 -e prompt="Your prompt here"
+
+# ================================================================== #
+# Play 1: Start workers on non-root nodes
+# ================================================================== #
+- name: Start dllama workers
+  hosts: dllama_nodes:!dllama_root
+  gather_facts: false
+
+  vars:
+    dllama_dir: /home/orangepi/distributed-llama
+    nthreads: 4
+    worker_port: 9999
+
+  tasks:
+
+    - name: Kill any existing dllama worker
+      shell: pkill -f 'dllama worker' || true
+      changed_when: false
+
+    - name: Start dllama worker in background
+      shell: >
+        nohup {{ dllama_dir }}/dllama worker
+        --port {{ worker_port }}
+        --nthreads {{ nthreads }}
+        > /tmp/dllama_worker.log 2>&1 &
+      async: 10
+      poll: 0
+
+    - name: Wait for workers to be ready
+      pause:
+        seconds: 3
+      run_once: true
+
+# ================================================================== #
+# Play 2: Run inference on root node
+# ================================================================== #
+- name: Run dllama inference on root
+  hosts: dllama_root
+  gather_facts: false
+
+  vars:
+    dllama_dir: /home/orangepi/distributed-llama
+    model_name: llama3_1_8b_instruct_q40
+    nthreads: 4
+    max_seq_len: 4096
+    steps: 64
+    prompt: "Hello, how are you today?"
+    worker_port: 9999
+
+  tasks:
+
+    - name: Build worker address list from inventory
+      set_fact:
+        worker_addrs: >-
+          {% for h in groups['dllama_nodes'] if h != groups['dllama_root'][0] -%}
+          {{ h }}:{{ worker_port }}{{ " " if not loop.last else "" }}
+          {%- endfor %}
+
+    - name: Run inference benchmark
+      command: >
+        {{ dllama_dir }}/dllama inference
+        --model models/{{ model_name }}/dllama_model_{{ model_name }}.m
+        --tokenizer models/{{ model_name }}/dllama_tokenizer_{{ model_name }}.t
+        --buffer-float-type q80
+        --nthreads {{ nthreads }}
+        --max-seq-len {{ max_seq_len }}
+        --prompt "{{ prompt }}"
+        --steps {{ steps }}
+        --workers {{ worker_addrs }}
+      args:
+        chdir: "{{ dllama_dir }}"
+      register: inference_output
+
+    - name: Print inference output
+      debug:
+        msg: "{{ inference_output.stdout_lines }}"
+
+# ================================================================== #
+# Play 3: Stop workers
+# ================================================================== #
+- name: Stop dllama workers
+  hosts: dllama_nodes:!dllama_root
+  gather_facts: false
+
+  tasks:
+
+    - name: Kill dllama workers
+      shell: pkill -f 'dllama worker' || true
+      changed_when: false
