@@ -16,7 +16,7 @@
   gather_facts: false
 
   vars:
-    dllama_dir: /home/orangepi/distributed-llama
+    dllama_dir: /home/orangepi/KUSC_2026-SBCC-Docs/DLLAMA/distributed-llama
     nthreads: 4
     worker_port: 9999
 
@@ -24,6 +24,7 @@
 
     - name: Kill any existing dllama worker
       shell: pkill -f 'dllama worker' || true
+      ignore_errors: yes
       changed_when: false
 
     - name: Start dllama worker in background
@@ -48,9 +49,9 @@
   gather_facts: false
 
   vars:
-    dllama_dir: /home/orangepi/distributed-llama
+    dllama_dir: /home/orangepi/KUSC_2026-SBCC-Docs/DLLAMA/distributed-llama
     model_name: llama3_1_8b_instruct_q40
-    nthreads: 4
+    nthreads: 2
     max_seq_len: 4096
     steps: 64
     prompt: "Hello, how are you today?"
@@ -83,6 +84,14 @@
     - name: Print inference output
       debug:
         msg: "{{ inference_output.stdout_lines }}"
+    - name: Record timestamp
+      shell: echo "$(TZ="America/Los_Angeles" date) | dllama inference" >> /home/orangepi/KUSC_2026-SBCC-Docs/DLLAMA/timestamps.txt
+
+    - name: Record full output
+      shell: |
+        echo "=== $(TZ="America/Los_Angeles" date) ===" >> /home/orangepi/KUSC_2026-SBCC-Docs/DLLAMA/output.txt
+        echo '{{ inference_output.stdout }}' >> /home/orangepi/KUSC_2026-SBCC-Docs/DLLAMA/output.txt
+        echo "" >> /home/orangepi/KUSC_2026-SBCC-Docs/DLLAMA/output.txt
 
 # ================================================================== #
 # Play 3: Stop workers

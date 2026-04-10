@@ -13,7 +13,7 @@
   gather_facts: false
 
   vars:
-    dllama_dir: /home/orangepi/distributed-llama
+    dllama_dir: /home/orangepi/KUSC_2026-SBCC-Docs/DLLAMA/distributed-llama
 
   tasks:
 
@@ -30,21 +30,6 @@
         state: present
         update_cache: true
         cache_valid_time: 3600
-
-    # -------------------------------------------------------------- #
-    # 2. Sync patched repo from head node
-    # -------------------------------------------------------------- #
-    - name: Sync patched distributed-llama repo to each node
-      ansible.builtin.synchronize:
-        src: ../DLLAMA/distributed-llama/
-        dest: "{{ dllama_dir }}/"
-        delete: true
-        rsync_opts:
-          - "--exclude=.git/"
-          - "--exclude=models/"
-          - "--exclude=*.o"
-          - "--exclude=dllama"
-          - "--exclude=dllama-api"
 
     # -------------------------------------------------------------- #
     # 3. Build — each node compiles its own binary (-march=native)
@@ -84,7 +69,7 @@
   gather_facts: false
 
   vars:
-    dllama_dir: /home/orangepi/distributed-llama
+    dllama_dir: /home/orangepi/KUSC_2026-SBCC-Docs/DLLAMA/distributed-llama
     model_name: llama3_1_8b_instruct_q40
 
   tasks:
