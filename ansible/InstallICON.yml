@@ -4,7 +4,7 @@
 
   vars:
     venv_path: /opt/mkexp-venv
-    mkexp_package: "mkexp==1.0.0"   # 🔒 pin version for stability
+    mkexp_package: "git+https://gitlab.dkrz.de:esmenv/mkexp.git"   # 🔒 pin version for stability
     mkexp_symlink: /usr/local/bin/mkexp
 
   tasks:
@@ -15,6 +15,7 @@
           - python3
           - python3-venv
           - python3-pip
+          - python3-setuptools
         state: present
         update_cache: yes
 
