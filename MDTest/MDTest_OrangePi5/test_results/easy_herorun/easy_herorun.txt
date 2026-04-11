@@ -1,0 +1,51 @@
+orangepi5-plus:~:% TZ="America/Los_Angeles" date >> timestamps.txt && \
+time mpirun --hostfile ~/MDTest/scripts/hosts.txt -np 5 \
+/home/orangepi/MDTest/ior-4.0.0-install/bin/mdtest \
+-n 500000 -u -L -F -P -N 1 -d ~/MDTest_Data \
+-x stonewall_easy.txt -Y -W 300 -w 0 -C -T -r && \
+TZ="America/Los_Angeles" date >> timestamps.txt
+-- started at 04/10/2026 12:47:56 --
+
+mdtest-4.0.0 was launched with 5 total task(s) on 1 node(s)
+Command line used: /home/orangepi/MDTest/ior-4.0.0-install/bin/mdtest '-n' '500000' '-u' '-L' '-F' '-P' '-N' '1' '-d' '/home/orangepi/MDTest_Data' '-x' 'stonewall_easy.txt' '-Y' '-W' '300' '-w' '0' '-C' '-T' '-r'
+Path                : /home/orangepi/MDTest_Data
+FS                  : 57.9 GiB   Used FS: 22.3%   Inodes: 3.7 Mi   Used Inodes: 5.4%
+Nodemap: 11111
+V-0: Rank   0 Line  2537 Shifting ranks by 1 for each phase.
+5 tasks, 2500000 files
+Continue stonewall hit min: 144275 max: 160816 avg: 153381.2
+
+
+SUMMARY rate: (of 1 iterations)
+   Operation                     Max            Min           Mean        Std Dev
+   ---------                     ---            ---           ----        -------
+   File creation                2448.659       2448.659       2448.659          0.000
+   File stat                  797261.758     797261.758     797261.758          0.000
+   File read                       0.000          0.000          0.000          0.000
+   File removal                 1442.514       1442.514       1442.514          0.000
+   Tree creation                2335.359       2335.359       2335.359          0.000
+   Tree removal                    1.836          1.836          1.836          0.000
+
+SUMMARY time: (of 1 iterations)
+   Operation                     Max            Min           Mean        Std Dev
+   ---------                     ---            ---           ----        -------
+   File creation                 328.376        328.376        328.376          0.000
+   File stat                       1.009          1.009          1.009          0.000
+   File read                       0.000          0.000          0.000          0.000
+   File removal                  557.416        557.416        557.416          0.000
+   Tree creation                   0.000          0.000          0.000          0.000
+   Tree removal                    0.545          0.545          0.545          0.000
+-- finished at 04/10/2026 13:02:45 --
+
+mpirun --hostfile ~/MDTest/scripts/hosts.txt -np 5  -n 500000 -u -L -F -P -N   204.06s user 49.38s system 28% cpu 14:50.19 total
+orangepi5-plus:~:% ls
+cluster-static-ip         iqtree2-2.4.0        MDTest_Data     openblas         stonewall_easy.txt
+cluster-static-ip.tar.gz  KUSC_2026-SBCC-Docs  mpi_hosts       OpenBLAS-0.3.27  timestamps.txt
+hpl-2.3                   MDTest               mpi_hosts_good  run_smoke.log    v0.3.27.tar.gz
+orangepi5-plus:~:% vim stonewall_easy.txt
+orangepi5-plus:~:% cd MDTest_Data
+orangepi5-plus:MDTest_Data:% ls
+orangepi5-plus:MDTest_Data:% cd ..
+orangepi5-plus:~:% df -T ~/MDTest_Data
+Filesystem     Type 1K-blocks     Used Available Use% Mounted on
+/dev/mmcblk1p1 ext4  60715768 20133684  39934468  34% /
