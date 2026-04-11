@@ -1,0 +1,14 @@
+#nexus
+begin sets;
+  charset gene_1 = DNA, 1-1324;
+  charset gene_2 = DNA, 1325-2222;
+  charset gene_3 = DNA, 2223-3593;
+  charset gene_4 = DNA, 3594-4157;
+  charset gene_5 = DNA, 4158-8020;
+  charpartition mine =
+    HKY+F+ASC:gene_1,
+    GTR+F+G4:gene_2,
+    JC+ASC:gene_3,
+    TPM3u+F+I:gene_4,
+    K2P+ASC:gene_5;
+end;
